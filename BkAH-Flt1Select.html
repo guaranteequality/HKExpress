@@ -1,0 +1,2423 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="./css/daterangepicker.css">
+	<link rel="stylesheet" href="./css/styles.min.css" type="text/css">
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="./css/bootstrap-treefy.js"></script>
+	<script src="./css/bootstrap.min.js"></script>
+	<script>
+		$(function () {
+			$("#table").treeFy({
+				treeColumn: 2
+			})
+		})
+	</script>
+	<style>
+		.header_link {
+			font-size: 1.5rem;
+		}
+
+		.header_link::before {
+			font-size: 1.5rem;
+		}
+
+		i.fa.fa-pencil {
+			color: white;
+			background: orange;
+			border-radius: 50px;
+			height: 25px;
+			width: 25px;
+			top: 25px !important;
+		}
+
+		.fa-pencil:before {
+			top: 5px !important;
+			content: "\f040";
+			position: relative;
+		}
+
+		label.pink11 {
+			color: white;
+			background: #6e2d91;
+			padding: 5px 10px;
+		}
+
+		.green {
+			color: white;
+			background: #00b14d;
+			padding: 5px 10px;
+		}
+
+		a.link_section {
+			font-size: 13px;
+			text-decoration: underline;
+			color: #6e2d91 !important;
+			position: relative;
+		}
+
+		.nav-pills>li>a {
+			border-radius: 0 !important;
+		}
+
+		ul.float-right {
+			float: right;
+			text-align: right;
+			padding-right: 15px;
+			padding-left: 15px;
+		}
+
+		ul.float-right li {
+			background-color: gray;
+			color: #fff;
+		}
+
+		ul.float-right li a {
+			color: #fff;
+		}
+
+		ul.float-right li a.active,
+		ul.float-right li a:hover {
+			background-color: #eee;
+			color: #000;
+		}
+
+		ul.float-left {
+			margin-top: 15px;
+			margin-bottom: -0px;
+			z-index: 999;
+			float: left;
+			text-align: left;
+			padding-right: 15px;
+			padding-left: 15px;
+		}
+
+		ul.float-left li {
+			border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
+			background-color: #bbb;
+			color: #fff;
+		}
+
+		ul.float-left li a {
+			color: #fff;
+		}
+
+		ul.float-left li a.active,
+		ul.float-left li a:hover {
+			border-top-left-radius: 5px !important;
+			border-top-right-radius: 5px !important;
+			background-color: #eee;
+			color: #000;
+		}
+
+		.border_section {
+			border: 1px solid black;
+			padding: 1px;
+		}
+
+		.border_section label {
+			margin-bottom: 0px;
+		}
+
+		.border_section label select.form-control.form-control-lg {
+			border: 1px solid #6e2d91;
+			height: 40px;
+		}
+
+		button.pink {
+			position: relative;
+			padding: 12px 52px;
+			margin-top: 35px;
+			left: -31px;
+		}
+
+		th,
+		td {
+			
+		}
+
+		.pink {
+			color: white;
+			background: #6e2d91;
+			border: 1px solid white !important;
+		}
+
+		td.green {
+			background: #00b14d;
+			color: white;
+			border: 1px solid white !important;
+		}
+
+		td.rd {
+			border: 1px solid black;
+			color: red;
+			text-decoration: underline;
+		}
+
+		td.rd1 {
+			color: red;
+			text-decoration: underline;
+		}
+
+		th.pink1 {
+			color: #6e2d91;
+			font-weight: 600;
+			text-decoration: underline;
+		}
+
+		.pink p {
+			padding: 12px;
+		}
+
+
+		.form-control {
+			border: 1px solid #6e2d91;
+		}
+
+		.form-control {
+			border: 1px solid #6e2d91;
+			height: 40px;
+		}
+
+		input::placeholder {
+			text-align: center;
+			color: #6e2d91;
+		}
+
+		input.form-control::placeholder {
+			color: #6e2d91;
+		}
+
+		span.input-group-addon.pink {
+			background: #6e2d91;
+			color: white;
+			border-radius: 0px !important;
+		}
+
+		.reds {
+			color: red;
+		}
+
+		.table>thead>tr>th {
+			border-bottom: 2px solid #333 !important;
+		}
+
+		.table>tbody>tr>td {
+			border-top: 1px solid #333 !important;
+		}
+
+		tr .rd {
+			font-size: 18px;
+		}
+
+		form {
+			border: solid 1px black;
+			padding: 5px;
+			background-color: rgb(212, 211, 211);
+		}
+
+		.checkbox label input {
+			width: 15px;
+			height: 15px;
+		}
+
+		thead {
+			background-color: gray;
+		}
+
+		thead tr th {
+			padding: 5px 0 !important;
+			color: #ffffff !important;
+		}
+
+		.btn-primary {
+			background-image: linear-gradient(to bottom, #6e2d91 0, #6e2d91 100%) !important;
+		}
+
+		.btn-primary:hover,
+		.btn-primary:focus {
+			color: #fff !important;
+			background-color: #6e2d91 !important;
+			border-color: #6e2d91 !important;
+		}
+
+		.btn-group {
+			padding: 0 10px 10px 0;
+		}
+
+		input {
+			
+		}
+
+		select {
+			height: 30px !important;
+		}
+
+		.reviewsection {
+			margin-top: 5px;
+			padding-top: 20px;
+			border-top: 2px solid #bd2c92;
+		}
+
+		.paymentdetail {
+			float: left;
+			min-width: 270px;
+			margin-bottom: 10px;
+			margin-right: 20px;
+		}
+
+		.reviewsection label {
+			margin-bottom: 0 !important;
+			font-weight: 500;
+		}
+
+		.paymentdetail .text1line {
+			height: 22px;
+		}
+
+		.boxgroup .text2line {
+			height: 42px;
+			text-align: center;
+		}
+
+		.paymentdetail table {
+			height: 64px;
+			margin: 0 !important;
+		}
+
+		.paymentdetail .tdgray {
+			background-color: #eee;
+		}
+
+		.paymentdetail tr {
+			border-top: 1px solid #333;
+			border-right: 1px solid #333;
+		}
+
+		.paymentdetail td {
+			border-bottom: 1px solid #333;
+			border-left: 1px solid #333;
+			padding: 0 !important;
+		}
+
+		.boxgroups {
+			float: left;
+			margin-bottom: 10px;
+		}
+		.boxgroup {
+			float: left;
+			min-width: 50px;
+			margin-bottom: 5px;
+			margin-right: 20px;
+		}
+
+		.numbox {
+			text-align: center;
+			padding-top: 10px;
+			height: 44px;
+			border: 1px solid #6e2d91;
+		}
+
+		.textdesc {
+			clear: both;
+			font-size:1.2rem;
+			font-style:italic;
+		}
+
+		.listsection {
+			z-index: 1;
+			margin-top: -1px;
+			border: 1px solid gray;
+			padding: 15px;
+		}
+
+		.pnrlabel {
+			float: left;
+			padding: 15px;
+		}
+
+		.listsection .table>thead>tr>th:first-child {
+			background-color: #fff !important;
+			border: 0 !important;
+		}
+
+		.listsection .table>tbody>tr>td:first-child {
+			background-color: #fff !important;
+			border: 0 !important;
+		}
+
+		tr.trbb {
+			background-color: #bbb;
+		}
+
+		tr.trbb td {
+			color: #fff !important;
+		}
+
+		tr.trcc {
+			background-color: #ccc;
+		}
+
+		tr.trdd {
+			background-color: #ddd;
+		}
+
+		tr.tree {
+			background-color: #eee;
+		}
+
+		.nav-tabs>li+li {
+			margin-left: 2px;
+		}
+		button.ui-input, input.ui-input {
+			
+		}
+		.formcol label {
+			padding: 8px 5px 0 0;
+			margin: 0;
+			font-weight: normal;
+		}
+		.formcol {
+			padding: 0 5px 0 0;
+			margin: 0;
+		}
+		.nopadding{
+			padding:0 0 0 0;
+		}
+		.paddingbottom{
+			padding-bottom:5px;
+		}
+		.paddingtop{
+			padding-top:5px;
+		}
+		input[type=radio]+label {
+			padding:0;
+		}
+		.ui-checkbox input[type=radio]:checked+label:after {
+			left: 4px;
+			top: 4px;
+			background: #6e2d91;
+			width: 12px;
+			height: 12px;
+		}
+		.changeflightbox{
+			border: 1px solid #ddd;
+			padding: 15px;
+			margin-bottom:15px;
+			background-color:#eee;
+		}
+		span.code-ah {
+			color: white;
+			background: #6e2d91;
+			margin-right: 10px;
+			padding: 5px;
+		}
+
+		span.code-sr {
+			color: white;
+			background: #00b14d;
+			margin-right: 10px;
+			padding: 5px;
+		}
+
+		span.code-as {
+			color: white;
+			background: #ed1d24;
+			margin-right: 10px;
+			padding: 5px;
+		}
+
+	</style>
+	<style>
+	.booking-steps {
+		position: relative;
+		display: table;
+		width: 340px;
+		margin: 10px 0 0 0;
+		counter-reset: booking_steps_counter;
+	}
+	.booking-steps li .label {
+		white-space: normal; 
+	}
+	.time-remaining{
+		padding-top:40px;
+		text-align:right;
+	}
+	.time-remaining span{ color:red}
+	.summary_header .label{text-align:left;padding:0}
+	.flightselect_header_route .label+.route{    margin-top: 0;}
+	.tripselector_outbound  .label,.tripselector_inbound  .label{text-align:left;padding:0}
+	.airport-name span{display:block;}
+	.ui-checkbox input[type=radio]{float:right;width:30px;height:55px;position:relative;padding:17px 0;}
+	.flights_table .price-rate {width:auto;display:inline-block;float:right}
+	.rowFlight .ui-checkbox input[type=checkbox]+label::after, 
+	.rowFlight .ui-checkbox input[type=checkbox]+label::before, 
+	.rowFlight .ui-checkbox input[type=radio]+label::after, 
+	.rowFlight .ui-checkbox input[type=radio]+label::before {
+		content: '';
+		position: absolute;
+		right: 0;
+		left:auto;
+		top: 0;
+		margin: 17px -30px 0 0;
+	}
+	.rowFlight .ui-checkbox input[type=radio]:checked+label:after {
+		right: 0;
+		left:auto;
+		top: 0;
+		background: #6e2d91;
+		width: 12px;
+		height: 12px;
+		margin: 21px -26px 0 0;
+	}.rowFlight .ui-checkbox input[type=radio]:checked+label{ background-color: #ae8dc1; }
+	
+		.btn-primary {
+			background-image: linear-gradient(to bottom, #6e2d91 0, #6e2d91 100%) !important;
+		}
+
+		.btn-primary:hover,
+		.btn-primary:focus {
+			color: #fff !important;
+			background-color: #6e2d91 !important;
+			border-color: #6e2d91 !important;
+		}
+
+		.btn-group {
+			padding: 0 10px 10px 0;
+		}
+		.show {
+			display: inline-block !important;
+		}
+		.group_combo{margin:0 !important;}
+		.col-9  .context-table{
+		    margin: 16px 0 16px 3%;
+		}
+	
+		.upperline-tb .fare3-label {top:0}
+		.summary_details_price.collapse.show{display: block !important;}
+		.group_combo.grid.padding15{
+			padding: 15px 3%;
+		}
+		.summary_typology_item{font-size:1.6rem;color:#6e2d91;}
+		.combined_summary_bar-left .right .button.btn-inverse {padding-right:40px}
+		.btn-inverse::after {
+			
+			content: "\e908";
+			font-family: FontAwesome;
+			font-weight: 400;
+			position: absolute;
+			display: block;
+			right: 10px;
+			line-height: 1;
+			color: #6e2d91;
+			transition: transform .18s ease;
+			top: 8px;
+			font-size: 1.75rem;
+		    transform: scaleY(-1);
+
+		}
+		.collapsing {
+			position: absolute;
+			height: 0;
+			transition: height .35s ease;
+		}
+		.summary_collapse {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		z-index: 1000;
+	}
+	.titlebar .title {
+    font-family: BiomeStd-Regular,sans-serif;
+    font-size: 2.375rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+.titlebar .subtitle {
+    margin-top: 4px;
+    font-size: 1.775rem;
+    line-height: 1.2;
+    font-weight: 300;
+}
+.summary_total_list .price {
+    font-family: BiomeStd-Regular,sans-serif;
+    font-size: 2.65rem;
+    line-height: 1;
+}
+.summary_total_list .label {
+    position: relative;
+    display: block;
+    font-size: 1.7rem;
+    line-height: 1.3;
+}
+.searchflight,.searchflight form {
+    background: none;border:none;
+}
+.summary_details_trigger .label{color:#6e2d91;font-size:1.2rem;}
+.summary_details_content{padding:0 15px;}
+.ui-input-multiline input.ui-input{padding-right:0;}
+.sborder {
+    border: 1px solid #6e2d91;
+    padding: 2px 5px;
+}
+.sbagr {
+    border-bottom: 1px solid #6e2d91;
+    padding: 2px 2px;
+}
+	</style>
+
+	</head>
+
+<body>
+	<div class="page-wrap">
+		<header class="header">
+			<div class="header_container">
+				<div class="header_logo">
+					<a class="logo" href="#">
+						<img src="./images/logoHK.svg">
+					</a>
+				</div>
+				<div class="header_right">
+					<div class="header_links">
+						<ul>
+							<li class="header_links_item link-home">
+								<!---->
+								<!---->
+								<div>
+									<button class="header_link" role="link">
+										<i class="fa fa-home"></i> home </button>
+								</div>
+							</li>
+							<!---->
+							<li class="header_links_item link-user">
+								<!---->
+								<!---->
+								<div>
+									<button class="header_link" role="link"> Welcome back Sally </button>
+								</div>
+							</li>
+							<li class="header_links_item link-language">
+								<ibe-language-selector listlabel="Language">
+									<div class="ui-dropdown">
+										<button data-toggle="dropdown" attr.aria-controls="languageTopListId" attr.aria-haspopup="true" class="header_link">
+										</button>
+										<!---->
+										<ul class="dropdown-menu ui-dropdown_list ng-star-inserted" id="languageTopListId" tabindex="-1" aria-hidden="false">
+											<!---->
+											<li class="ng-star-inserted">
+												<button>日本(日本語)</button>
+											</li>
+											<li class="ng-star-inserted">
+												<button>한국(한국어)</button>
+											</li>
+											<li class="ng-star-inserted">
+												<button>中国大陆 (简体)</button>
+											</li>
+											<li class="ng-star-inserted">
+												<button>中國台灣 (繁體)</button>
+											</li>
+											<li class="ng-star-inserted">
+												<button>香港特別行政區 (繁體)</button>
+											</li>
+										</ul>
+									</div>
+								</ibe-language-selector>
+							</li>
+							<!---->
+							<li class="header_links_item link-Logout">
+								<!---->
+								<!---->
+								<div>
+									<button class="header_link" role="link">
+										<i class="fa fa-lock"></i> Logout </button>
+								</div>
+							</li>
+						</ul>
+						<div class="company-info">
+							<div class="des">
+								<strong>B2G Group Booking Portal</strong>
+							</div>
+							<strong>Company:</strong> ABC Travel Services Ltd.
+							<strong>Account Balance:</strong> HKD 150.000
+							<button id="btnrefesh" class="header_link">
+								<i class="fa fa-redo-alt" style="font-size:12px"></i>
+							</button>
+							<span class="balup">Bal. update: 30Sep’18 15:35</span>
+						</div>
+					</div>
+				</div>
+				<div class="header_bottom">
+					<div class="header_links">
+						<div class="dropdown btn-group">
+							<button class="btn btn-primary dropdown-toggle colorone" type="button" data-toggle="dropdown">
+								<span id="selected1">Book Ad-Hoc Group</span>
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu dropmenu1">
+								<li>
+									<a tabindex="-1" href="#">B2G</a>
+								</li>
+								<li>
+									<a tabindex="-1" href="#">Book Ad-Hoc Group</a>
+								</li>
+							</ul>
+						</div>
+						<div class="dropdown btn-group">
+							<button class="btn btn-primary dropdown-toggle colortwo" type="button" data-toggle="dropdown">
+								<span id="selected2">Admin</span>
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu dropmenu2">
+								<li>
+									<a tabindex="-1" href="#">Admin</a>
+								</li>
+								<li>
+									<a tabindex="-1" href="#">Profile</a>
+								</li>
+								<li>
+									<a tabindex="-1" href="#">Users Management</a>
+								</li>
+								<li class="dropdown-submenu">
+									<a class="test" tabindex="-1" href="#">Reports
+										<span class="caret"></span>
+									</a>
+									<ul class="dropdown-menu">
+										<li>
+											<a tabindex="-1" href="#">UO Alerts</a>
+										</li>
+										<li>
+											<a tabindex="-1" href="#">Payments</a>
+										</li>
+										<li>
+											<a tabindex="-1" href="#">Monthly Statement</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						
+					</div>
+					
+				</div>
+			</div>
+		</header>
+		<main id="maincontent">
+			<div class="container-wrap">
+				<div class="row mt-2 table-section tab-pane fade active in" id="pills-flights" role="tabpanel" aria-labelledby="pills-filghts-tab">
+						<div class="container-wrap">
+        <div class="grid">
+          <div class="col-12 lg-12">
+            <div class="col-sm-9 col-md-9">
+				<ul class="booking-steps">
+				  <li class="active">
+					<span class="number"></span>
+					<span class="hide-visually">active step</span>
+					<span class="label">Select Flight</span>
+				  </li>
+				  <li>
+					<span class="number"></span>
+					<span class="label">Payment &amp; Confirmation</span>
+				  </li>
+				</ul>
+			</div>
+			<div class="col-sm-3 col-md-3">
+				<div class="time-remaining">Time Remaining <span>30</span></div>
+			</div>
+            
+            
+          </div>
+		  <div class="col-12 lg-12">
+			<div class="combined_summary_bar is-searchresult">
+              <div class="combined_summary_bar-left">
+                <!---->
+                <!---->
+                <div class="left searchresult">
+                  <!---->
+                  <!---->
+                  <div class="titlebar">
+                    <h1 class="title"> Siem Reap (REP) <span class="direction">to</span> Tokyo (Narita) (NRT) </h1>
+                    <div class="subtitle">
+                      <!----> Mon, 03 Oct - Tue, 19 Oct | 13AD 2CH 1IN
+                      <!---->
+                      <div class="paxtype_group">
+                        <!---->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!---->
+                <div class="right">
+                  <button class="button btn-inverse collapsed" role="link" data-target="#collapseSearch" data-toggle="collapse" aria-expanded="false" aria-controls="collapseSearch"> Change search </button>
+				  <div class="container-wrap summary_collapse collapse" id="collapseSearch" style="background: rgb(244, 244, 247);">
+					
+					<div class="grid">
+					  <div class="col-12_lg-12">
+						<!---->
+						<!---->
+						<div class=" ng-star-inserted">
+						  <!---->
+						  <ibe-tab-panel id="tab-panel">
+							<!---->
+							<!---->
+							<ul class="tab-panel-buttons ng-star-inserted">
+							  <!---->
+							  <li class="selected ng-star-inserted">
+							  </li>
+							</ul>
+							<ibe-tab>
+							  <!---->
+							  <!---->
+							  <flight-search class="ng-star-inserted">
+								<div class="searchflight multicity">
+								  <form autocomplete="off" novalidate="" class="ng-pristine ng-valid ng-touched">
+									<div class="inner">
+									  <div class="route">
+										<ibe-input-station class="ng-tns-c0-0">
+										  <div class="ng-tns-c0-0">
+											<div class="ui-input-container has-value" data-toggle="dropdown">
+											  <div class="ui-input-multiline">
+												<div class="ui-input-multiline_group outbound">
+												  <div class="ui-input-multiline_group_inner" id="originDiv">
+													<button class="ui-input" aria-haspopup="true" id="originBtn" aria-expanded="false">
+													  <span class="hide-visually">From</span>
+													  <span class="value-selected" id="originStationSelected">
+														<span class="value-large" id="originStationBig" title="Hong Kong (HKG)">Hong Kong (HKG)</span>
+														<span class="value-small" id="originStationSmall">Hong Kong SAR</span>
+													  </span>
+													</button>
+												  </div>
+												  <div class="ui-input-multiline_group_inner" hidden="">
+													<label class="hide-visually" for="outboundDepartureStation">Choose an Origin</label>
+													<input class="ui-input" aria-haspopup="true" type="text" aria-expanded="false" name="outboundDepartureStation" id="outboundDepartureStation" placeholder="From">
+												  </div>
+												</div>
+												<div class="ui-input-multiline_group inbound">
+												  <div class="ui-input-multiline_group_inner">
+													<button class="ui-input" aria-haspopup="true" tabindex="0" aria-expanded="false">
+													  <span class="hide-visually">To</span>
+													  <span class="value-selected">
+														<span class="value-large" title="Tokyo (All Airports) (TYO)">Tokyo (All Airports) (TYO)</span>
+														<span class="value-small">Japan </span>
+													  </span>
+													</button>
+												  </div>
+												  <div class="ui-input-multiline_group_inner" hidden="">
+													<label class="hide-visually" for="outboundArrivalStation">Choose a Destination</label>
+													<input class="ui-input" aria-haspopup="true" type="text" aria-expanded="false" name="outboundArrivalStation" id="outboundArrivalStation" placeholder="To" tabindex="0">
+												  </div>
+												</div>
+											  </div>
+											</div>
+											<!---->
+											<div class="dropdown-menu search_tt ng-tns-c0-0 ng-trigger ng-trigger-curtainEffec ng-star-inserted" ibe-content-stations="" id="originStationsListId">
+											  <div class="search_tt_inner">
+												<div class="search_tt_title">Choose an Origin</div>
+												<div class="search_tt_menu_scroll">
+												  <div class="search_tt_menu">
+													<!---->
+													<ul class="ng-star-inserted" style="">
+													  <li class="title">Hong Kong SAR</li>
+													  <!---->
+													  <li class="ng-star-inserted">
+														<a href=""> Hong Kong (HKG) </a>
+													  </li>
+													</ul>
+													<ul class="ng-star-inserted" style="">
+													  <li class="title">Cambodia</li>
+													  <!---->
+													  <li class="ng-star-inserted">
+														<a href=""> Siem Reap (REP) </a>
+													  </li>
+													</ul>
+													<ul class="ng-star-inserted" style="">
+													  <li class="title">Mainland China</li>
+													  <!---->
+													  <li class="ng-star-inserted">
+														<a href=""> Ningbo (NGB) </a>
+													  </li>
+													  <li class="ng-star-inserted">
+														<a href=""> Zhangjiajie (DYG) </a>
+													  </li>
+													</ul>
+													<ul class="ng-star-inserted" style="">
+													  <li class="title">Japan</li>
+													  <!---->
+													  <li class="ng-star-inserted">
+														<a href=""> Fukuoka (FUK) </a>
+													  </li>
+													  <li class="ng-star-inserted">
+														<a href=""> Hiroshima (HIJ) </a>
+													  </li>
+													  <li class="ng-star-inserted">
+														<a href=""> Ishigaki (ISG) </a>
+													  </li>
+													  <li class="ng-star-inserted">
+														<a href=""> Kagoshima (KOJ) </a>
+													  </li>
+													  <li class="ng-star-inserted">
+														<a href=""> Kumamoto (KMJ) </a>
+													  </li>
+													  <li class="ng-star-inserted">
+														<a href=""> Nagoya (NGO) </a>
+													  </li>
+													  <li class="ng-star-inserted">
+														<a href=""> Osaka (Kansai) (KIX) </a>
+													  </li>
+													  <li class="ng-star-inserted">
+														<a href=""> Takamatsu (TAK) </a>
+													  </li>
+													  <li class="ng-star-inserted">
+														<a href=""> Tokyo (All Airports) (TYO) </a>
+													  </li>
+													  <li class="ng-star-inserted">
+														<a href=""> Tokyo (Haneda) (HND) </a>
+													  </li>
+													  <li class="ng-star-inserted">
+														<a href=""> Tokyo (Narita) (NRT) </a>
+													  </li>
+													</ul>
+													<ul class="ng-star-inserted" style="">
+													  <li class="title">South Korea</li>
+													  <!---->
+													  <li class="ng-star-inserted">
+														<a href=""> Busan (PUS) </a>
+													  </li>
+													  <li class="ng-star-inserted">
+														<a href=""> Jeju (CJU) </a>
+													  </li>
+													  <li class="ng-star-inserted">
+														<a href=""> Seoul (Incheon) (ICN) </a>
+													  </li>
+													</ul>
+													<ul class="ng-star-inserted" style="">
+													  <li class="title">Taiwan, China</li>
+													  <!---->
+													  <li class="ng-star-inserted">
+														<a href=""> Hualien (HUN) </a>
+													  </li>
+													  <li class="ng-star-inserted">
+														<a href=""> Taichung (RMQ) </a>
+													  </li>
+													</ul>
+													<ul class="ng-star-inserted" style="">
+													  <li class="title">Thailand</li>
+													  <!---->
+													  <li class="ng-star-inserted">
+														<a href=""> Chiang Mai (CNX) </a>
+													  </li>
+													  <li class="ng-star-inserted">
+														<a href=""> Chiang Rai (CEI) </a>
+													  </li>
+													  <li class="ng-star-inserted">
+														<a href=""> Phuket (HKT) </a>
+													  </li>
+													</ul>
+													<ul class="ng-star-inserted" style="">
+													  <li class="title">Northern Mariana Islands</li>
+													  <!---->
+													  <li class="ng-star-inserted">
+														<a href=""> Saipan (SPN) </a>
+													  </li>
+													</ul>
+													<ul class="ng-star-inserted" style="">
+													  <li class="title">Vietnam</li>
+													  <!---->
+													  <li class="ng-star-inserted">
+														<a href=""> Da Nang (DAD) </a>
+													  </li>
+													  <li class="ng-star-inserted">
+														<a href=""> Nha Trang (CXR) </a>
+													  </li>
+													</ul>
+												  </div>
+												</div>
+											  </div>
+											</div>
+											<!---->
+										  </div>
+										</ibe-input-station>
+									  </div>
+									  <div class="dates">
+										<div ibe-calendar="" class="ng-tns-c1-1">
+										  <div class="ui-input-container">
+											<div class="ui-input-multiline" id="outboundStartDate">
+											  <div class="ui-input-multiline_group outbound">
+												<div class="ui-input-multiline_group_inner">
+												  <!---->
+												  <label class="hide-visually ng-tns-c1-1 ng-star-inserted" for="departureDateInput"> Departure Date: format dd/mm/yyyy </label>
+												  <input class="ui-input ng-tns-c1-1 ng-untouched ng-pristine ng-valid ng-star-inserted" id="departureDateInput" name="startDate" type="text" maxlength="10" placeholder="Outbound">
+												  <!---->
+												  <!---->
+												</div>
+											  </div>
+											</div>
+										  </div>
+										  <!---->
+										</div>
+									  </div>
+									  <div class="triptype ng-star-inserted">
+                            <ibe-select listid="triptype" listlabel="Trip type" name="tripType">
+                              <!---->
+                              <!---->
+                              <div class="ui-input-container has-value ng-star-inserted">
+                                <!---->
+                                <!---->
+                                <div class="ui-dropdown dropdown ng-star-inserted">
+                                  <button class="ui-input " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                                    <!---->
+                                    <div class="ui-dropdown_value ng-star-inserted">
+                                      <span class="hide-visually">Trip type</span> Round Trip </div>
+                                    <!---->
+                                  </button>
+                                  <ul class="dropdown-menu ui-dropdown_list ng-star-inserted" aria-labelledby="dropdownMenuButton" tabindex="-1" id="triptype" aria-hidden="" aria-activedescendant="triptype-2" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 50px, 0px); top: 0px; left: 0px; will-change: transform;">
+                                    <!---->
+                                    <!---->
+                                    <li class="ng-star-inserted">
+                                      <button id="triptype-0" aria-selected="false"> One way </button>
+                                    </li>
+                                    <li class="ng-star-inserted">
+                                      <button id="triptype-1" aria-selected="false"> Round Trip </button>
+                                    </li>
+                                  </ul>
+                                  <!---->
+                                </div>
+                              </div>
+                              <!---->
+                            </ibe-select>
+                          </div>
+									  <div class="typology">
+										  <div class="ui-input-container has-value">
+											<div class="ui-dropdown">
+											  <button data-toggle="dropdown" aria-haspopup="true" class="ui-input" name="typology" type="button" aria-label="Passengers type 3 Adults, 1 Child, 1 Infant">
+												<div class="ui-dropdown_value"> 3 Adults, 1 Child, 1 Infant </div>
+											  </button>
+											  <!---->
+											  <div class="dropdown-menu typology_option ng-star-inserted" tabindex="-1">
+												<fieldset class="typology_option_list ng-untouched ng-pristine ng-valid">
+												  <legend class="hide-visually">Passengers type selection</legend>
+												  <div class="typology_option_item">
+													<label class="typology_option_label" for="paxAdultInput" id="paxAdultInput_label"> Adult <span class="label-small">(&gt;12 years)</span>
+													</label>
+													<div class="typology_option_select">
+													  <ibe-minus-plus id="paxAdultInput" labelledby="paxAdultInput_label">
+														<div class="ui-num-ud">
+														  <button class="ui-num-ud_button minus" tabindex="0" aria-labelledby="paxAdultInput_label numLabelDecrease">
+															<span class="hide-visually" id="numLabelDecrease">decrease</span>
+														  </button>
+														  <div class="ui-num-ud_input">
+															<input readonly="readonly" tabindex="-1" type="text" id="paxAdultInput" value="3">
+														  </div>
+														  <button class="ui-num-ud_button plus" tabindex="0" aria-labelledby="paxAdultInput_label numLabelIncrease">
+															<span class="hide-visually" id="numLabelIncrease">increase</span>
+														  </button>
+														</div>
+													  </ibe-minus-plus>
+													</div>
+												  </div>
+												  <div class="typology_option_item">
+													<label class="typology_option_label" for="paxChildrenInput" id="paxChildrenInput_label"> Children <span class="label-small">(2-11 years)</span>
+													</label>
+													<div class="typology_option_select">
+													  <ibe-minus-plus id="paxChildrenInput" labelledby="paxChildrenInput_label">
+														<div class="ui-num-ud">
+														  <button class="ui-num-ud_button minus disabled" tabindex="-1" aria-labelledby="paxChildrenInput_label numLabelDecrease">
+															<span class="hide-visually" id="numLabelDecrease">decrease</span>
+														  </button>
+														  <div class="ui-num-ud_input">
+															<input readonly="readonly" tabindex="-1" type="text" id="paxChildrenInput" value="1">
+														  </div>
+														  <button class="ui-num-ud_button plus" tabindex="0" aria-labelledby="paxChildrenInput_label numLabelIncrease">
+															<span class="hide-visually" id="numLabelIncrease">increase</span>
+														  </button>
+														</div>
+													  </ibe-minus-plus>
+													</div>
+												  </div>
+												  <div class="typology_option_item">
+													<label class="typology_option_label" for="paxInfantInput" id="paxInfantInput_label"> Infant <span class="label-small">(&lt;2 years)</span>
+													  <button class="ui-tooltip_info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Please note, by selecting the below you must seat your infant in your lap. Should you choose to purchase a seat for your infant, please contact our call center at (852) 3902 0288.">
+														<span class="hide-visually">Infant information</span>
+													  </button>
+													</label>
+													<div class="typology_option_select">
+													  <ibe-minus-plus id="paxInfantInput" labelledby="paxInfantInput_label">
+														<div class="ui-num-ud">
+														  <button class="ui-num-ud_button minus" tabindex="0" aria-labelledby="paxInfantInput_label numLabelDecrease">
+															<span class="hide-visually" id="numLabelDecrease">decrease</span>
+														  </button>
+														  <div class="ui-num-ud_input">
+															<input readonly="readonly" tabindex="-1" type="text" id="paxInfantInput" value="1">
+														  </div>
+														  <button class="ui-num-ud_button plus disabled" tabindex="-1" aria-labelledby="paxInfantInput_label numLabelIncrease">
+															<span class="hide-visually" id="numLabelIncrease">increase</span>
+														  </button>
+														</div>
+													  </ibe-minus-plus>
+													</div>
+												  </div>
+												</fieldset>
+												<div class="typology_option_button">
+												  <button class="button">Done</button>
+												</div>
+											  </div>
+											</div>
+										  </div>
+										</div>
+									  
+									  <div class="searchflight_button">
+										<<button id="btnf" class="btn float-right mt-2 mb-3 cancelBtn" style="width:128px; height:35px; color:white; background-color:#6e2d91; border-radius: 0.5em;margin-top:20px;"> Find flights </button>
+									  </div>
+									</div>
+								  </form>
+								</div>
+							  </flight-search>
+							</ibe-tab>
+						  </ibe-tab-panel>
+						</div>
+					  </div>
+					</div>
+				  </div>
+                </div>
+                <!---->
+              </div>
+              <div class="combined_summary_bar-right">
+                <div class="summary">
+                  <div class="summary_header">
+                    <ul class="summary_total_list collapsed" data-target="#collapseSummary" data-toggle="collapse" aria-expanded="false" aria-controls="collapseExample">
+                      <li>
+                        <span class="label">Total Cost</span>
+                        <button class="summary_trigger collapsed" aria-expanded="true">
+                          <span class="price"> USD 10,337 </span>
+                        </button>
+                        <!---->
+                      </li>
+                    </ul>
+                  </div>
+                  <!---->
+                  <div class="summary_collapse ng-star-inserted collapse" id="collapseSummary" style="">
+                    <div class="summary_collapse_wrap">
+						<div class="group_combo grid padding15">
+							<div class=" col-3 col-lg-3" style="padding-left:0">
+								<span class="summary_label">Current PNR: </span>&nbsp;&nbsp;&nbsp;&nbsp;
+								<span class="summary_label" style="color:#56506f">WOOOEJ</span>
+							</div>
+							<div class=" col-3 col-lg-3">
+								<span class="summary_label">New PNR: </span>&nbsp;&nbsp;&nbsp;&nbsp;
+								<span class="summary_label" style="color:red">Pending</span>
+							</div>							
+							
+						<div>
+							<p>Note: A new PNR will be created once you have completed the flight change successfully.</p>						
+						</div>
+						</div>
+						<div class="group_combo grid padding15">							
+							<div class=" col-9 col-lg-9" style="padding-left:0">
+							<div><span class="summary_label">Selected passenger(s) for the new flight</span></div>								
+							<div class=" col-3 col-lg-3">
+								<ul><li>1.&nbsp;&nbsp;SINYEE WONG MS.</li><li>2.&nbsp;&nbsp;SINYEE WONG MS.</li><li>3.&nbsp;&nbsp;SINYEE WONG MS.</li></ul>
+							</div>
+							<div class=" col-3 col-lg-3">
+								<ul><li>4.&nbsp;&nbsp;SINYEE WONG MS.</li><li>5.&nbsp;&nbsp;SINYEE WONG MS.</li><li>6.&nbsp;&nbsp;SINYEE WONG MS.</li></ul>
+							</div>
+							<div class=" col-3 col-lg-3">
+								<ul><li>7.&nbsp;&nbsp;SINYEE WONG MS.</li><li>8.&nbsp;&nbsp;SINYEE WONG MS.</li><li>9.&nbsp;&nbsp;SINYEE WONG MS.</li></ul>
+							</div>
+							<div class=" col-3 col-lg-3">
+								<ul><li>&nbsp;</li><li>&nbsp;</li><li><a href="">View more...</a></li></ul>
+							</div>
+							</div>
+							<div class=" col-3 col-lg-3">
+								<div class="summary_label" style="text-align:center;">Total Group Size</div>
+								<div class="summary_typology_item" style="text-align:center;padding-top:15px "><span style="border:1px solid #6e2d91;padding:12px"> 16 PAX </span></div>
+							</div>							
+						</div>
+                      <div class="summary_body">
+                        <!---->
+                        <!---->
+                        <ibe-itinerary class="summary_journey departure ng-star-inserted">
+                          <!---->
+                          <!---->
+                          <h3 class="summary_label ng-star-inserted">Departure </h3>
+                          <!---->
+                          <div class="summary_route">
+                            <div class="summary_airport">
+                              <p class="summary_airport-city"> Nagoya </p>
+                              <p class="summary_airport-name">
+                                <!---->
+                              </p>
+                              <p class="summary_airport-code"> NGO | <strong>18:55</strong>
+                              </p>
+                            </div>
+                            <span class="summary_route_icon departure">
+                              <span class="hide-visually">to</span>
+                            </span>
+                            <div class="summary_airport">
+                              <p class="summary_airport-city"> Taichung </p>
+                              <p class="summary_airport-name">
+                                <!---->
+                              </p>
+                              <p class="summary_airport-code"> RMQ | <strong>09:20</strong>
+                              </p>
+                            </div>
+                          </div>
+                          <p class="summary_date"> Thu, 11 Oct 2018
+                            <!----><span class="extra-day ng-star-inserted">(+1 day)</span>
+                          </p>
+                          <!---->
+                          <div class="summary_flight ng-star-inserted">
+                            <div class="flight-number">
+                              <span class="flight-number_label" id="summaryFlightsLabel_departure"> Flight: </span>
+                              <ul class="flight-number_list" aria-labelledby="summaryFlightsLabel_departure">
+                                <!---->
+                                <li class="ng-star-inserted">UO 591</li>
+                                <li class="ng-star-inserted">UO 192</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <!---->
+                        </ibe-itinerary>
+                        <!---->
+                        <!---->
+                        <ibe-itinerary class="summary_journey return ng-star-inserted">
+                          <!---->
+                          <!---->
+                          <h3 class="summary_label ng-star-inserted">Returning </h3>
+                          <!---->
+                          <div class="summary_route">
+                            <div class="summary_airport">
+                              <p class="summary_airport-city"> Taichung </p>
+                              <p class="summary_airport-name">
+                                <!---->
+                              </p>
+                              <p class="summary_airport-code"> RMQ | <strong>10:40</strong>
+                              </p>
+                            </div>
+                            <span class="summary_route_icon return">
+                              <span class="hide-visually">to</span>
+                            </span>
+                            <div class="summary_airport">
+                              <p class="summary_airport-city"> Nagoya </p>
+                              <p class="summary_airport-name">
+                                <!---->
+                              </p>
+                              <p class="summary_airport-code"> NGO | <strong>14:30</strong>
+                              </p>
+                            </div>
+                          </div>
+                          <p class="summary_date"> Tue, 13 Nov 2018
+                            <!----><span class="extra-day ng-star-inserted">(+1 day)</span>
+                          </p>
+                          <!---->
+                          <div class="summary_flight ng-star-inserted">
+                            <div class="flight-number">
+                              <span class="flight-number_label" id="summaryFlightsLabel_return"> Flight: </span>
+                              <ul class="flight-number_list" aria-labelledby="summaryFlightsLabel_return">
+                                <!---->
+                                <li class="ng-star-inserted">UO 193</li>
+                                <li class="ng-star-inserted">UO 610</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <!---->
+                        </ibe-itinerary>
+                        <!---->
+                        <!---->
+                        <flight-payment-summary class="summary_typology ng-star-inserted">
+                          
+                        </flight-payment-summary>
+                      </div>
+                      <div class="group_combo grid">
+                        <div class=" col-9 col-lg-9">
+                          <div class="context-table">
+                            <h3 class="summary_label ng-star-inserted">Group Combo Fares</h3>
+                            <table class="table-responsive">
+                              <thead>
+                                <tr valign="center">
+                                  <th align="center" scope="col" rowspan="1" colspan="1"></th>
+                                  <th align="center" scope="col" rowspan="1" colspan="1"></th>
+                                  <th align="center" scope="col" rowspan="1" colspan="1">Per Pax (USD)</th>
+                                  <th align="center" scope="col" rowspan="1" colspan="1">No. or Pax</th>
+                                  <th align="center" scope="col" rowspan="1" colspan="1">Total (USD)</th>
+                                </tr>
+                              </thead>
+                              <tbody class="upperline-tb">
+                                <tr class="upperline" valign="center">
+                                  <td scope="row" align="center" rowspan="1" colspan="1" class="td-rowspan ">Fare 1</td>
+                                  <td data-th="" rowspan="1" colspan="1" align="left">Abult</td>
+                                  <td data-th="Fun" rowspan="1" colspan="1" align="right">$ 615.40</td>
+                                  <td data-th="No. or Pax" align="left" rowspan="1" colspan="1">x   4</td>
+                                  <td data-th="U-Biz" rowspan="1" colspan="1" align="center">$ 2461.60</td>
+                                </tr>
+                                <tr class="upperline" valign="center">
+                                  <td scope="row" align="center" rowspan="1" colspan="1" class="td-rowspan ">Fare 2</td>
+                                  <td data-th="" rowspan="1" colspan="1" align="left">Abult</td>
+                                  <td data-th="Fun" rowspan="1" colspan="1" align="right">$ 729.40</td>
+                                  <td data-th="Fun+" rowspan="1" colspan="1" align="left">x   9</td>
+                                  <td data-th="U-Biz" rowspan="1" colspan="1" align="center">$ 6564.60</td>
+                                </tr>
+                                <tr class="upperline" valign="center">
+                                  <th scope="row" align="center" rowspan="1" colspan="1" class="td-rowspan "></th>
+                                  <td data-th="" rowspan="1" colspan="1" align="left">Child</td>
+                                  <td data-th="Fun" rowspan="1" colspan="1" align="right">$ 583.40</td>
+                                  <td data-th="Fun+" rowspan="1" colspan="1" align="left">x   2</td>
+                                  <td data-th="U-Biz" rowspan="1" colspan="1" align="center">$1,166.80</td>
+                                </tr>
+                                <tr class="upperline" valign="center">
+                                  <th scope="row" align="center" rowspan="1" colspan="1" class="td-rowspan "></th>
+                                  <td data-th="" rowspan="1" colspan="1" align="left">Infant</td>
+                                  <td data-th="Fun" rowspan="1" colspan="1" align="right">$ 144.00</td>
+                                  <td data-th="Fun+" rowspan="1" colspan="1" align="left">x   1</td>
+                                  <td data-th="U-Biz" rowspan="1" colspan="1" align="center">$ 144.00</td>
+                                </tr>
+                                <tr class="upperline" valign="center">
+                                  <th scope="row" align="center" rowspan="1" colspan="1" class="td-rowspan "></th>
+                                  <td data-th="" rowspan="1" colspan="1" align="left"></td>
+                                  <td data-th="Fun" rowspan="1" colspan="1" align="center"></td>
+                                  <td data-th="Fun+" rowspan="1" colspan="1" align="left">&nbsp;<strong>   16</strong></td>
+                                  <td data-th="U-Biz" rowspan="1" colspan="1" align="center" class="fare3-label" style="font-size:inherit;">$ 10,337.00</td>
+                                </tr>
+								<tr class="upperline" valign="center">
+                                  <td scope="row" align="right" rowspan="1" colspan="4" class="td-rowspan " class="td-rowspan " style="    text-align: right !important;">
+									<p> 
+									  Average Price Per Pax with infant
+									</p>
+								  </td>
+                                  <td data-th="U-Biz" rowspan="1" colspan="1" align="center">$ 646.06</td>
+                                </tr>
+								<tr class="upperline" valign="center">
+                                  <td scope="row" align="right" rowspan="1" colspan="4" class="td-rowspan " style="    text-align: right !important;">
+									<p> 
+									  Average Price Per Pax without infant
+									</p>
+								  </td>
+                                  <td data-th="U-Biz" rowspan="1" colspan="1" align="center">$ 689.13</td>
+                                </tr>
+								<tr class="upperline" valign="center">
+                                  <td scope="row" align="right" rowspan="1" colspan="4" class="td-rowspan " class="td-rowspan " style="    text-align: right !important;">
+									<p> 
+									  Previous total booking amount for above passenger(s) 
+									</p>
+								  </td>
+                                  <td data-th="U-Biz" rowspan="1" colspan="1" align="center">$ 9,800.00</td>
+                                </tr>
+                              </tbody>
+                            </table>
+							</div>
+                        </div>
+                        <div class="schedule col-9 col-lg-9">
+                          <div class="context-table">
+                          <h3 class="summary_label ng-star-inserted">Payment Schedule</h3>
+                            <table class="col-6 col-lg-6">
+                              <caption class="hide-visually">Fare categories</caption>
+                              <thead>
+                                <tr valign="center">
+                                  <th align="center" scope="col" rowspan="1" colspan="1"></th>
+                                  <th align="right" scope="col" rowspan="1" colspan="1">Amount due (USD)</th>
+                                </tr>
+                              </thead>
+                              <tbody class="upperline-tb">
+                                <tr class="upperline" valign="center">
+                                  <td data-th="No. or Pax" align="left" rowspan="1" colspan="1">Booking deposit<br><span class="reds"> By sat, 01 Sep 2018 (13:00)</span></td>
+                                  <td data-th="U-Biz" rowspan="1" colspan="1" align="right"><br>USD 100</td>
+                                </tr>
+                                <tr class="upperline" valign="center">
+                                  <td data-th="Fun+" rowspan="1" colspan="1" align="left">Balance payment<br><span class="reds"> By frl, 02 Sep 2018 (13:00)</span></td>
+                                  <td data-th="U-Biz" rowspan="1" colspan="1" align="right"><br>USD 275</td>
+                                </tr>
+								<tr class="upperline" valign="center">
+                                  <td data-th="Fun+" rowspan="1" colspan="1" align="left">Final payment<br><span class="reds"> By frl, 28 Sep 2018 (13:00)</span></td>
+                                  <td data-th="U-Biz" rowspan="1" colspan="1" align="right"><br>USD 9,962</td>
+                                </tr>
+                                <tr class="upperline" valign="center">
+                                  <td data-th="Fun+" rowspan="1" colspan="1" align="left"></td>
+                                  <td data-th="U-Biz" rowspan="1" colspan="1" align="right"><br><strong> USD10,337</strong></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="summary_details">
+                        <button class="summary_details_trigger" data-target="#collapseDetals" data-toggle="collapse" aria-expanded="false" aria-controls="collapseDetals">
+                          <span class="label">More Details</span>
+                        </button>
+                        <div class="summary_details_price collapse " id="collapseDetals">
+                          <div class="summary_details_content">
+                            <!---->
+                            <!---->
+							
+                            <table class="tblnocenter table-responsive" style="clear:both; width: 80%;">
+                              <thead>
+                                <tr valign="center">
+                                  <th align="left" scope="col" rowspan="1" colspan="1" style="padding-left:10px!important">Departing</th>
+                                  <th align="left" scope="col" rowspan="1" colspan="1"> USD <span class="price"> 1352,93</span> </th>
+                                  <th align="left" scope="col" rowspan="1" colspan="1">Returning</th>
+                                  <th align="left" scope="col" rowspan="1" colspan="1">USD <span class="price"> 719,27</span> </th>
+                                  <th align="right" scope="col" rowspan="1" colspan="1"></th>
+                                </tr>
+                              </thead>
+                              <tbody class="upperline-tb adult-1">
+                                <tr class="upperline" valign="center">
+                                  <th data-th="Amount Due" rowspan="1" colspan="1" align="left" style="font-weight:bold;text-decoration:underline">Adult</th>
+                                  <th data-th="Amount Paid" rowspan="1" colspan="1" align="right"></th>
+                                  <th data-th="Payment ID" rowspan="1" colspan="1" align="left"></th>
+                                  <th data-th="FOP" rowspan="1" colspan="1" align="right"></th>
+                                  <th data-th="Status" rowspan="1" colspan="1" align="left"></th>
+                                </tr>
+                                <tr class="upperline" valign="center">
+                                  <td data-th="Amount Due" rowspan="1" colspan="1" align="left" class="reds">PNR-WOOOJE</td>
+                                  <td data-th="Amount Paid" rowspan="1" colspan="1" align="right">311,81</td>
+                                  <td data-th="Amount Due" rowspan="1" colspan="1" align="left" class="reds">PNR-WOOOJE</td>
+                                  <td data-th="FOP" rowspan="1" colspan="1" align="right">137,59</td>
+								  <th data-th="Status" rowspan="1" colspan="1" align="left"></th>
+                                  
+                                </tr>
+                                <tr class="upperline" valign="center">
+                                  <td data-th="Payment Expiry" rowspan="1" colspan="1" align="left">Fuel Surcharge</td>
+                                  <td data-th="Time Remains" align="right" rowspan="1" colspan="1">3</td>
+                                  <td data-th="Min. Payment" rowspan="1" colspan="1" align="left">JP Passenger Security Service Charge</td>
+                                  <td data-th="Amount Due" rowspan="1" colspan="1" align="right">6</td>
+								  <th data-th="Status" rowspan="1" colspan="1" align="left"></th>
+                                </tr>
+                                <tr class="upperline" valign="center">
+                                  <td data-th="Payment Expiry" rowspan="1" colspan="1" align="left">KH Passenger Service Charge</td>
+                                  <td data-th="Time Remains" align="right" rowspan="1" colspan="1">25</td>
+                                  <td data-th="Min. Payment" rowspan="1" colspan="1" align="left">JP Passenger Service Facilities Charge</td>
+                                  <td data-th="Amount Due" rowspan="1" colspan="1" align="right">28</td>
+								  <th data-th="Status" rowspan="1" colspan="1" align="left"></th>
+                                </tr>
+                                <tr class="upperline" valign="center">
+                                  <td data-th="Payment Expiry" rowspan="1" colspan="1" align="left">HKG Security Chargee</td>
+                                  <td data-th="Time Remains" align="right" rowspan="1" colspan="1">5</td>
+                                  <td data-th="Min. Payment" rowspan="1" colspan="1" align="left">Airport Construction Fee</td>
+                                  <td data-th="Amount Due" rowspan="1" colspan="1" align="right">9,5</td>
+								  <th data-th="Status" rowspan="1" colspan="1" align="left"></th>
+                                </tr>
+                                <tr class="upperline" valign="center">
+                                  <td data-th="Payment Expiry" rowspan="1" colspan="1" align="left">Airport Construction Fee</td>
+                                  <td data-th="Time Remains" align="right" rowspan="1" colspan="1">9,5</td>
+                                  <td data-th="Min. Payment" rowspan="1" colspan="1" align="left">HK Air Passenger Departure Tax</td>
+                                  <td data-th="Amount Due" rowspan="1" colspan="1" align="right">16</td>
+								  <th data-th="Status" rowspan="1" colspan="1" align="left"></th>
+                                </tr>
+                                <tr class="upperline" valign="center">
+                                  <td data-th="Payment Expiry" rowspan="1" colspan="1" align="left">HK Air Passenger Departure Tax</td>
+                                  <td data-th="Time Remains" align="right" rowspan="1" colspan="1">16</td>
+                                  <td data-th="Min. Payment" rowspan="1" colspan="1" align="left">HKG Security Charge</td>
+                                  <td data-th="Amount Due" rowspan="1" colspan="1" align="right">6</td>
+								  <th data-th="Status" rowspan="1" colspan="1" align="left"></th>
+                                </tr>
+                                <tr class="upperline" valign="center">
+                                  <td data-th="Payment Expiry" rowspan="1" colspan="1" align="left">HKG Security Charge</td>
+                                  <td data-th="Time Remains" align="right" rowspan="1" colspan="1">6</td>
+                                  <td data-th="Min. Payment" rowspan="1" colspan="1" align="left">U-Connect Fee</td>
+                                  <td data-th="Amount Due" rowspan="1" colspan="1" align="right">15</td>
+								  <th data-th="Status" rowspan="1" colspan="1" align="left"></th>
+                                </tr>
+                                <tr class="upperline" valign="center">
+                                  <td data-th="Payment Expiry" rowspan="1" colspan="1" align="left">U-Connect Fee</td>
+                                  <td data-th="Time Remains" align="right" rowspan="1" colspan="1">15</td>
+                                  <td data-th="Min. Payment" rowspan="1" colspan="1" align="left">Fuel Surcharge</td>
+                                  <td data-th="Amount Due" rowspan="1" colspan="1" align="right">3</td>
+								  <td data-th="Status" rowspan="1" colspan="1" align="right" class="reds">PNR-WOOOJE</td>
+                                </tr>
+                                <tr class="upperline" valign="center">
+                                  <td data-th="Payment Expiry" rowspan="1" colspan="1" align="left">Fuel Surcharge</td>
+                                  <td data-th="Time Remains" align="right" rowspan="1" colspan="1">3</td>
+                                  <td data-th="Min. Payment" rowspan="1" colspan="1" align="left"></td>
+                                  <td data-th="Amount Due" rowspan="1" colspan="1" align="right"></td>
+								  <td data-th="Status" rowspan="1" colspan="1" align="right" class="valign-bottom">Total Per Adult
+                                  </td>
+                                </tr>
+                                <tr class="upperline" valign="center">
+                                  <td data-th="Payment Expiry" rowspan="1" colspan="1" align="left"></td>
+                                  <td data-th="Time Remains" align="right" rowspan="1" colspan="1"><strong class="sborder">394,31</strong></td>
+                                  <td data-th="Min. Payment" rowspan="1" colspan="1" align="left"></td>
+                                  <td data-th="Amount Due" rowspan="1" colspan="1" align="right"><strong class="sborder">221,09</strong></td>
+								  <td data-th="Status" rowspan="1" colspan="1" align="right" class="valign-bottom"><strong class="sbagr">615,40</strong>
+                                  </td>
+                                </tr>
+                              </tbody>
+                              <tbody class="upperline-tb adult-1">
+                                <tr class="upperline" valign="center">
+                                  <th data-th="Amount Due" rowspan="1" colspan="1" align="left" style="font-weight:bold;text-decoration:underline">Adult</th>
+                                  <th data-th="Amount Paid" rowspan="1" colspan="1" align="right"></th>
+                                  <th data-th="Payment ID" rowspan="1" colspan="1" align="left"></th>
+                                  <th data-th="FOP" rowspan="1" colspan="1" align="right"></th>
+                                  <th data-th="Status" rowspan="1" colspan="1" align="left"></th>
+                                </tr>
+                                <tr class="upperline" valign="center">
+                                  <td data-th="Amount Due" rowspan="1" colspan="1" align="left" class="reds">PNR2-JHJE3U</td>
+                                  <td data-th="Amount Paid" rowspan="1" colspan="1" align="right">311,81</td>
+                                  <td data-th="Amount Due" rowspan="1" colspan="1" align="left" class="reds">PNR2-JHJE3U</td>
+                                  <td data-th="FOP" rowspan="1" colspan="1" align="right">137,59</td>
+								  <th data-th="Status" rowspan="1" colspan="1" align="left"></th>
+                                  
+                                </tr>
+                                <tr class="upperline" valign="center">
+                                  <td data-th="Payment Expiry" rowspan="1" colspan="1" align="left">Fuel Surcharge</td>
+                                  <td data-th="Time Remains" align="right" rowspan="1" colspan="1">3</td>
+                                  <td data-th="Min. Payment" rowspan="1" colspan="1" align="left">JP Passenger Security Service Charge</td>
+                                  <td data-th="Amount Due" rowspan="1" colspan="1" align="right">6</td>
+								  <th data-th="Status" rowspan="1" colspan="1" align="left"></th>
+                                </tr>
+                                <tr class="upperline" valign="center">
+                                  <td data-th="Payment Expiry" rowspan="1" colspan="1" align="left">KH Passenger Service Charge</td>
+                                  <td data-th="Time Remains" align="right" rowspan="1" colspan="1">25</td>
+                                  <td data-th="Min. Payment" rowspan="1" colspan="1" align="left">JP Passenger Service Facilities Charge</td>
+                                  <td data-th="Amount Due" rowspan="1" colspan="1" align="right">28</td>
+								  <th data-th="Status" rowspan="1" colspan="1" align="left"></th>
+                                </tr>
+                                <tr class="upperline" valign="center">
+                                  <td data-th="Payment Expiry" rowspan="1" colspan="1" align="left">HKG Security Chargee</td>
+                                  <td data-th="Time Remains" align="right" rowspan="1" colspan="1">5</td>
+                                  <td data-th="Min. Payment" rowspan="1" colspan="1" align="left">Airport Construction Fee</td>
+                                  <td data-th="Amount Due" rowspan="1" colspan="1" align="right">9,5</td>
+								  <th data-th="Status" rowspan="1" colspan="1" align="left"></th>
+                                </tr>
+                                <tr class="upperline" valign="center">
+                                  <td data-th="Payment Expiry" rowspan="1" colspan="1" align="left">Airport Construction Fee</td>
+                                  <td data-th="Time Remains" align="right" rowspan="1" colspan="1">9,5</td>
+                                  <td data-th="Min. Payment" rowspan="1" colspan="1" align="left">HK Air Passenger Departure Tax</td>
+                                  <td data-th="Amount Due" rowspan="1" colspan="1" align="right">16</td>
+								  <th data-th="Status" rowspan="1" colspan="1" align="left"></th>
+                                </tr>
+                                <tr class="upperline" valign="center">
+                                  <td data-th="Payment Expiry" rowspan="1" colspan="1" align="left">HK Air Passenger Departure Tax</td>
+                                  <td data-th="Time Remains" align="right" rowspan="1" colspan="1">16</td>
+                                  <td data-th="Min. Payment" rowspan="1" colspan="1" align="left">HKG Security Charge</td>
+                                  <td data-th="Amount Due" rowspan="1" colspan="1" align="right">6</td>
+								  <th data-th="Status" rowspan="1" colspan="1" align="left"></th>
+                                </tr>
+                                <tr class="upperline" valign="center">
+                                  <td data-th="Payment Expiry" rowspan="1" colspan="1" align="left">HKG Security Charge</td>
+                                  <td data-th="Time Remains" align="right" rowspan="1" colspan="1">6</td>
+                                  <td data-th="Min. Payment" rowspan="1" colspan="1" align="left">U-Connect Fee</td>
+                                  <td data-th="Amount Due" rowspan="1" colspan="1" align="right">15</td>
+								  <th data-th="Status" rowspan="1" colspan="1" align="left"></th>
+                                </tr>
+                                <tr class="upperline" valign="center">
+                                  <td data-th="Payment Expiry" rowspan="1" colspan="1" align="left">U-Connect Fee</td>
+                                  <td data-th="Time Remains" align="right" rowspan="1" colspan="1">15</td>
+                                  <td data-th="Min. Payment" rowspan="1" colspan="1" align="left">Fuel Surcharge</td>
+                                  <td data-th="Amount Due" rowspan="1" colspan="1" align="right">3</td>
+								  <td data-th="Status" rowspan="1" colspan="1" align="right" class="reds">PNR2-JHJE3U</td>
+                                </tr>
+                                <tr class="upperline" valign="center">
+                                  <td data-th="Payment Expiry" rowspan="1" colspan="1" align="left">Fuel Surcharge</td>
+                                  <td data-th="Time Remains" align="right" rowspan="1" colspan="1">3</td>
+                                  <td data-th="Min. Payment" rowspan="1" colspan="1" align="left"></td>
+                                  <td data-th="Amount Due" rowspan="1" colspan="1" align="right"></td>
+								  <td data-th="Status" rowspan="1" colspan="1" align="right" class="valign-bottom">Total Per Adult
+                                  </td>
+                                </tr>
+                                                                <tr class="upperline" valign="center">
+                                  <td data-th="Payment Expiry" rowspan="1" colspan="1" align="left"></td>
+                                  <td data-th="Time Remains" align="right" rowspan="1" colspan="1"><strong class="sborder">394,31</strong></td>
+                                  <td data-th="Min. Payment" rowspan="1" colspan="1" align="left"></td>
+                                  <td data-th="Amount Due" rowspan="1" colspan="1" align="right"><strong class="sborder">221,09</strong></td>
+								  <td data-th="Status" rowspan="1" colspan="1" align="right" class="valign-bottom"><strong class="sbagr">615,40</strong>
+                                  </td>
+                                </tr>
+                              </tbody><tbody class="upperline-tb adult-1">
+                                <tr class="upperline" valign="center">
+                                  <th data-th="Amount Due" rowspan="1" colspan="1" align="left" style="font-weight:bold;text-decoration:underline">Child</th>
+                                  <th data-th="Amount Paid" rowspan="1" colspan="1" align="right"></th>
+                                  <th data-th="Payment ID" rowspan="1" colspan="1" align="left"></th>
+                                  <th data-th="FOP" rowspan="1" colspan="1" align="right"></th>
+                                  <th data-th="Status" rowspan="1" colspan="1" align="left"></th>
+                                </tr>
+                                <tr class="upperline" valign="center">
+                                  <td data-th="Amount Due" rowspan="1" colspan="1" align="left" class="reds">PNR-WOOOJE</td>
+                                  <td data-th="Amount Paid" rowspan="1" colspan="1" align="right">311,81</td>
+                                  <td data-th="Amount Due" rowspan="1" colspan="1" align="left" class="reds">PNR-WOOOJE</td>
+                                  <td data-th="FOP" rowspan="1" colspan="1" align="right">137,59</td>
+								  <th data-th="Status" rowspan="1" colspan="1" align="left"></th>
+                                  
+                                </tr>
+                                <tr class="upperline" valign="center">
+                                  <td data-th="Payment Expiry" rowspan="1" colspan="1" align="left">Fuel Surcharge</td>
+                                  <td data-th="Time Remains" align="right" rowspan="1" colspan="1">3</td>
+                                  <td data-th="Min. Payment" rowspan="1" colspan="1" align="left">JP Passenger Security Service Charge</td>
+                                  <td data-th="Amount Due" rowspan="1" colspan="1" align="right">6</td>
+								  <th data-th="Status" rowspan="1" colspan="1" align="left"></th>
+                                </tr>
+                                <tr class="upperline" valign="center">
+                                  <td data-th="Payment Expiry" rowspan="1" colspan="1" align="left">KH Passenger Service Charge</td>
+                                  <td data-th="Time Remains" align="right" rowspan="1" colspan="1">25</td>
+                                  <td data-th="Min. Payment" rowspan="1" colspan="1" align="left">JP Passenger Service Facilities Charge</td>
+                                  <td data-th="Amount Due" rowspan="1" colspan="1" align="right">28</td>
+								  <th data-th="Status" rowspan="1" colspan="1" align="left"></th>
+                                </tr>
+                                <tr class="upperline" valign="center">
+                                  <td data-th="Payment Expiry" rowspan="1" colspan="1" align="left">HKG Security Chargee</td>
+                                  <td data-th="Time Remains" align="right" rowspan="1" colspan="1">5</td>
+                                  <td data-th="Min. Payment" rowspan="1" colspan="1" align="left">Airport Construction Fee</td>
+                                  <td data-th="Amount Due" rowspan="1" colspan="1" align="right">9,5</td>
+								  <th data-th="Status" rowspan="1" colspan="1" align="left"></th>
+                                </tr>
+                                <tr class="upperline" valign="center">
+                                  <td data-th="Payment Expiry" rowspan="1" colspan="1" align="left">Airport Construction Fee</td>
+                                  <td data-th="Time Remains" align="right" rowspan="1" colspan="1">9,5</td>
+                                  <td data-th="Min. Payment" rowspan="1" colspan="1" align="left">HK Air Passenger Departure Tax</td>
+                                  <td data-th="Amount Due" rowspan="1" colspan="1" align="right">16</td>
+								  <th data-th="Status" rowspan="1" colspan="1" align="left"></th>
+                                </tr>
+                                <tr class="upperline" valign="center">
+                                  <td data-th="Payment Expiry" rowspan="1" colspan="1" align="left">HK Air Passenger Departure Tax</td>
+                                  <td data-th="Time Remains" align="right" rowspan="1" colspan="1">16</td>
+                                  <td data-th="Min. Payment" rowspan="1" colspan="1" align="left">HKG Security Charge</td>
+                                  <td data-th="Amount Due" rowspan="1" colspan="1" align="right">6</td>
+								  <th data-th="Status" rowspan="1" colspan="1" align="left"></th>
+                                </tr>
+                                <tr class="upperline" valign="center">
+                                  <td data-th="Payment Expiry" rowspan="1" colspan="1" align="left">HKG Security Charge</td>
+                                  <td data-th="Time Remains" align="right" rowspan="1" colspan="1">6</td>
+                                  <td data-th="Min. Payment" rowspan="1" colspan="1" align="left">U-Connect Fee</td>
+                                  <td data-th="Amount Due" rowspan="1" colspan="1" align="right">15</td>
+								  <th data-th="Status" rowspan="1" colspan="1" align="left"></th>
+                                </tr>
+                                <tr class="upperline" valign="center">
+                                  <td data-th="Payment Expiry" rowspan="1" colspan="1" align="left">U-Connect Fee</td>
+                                  <td data-th="Time Remains" align="right" rowspan="1" colspan="1">15</td>
+                                  <td data-th="Min. Payment" rowspan="1" colspan="1" align="left">Fuel Surcharge</td>
+                                  <td data-th="Amount Due" rowspan="1" colspan="1" align="right">3</td>
+								  <td data-th="Status" rowspan="1" colspan="1" align="right" class="reds">PNR-WOOOJE</td>
+                                </tr>
+                                <tr class="upperline" valign="center">
+                                  <td data-th="Payment Expiry" rowspan="1" colspan="1" align="left">Fuel Surcharge</td>
+                                  <td data-th="Time Remains" align="right" rowspan="1" colspan="1">3</td>
+                                  <td data-th="Min. Payment" rowspan="1" colspan="1" align="left"></td>
+                                  <td data-th="Amount Due" rowspan="1" colspan="1" align="right"></td>
+								  <td data-th="Status" rowspan="1" colspan="1" align="right" class="valign-bottom">Total Per Child
+                                  </td>
+                                </tr>
+                                                                <tr class="upperline" valign="center">
+                                  <td data-th="Payment Expiry" rowspan="1" colspan="1" align="left"></td>
+                                  <td data-th="Time Remains" align="right" rowspan="1" colspan="1"><strong class="sborder">394,31</strong></td>
+                                  <td data-th="Min. Payment" rowspan="1" colspan="1" align="left"></td>
+                                  <td data-th="Amount Due" rowspan="1" colspan="1" align="right"><strong class="sborder">221,09</strong></td>
+								  <td data-th="Status" rowspan="1" colspan="1" align="right" class="valign-bottom"><strong class="sbagr">615,40</strong>
+                                  </td>
+                                </tr>
+                              </tbody><tbody class="upperline-tb adult-1">
+                                <tr class="upperline" valign="center">
+                                  <th data-th="Amount Due" rowspan="1" colspan="1" align="left" style="font-weight:bold;text-decoration:underline">Infant</th>
+                                  <th data-th="Amount Paid" rowspan="1" colspan="1" align="right"></th>
+                                  <th data-th="Payment ID" rowspan="1" colspan="1" align="left"></th>
+                                  <th data-th="FOP" rowspan="1" colspan="1" align="right"></th>
+                                  <th data-th="Status" rowspan="1" colspan="1" align="left">Total Per Infant</th>
+                                </tr>
+                                <tr class="upperline" valign="center">
+                                  <td data-th="Amount Due" rowspan="1" colspan="1" align="left" class="reds">PNR2-JHJE3U</td>
+                                  <td data-th="Amount Paid" rowspan="1" colspan="1" align="right"><strong class="sborder">211,31</strong></td>
+                                  <td data-th="Amount Due" rowspan="1" colspan="1" align="left" class="reds">PNR2-JHJE3U</td>
+                                  <td data-th="FOP" rowspan="1" colspan="1" align="right"><strong class="sborder">123,45</strong></td>
+								  <th data-th="Status" rowspan="1" colspan="1" align="left"><strong class="sbagr">144,40</strong></th>
+                                  
+                                </tr>
+                              </tbody>
+
+                            </table>
+                            <!---->
+                            <!---->
+                          </div></div>
+                        <!---->
+                      </div>
+                    </div>
+                  </div>
+                  <!---->
+                </div>
+              </div>
+            </div>
+            </div>
+        </div>
+      </div>
+	  <div class="container-wrap">
+        <div class="grid">
+			<p>Based on your search criteria, we have found the best deal for your group!</p>
+          <div class="col-12_lg-12">
+            <!---->
+            <schedule-tabs class="ng-star-inserted">
+              <!---->
+              <div class="tripselector_outbound ng-star-inserted">
+                <header class="flightselect_header">
+                  <div class="flightselect_header_content">
+                    <div class="flightselect_header_route">
+                      <h2 class="label"> Departure </h2>
+                      <h3 class="route"> Hong Kong - Osaka (Kansai) </h3>
+                    </div>
+                  </div>
+                </header>
+                <ibe-tab-panel>
+                  <!---->
+                  <div class="dayselector ng-star-inserted">
+                    <div class="weekselector">
+                      <div class=" dayselector_slider">
+                        <button class="slider_control_btn prev" data-slide="next">
+                          <span class="hide-visually">Departure day calendar click to see previous 3 days</span>
+                        </button>
+                        <ul class="slider">
+                          <!---->
+                          <li class="item slide disabled ng-star-inserted">
+                            <button class="slide-item">
+                              <span class="dayselector_date">
+                                <!---->
+                                <span class="week"> Saturday </span>
+                                <span class="date"> 29 Sep </span>
+                                <!---->
+                                <!----><span class="hide-visually ng-star-inserted">Not available date</span>
+                              </span>
+                              <span class="dayselector_price">
+                                <!---->
+                                <!---->
+                                <!---->
+                                <span class="price ng-star-inserted">No Flights</span>
+                                <!---->
+                              </span>
+                            </button>
+                          </li>
+                          <li class="slide disabled ng-star-inserted">
+                            <button class="slide-item">
+                              <span class="dayselector_date">
+                                <!---->
+                                <span class="week"> Sunday </span>
+                                <span class="date"> 30 Sep </span>
+                                <!---->
+                                <!----><span class="hide-visually ng-star-inserted">Not available date</span>
+                              </span>
+                              <span class="dayselector_price">
+                                <!---->
+                                <!---->
+                                <!---->
+                                <span class="price ng-star-inserted">No Flights</span>
+                                <!---->
+                              </span>
+                            </button>
+                          </li>
+                          <li class="slide disabled ng-star-inserted">
+                            <button class="slide-item">
+                              <span class="dayselector_date">
+                                <!---->
+                                <span class="week"> Monday </span>
+                                <span class="date"> 1 Oct </span>
+                                <!---->
+                                <!----><span class="hide-visually ng-star-inserted">Not available date</span>
+                              </span>
+                              <span class="dayselector_price">
+                                <!---->
+                                <!---->
+                                <!---->
+                                <span class="price ng-star-inserted">No Flights</span>
+                                <!---->
+                              </span>
+                            </button>
+                          </li>
+                          <li class="slide disabled ng-star-inserted">
+                            <button class="slide-item">
+                              <span class="dayselector_date">
+                                <!---->
+                                <span class="week"> Tuesday </span>
+                                <span class="date"> 2 Oct </span>
+                                <!---->
+                                <!----><span class="hide-visually ng-star-inserted">Not available date</span>
+                              </span>
+                              <span class="dayselector_price">
+                                <!---->
+                                <!---->
+                                <!---->
+                                <!---->
+                                <span class="price ng-star-inserted">Sold Out</span>
+                              </span>
+                            </button>
+                          </li>
+                          <li class="slide selected ng-star-inserted">
+                            <button class="slide-item">
+                              <span class="dayselector_date">
+                                <!----><span class="hide-visually ng-star-inserted">Selected date</span>
+                                <span class="week"> Wednesday </span>
+                                <span class="date"> 3 Oct </span>
+                                <!---->
+                                <!---->
+                              </span>
+                              <span class="dayselector_price">
+                                <!---->
+                                <!---->
+                                <span class="currency ng-star-inserted">AUD</span>
+                                <span class="price ng-star-inserted">287.82</span>
+                                <!---->
+                                <!---->
+                              </span>
+                            </button>
+                          </li>
+                          <li class="slide ng-star-inserted">
+                            <button class="slide-item">
+                              <span class="dayselector_date">
+                                <!---->
+                                <span class="week"> Thursday </span>
+                                <span class="date"> 4 Oct </span>
+                                <!----><span class="hide-visually ng-star-inserted">Press enter to select date</span>
+                                <!---->
+                              </span>
+                              <span class="dayselector_price">
+                                <!---->
+                                <!---->
+                                <span class="currency ng-star-inserted">AUD</span>
+                                <span class="price ng-star-inserted">204.94</span>
+                                <!---->
+                                <!---->
+                              </span>
+                            </button>
+                          </li>
+                          <li class="slide ng-star-inserted">
+                            <button class="slide-item">
+                              <span class="dayselector_date">
+                                <!---->
+                                <span class="week"> Friday </span>
+                                <span class="date"> 5 Oct </span>
+                                <!----><span class="hide-visually ng-star-inserted">Press enter to select date</span>
+                                <!---->
+                              </span>
+                              <span class="dayselector_price">
+                                <!---->
+                                <!---->
+                                <span class="currency ng-star-inserted">AUD</span>
+                                <span class="price ng-star-inserted">150.31</span>
+                                <!---->
+                                <!---->
+                              </span>
+                            </button>
+                          </li>
+                        </ul>
+                        <button class="slider_control_btn next" data-slide="prev">
+                          <span class="hide-visually">Departure day calendar click to see next 3 days</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!---->
+                  <div class="flights ng-star-inserted">
+                    <div class="flights_table" number-fares="3">
+                      <!---->
+                      <flight class="ng-tns-c0-30 flight ng-star-inserted">
+                        <!----><span class="tooltip-note ng-tns-c0-30 ng-star-inserted">Departure and return time are uncompatible.</span>
+                        <!---->
+                        <div class="rowFlight">
+                          <div class="colDeparture">
+                            <div class="route">
+                              <span class="time">07:05</span>
+                              <span class="airport-name">
+                                <span class="airport-city">Hong Kong International Airport</span>
+                                <!----><span class="airport-terminal ng-tns-c0-30 ng-star-inserted">Terminal 2</span>
+                                <span class="airport-code">(HKG)</span>
+                              </span>
+                            </div>
+                          </div>
+                          <div class="colDuration">
+                            <div class="icon"><span class="hide-visually">to</span></div>
+                            <div class="time">
+                              <span class="hide-visually">flight duration</span> 3:50h </div>
+                            <!---->
+                            <span class="connection ng-tns-c0-0 ng-star-inserted" data-toggle="modal" data-target="#exampleModal">
+                              <ibe-modal class="ng-tns-c0-0">
+                                <!----><button class="info-link ng-star-inserted">
+                                  <span class="hide-visually">flight connections:</span>
+                                  <span>1 Stop</span>
+                                </button>
+                                <!---->
+                              </ibe-modal>
+                            </span>
+                            <div class="flight-number">
+                              <!---->
+                              <!---->
+                              <ul class="flight-number_list ng-tns-c0-30 ng-star-inserted">
+                                <li class="ng-tns-c0-30">UO850</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="colReturn">
+                            <div class="route">
+                              <span class="time">11:55</span>
+                              <!---->
+                              <span class="airport-name">
+                                <span class="airport-city">Kansai International Airport</span>
+                                <!----><span class="airport-terminal ng-tns-c0-30 ng-star-inserted">Terminal 1</span>
+                                <span class="airport-code">(KIX)</span>
+                              </span>
+                            </div>
+                          </div>
+                          <div class="colPrices">
+                            <!---->
+                            <!---->
+                            <!---->
+                            <div class="ui-checkbox">
+                              <input name="mr" type="radio" id="genderMS1" class="ng-untouched ng-pristine ng-valid">
+								  <label for="genderMS1" class="price-rate ng-tns-c0-30 ng-star-inserted collapsed">
+								
+								  <span class="currency">USD</span>
+								  <span class="price"> 287.821 </span>                              
+								</label>
+                            </div>
+                            
+                            <!---->
+                          </div>
+                        </div>
+                        <!---->
+                        
+                      </flight>
+                      <!---->
+                      <flight class="ng-tns-c0-33 flight ng-star-inserted">
+                        <!----><span class="tooltip-note ng-tns-c0-33 ng-star-inserted">Departure and return time are uncompatible.</span>
+                        <!---->
+                        <div class="rowFlight">
+                          <div class="colDeparture">
+                            <div class="route">
+                              <span class="time">14:15</span>
+                              <span class="airport-name">
+                                <span class="airport-city">Hong Kong International Airport</span>
+                                <!----><span class="airport-terminal ng-tns-c0-33 ng-star-inserted">Terminal 2</span>
+                                <span class="airport-code">(HKG)</span>
+                              </span>
+                            </div>
+                          </div>
+                          <div class="colDuration">
+                            <div class="icon"><span class="hide-visually">to</span></div>
+                            <div class="time">
+                              <span class="hide-visually">flight duration</span> 3:50h </div>
+                            <!---->
+                            <span class="connection ng-tns-c0-0 ng-star-inserted" data-toggle="modal" data-target="#exampleModal">
+                              <ibe-modal class="ng-tns-c0-0">
+                                <!---->
+                                <button class="info-link ng-star-inserted">
+                                  <span class="hide-visually">flight connections:</span>
+                                  <span>1 Stop</span>
+                                </button>
+                                <!---->
+                              </ibe-modal>
+                            </span>
+                            <div class="flight-number">
+                              <!---->
+                              <!---->
+                              <ul class="flight-number_list ng-tns-c0-33 ng-star-inserted">
+                                <li class="ng-tns-c0-33">UO688</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="colReturn">
+                            <div class="route">
+                              <span class="time">19:05</span>
+                              <span class="extra-day ng-tns-c0-6 ng-star-inserted">+1 <span class="ng-tns-c0-6">Day</span>
+                              </span>
+                              <!---->
+                              <span class="airport-name">
+                                <span class="airport-city">Kansai International Airport</span>
+                                <!----><span class="airport-terminal ng-tns-c0-33 ng-star-inserted">Terminal 1</span>
+                                <span class="airport-code">(KIX)</span>
+                              </span>
+                            </div>
+                          </div>
+                          <div class="colPrices">
+                            <!---->
+                            <div class="ui-checkbox">
+                              <input name="mr" type="radio" id="genderMS2" class="ng-untouched ng-pristine ng-valid">
+                              
+                            <label for="genderMS2" class="collapse price-rate ng-tns-c0-33 ng-star-inserted collapsed">
+                              <!---->
+                              <span class="currency">USD</span>
+                              <span class="price">
+                                <span class="hide-visually">From</span> 287.82 <span class="ng-tns-c0-33" aria-hidden="true">+</span>
+                              </span>
+                              <span class="hide-visually">click to select your flight fare</span>
+                            </label>
+                            </div>
+                            <!---->
+                            <!---->
+                            <!---->
+                          </div>
+                        </div>
+                        <!---->
+                      </flight>
+                      <!---->
+                      <flight class="ng-tns-c0-33 flight ng-star-inserted">
+                        <!----><span class="tooltip-note ng-tns-c0-33 ng-star-inserted">Departure and return time are uncompatible.</span>
+                        <!---->
+                        <div class="rowFlight">
+                          <div class="colDeparture">
+                            <div class="route">
+                              <span class="time">14:15</span>
+                              <span class="airport-name">
+                                <span class="airport-city">Hong Kong International Airport</span>
+                                <!----><span class="airport-terminal ng-tns-c0-33 ng-star-inserted">Terminal 2</span>
+                                <span class="airport-code">(HKG)</span>
+                              </span>
+                            </div>
+                          </div>
+                          <div class="colDuration">
+                            <div class="icon"><span class="hide-visually">to</span></div>
+                            <div class="time">
+                              <span class="hide-visually">flight duration</span> 3:50h </div>
+                            <!---->
+                            <span class="connection ng-tns-c0-0 ng-star-inserted" data-toggle="modal" data-target="#exampleModal">
+                              <ibe-modal class="ng-tns-c0-0">
+                                <!---->
+                                <button class="info-link ng-star-inserted">
+                                  <span class="hide-visually">flight connections:</span>
+                                  <span>1 Stop</span>
+                                </button>
+                                <!---->
+                              </ibe-modal>
+                            </span>
+                            <div class="flight-number">
+                              <!---->
+                              <!---->
+                              <ul class="flight-number_list ng-tns-c0-33 ng-star-inserted">
+                                <li class="ng-tns-c0-33">UO688</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="colReturn">
+                            <div class="route">
+                              <span class="time">19:05</span>
+                              <span class="extra-day ng-tns-c0-6 ng-star-inserted">+1 <span class="ng-tns-c0-6">Day</span>
+                              </span>
+                              <!---->
+                              <span class="airport-name">
+                                <span class="airport-city">Kansai International Airport</span>
+                                <!----><span class="airport-terminal ng-tns-c0-33 ng-star-inserted">Terminal 1</span>
+                                <span class="airport-code">(KIX)</span>
+                              </span>
+                            </div>
+                          </div>
+                          <div class="colPrices">
+                            <!---->
+                            <div class="ui-checkbox">
+                              <input name="mr" type="radio" id="genderMS3" class="ng-untouched ng-pristine ng-valid">
+                              
+                            <label for="genderMS3" class="collapse price-rate ng-tns-c0-33 ng-star-inserted collapsed">
+                              <!---->
+                              <span class="currency">USD</span>
+                              <span class="price">
+                                <span class="hide-visually">From</span> 287.82 <span class="ng-tns-c0-33" aria-hidden="true">+</span>
+                              </span>
+                              <span class="hide-visually">click to select your flight fare</span>
+                            </label>
+                            </div>
+                            <!---->
+                            <!---->
+                            <!---->
+                          </div>
+                        </div>
+                        <!---->
+                      </flight>
+                      <!---->
+                    </div>
+                  </div>
+                </ibe-tab-panel>
+              </div>
+              <!---->
+              <div class="tripselector_inbound ng-star-inserted">
+                <header class="flightselect_header">
+                  <div class="flightselect_header_content">
+                    <div class="flightselect_header_route">
+                      <h1 class="label"> Return </h1>
+                      <h2 class="route"> Hiroshima - Hong Kong </h2>
+                    </div>
+                  </div>
+                </header>
+                <ibe-tab-panel>
+                  <!---->
+                  <!---->
+                  <!---->
+                  <!---->
+                  <div class="dayselector ng-star-inserted">
+                    <div class="weekselector">
+                      <div class="dayselector_slider">
+                        <button class="slider_control_btn prev">
+                          <span class="hide-visually">Return day calendar click to see previous 3 days</span>
+                        </button>
+                        <ul class="slider">
+                          <!---->
+                          <li class="slide ng-star-inserted">
+                            <button class="slide-item">
+                              <span class="dayselector_date">
+                                <!---->
+                                <span class="week"> Tuesday </span>
+                                <span class="date"> 27 Nov </span>
+                                <!----><span class="hide-visually ng-star-inserted">Press enter to select date</span>
+                                <!---->
+                              </span>
+                              <span class="dayselector_price">
+                                <!---->
+                                <!---->
+                                <span class="currency ng-star-inserted">AUD</span>
+                                <span class="price ng-star-inserted">150.31</span>
+                                <!---->
+                                <!---->
+                              </span>
+                            </button>
+                          </li>
+                          <li class="slide disabled ng-star-inserted">
+                            <button class="slide-item">
+                              <span class="dayselector_date">
+                                <!---->
+                                <span class="week"> Wednesday </span>
+                                <span class="date"> 28 Nov </span>
+                                <!---->
+                                <!----><span class="hide-visually ng-star-inserted">Not available date</span>
+                              </span>
+                              <span class="dayselector_price">
+                                <!---->
+                                <!---->
+                                <!---->
+                                <span class="price ng-star-inserted">No Flights</span>
+                                <!---->
+                              </span>
+                            </button>
+                          </li>
+                          <li class="slide ng-star-inserted">
+                            <button class="slide-item">
+                              <span class="dayselector_date">
+                                <!---->
+                                <span class="week"> Thursday </span>
+                                <span class="date"> 29 Nov </span>
+                                <!----><span class="hide-visually ng-star-inserted">Press enter to select date</span>
+                                <!---->
+                              </span>
+                              <span class="dayselector_price">
+                                <!---->
+                                <!---->
+                                <span class="currency ng-star-inserted">AUD</span>
+                                <span class="price ng-star-inserted">596.73</span>
+                                <!---->
+                                <!---->
+                              </span>
+                            </button>
+                          </li>
+                          <li class="slide disabled ng-star-inserted">
+                            <button class="slide-item">
+                              <span class="dayselector_date">
+                                <!---->
+                                <span class="week"> Friday </span>
+                                <span class="date"> 30 Nov </span>
+                                <!---->
+                                <!----><span class="hide-visually ng-star-inserted">Not available date</span>
+                              </span>
+                              <span class="dayselector_price">
+                                <!---->
+                                <!---->
+                                <!---->
+                                <span class="price ng-star-inserted">No Flights</span>
+                                <!---->
+                              </span>
+                            </button>
+                          </li>
+                          <li class="slide disabled ng-star-inserted">
+                            <button class="slide-item">
+                              <span class="dayselector_date">
+                                <!---->
+                                <span class="week"> Saturday </span>
+                                <span class="date"> 1 Dec </span>
+                                <!---->
+                                <!----><span class="hide-visually ng-star-inserted">Not available date</span>
+                              </span>
+                              <span class="dayselector_price">
+                                <!---->
+                                <!---->
+                                <!---->
+                                <span class="price ng-star-inserted">No Flights</span>
+                                <!---->
+                              </span>
+                            </button>
+                          </li>
+                          <li class="slide selected ng-star-inserted">
+                            <button class="slide-item">
+                              <span class="dayselector_date">
+                                <!----><span class="hide-visually ng-star-inserted">Selected date</span>
+                                <span class="week"> Sunday </span>
+                                <span class="date"> 2 Dec </span>
+                                <!---->
+                                <!---->
+                              </span>
+                              <span class="dayselector_price">
+                                <!---->
+                                <!---->
+                                <span class="currency ng-star-inserted">AUD</span>
+                                <span class="price ng-star-inserted">106.99</span>
+                                <!---->
+                                <!---->
+                              </span>
+                            </button>
+                          </li>
+                          <li class="slide disabled ng-star-inserted">
+                            <button class="slide-item">
+                              <span class="dayselector_date">
+                                <!---->
+                                <span class="week"> Monday </span>
+                                <span class="date"> 3 Dec </span>
+                                <!---->
+                                <!----><span class="hide-visually ng-star-inserted">Not available date</span>
+                              </span>
+                              <span class="dayselector_price">
+                                <!---->
+                                <!---->
+                                <!---->
+                                <span class="price ng-star-inserted">No Flights</span>
+                                <!---->
+                              </span>
+                            </button>
+                          </li>
+                        </ul>
+                        <button class="slider_control_btn next">
+                          <span class="hide-visually">Return day calendar click to see next 3 days</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!---->
+                  <div class="flights ng-star-inserted">
+                    <div class="flights_table" number-fares="3">
+                      <!---->
+                      <flight class="ng-tns-c0-30 flight ng-star-inserted">
+                        <!----><span class="tooltip-note ng-tns-c0-30 ng-star-inserted">Departure and return time are uncompatible.</span>
+                        <!---->
+                        <div class="rowFlight">
+                          <div class="colDeparture">
+                            <div class="route">
+                              <span class="time">07:05</span>
+                              <span class="airport-name">
+                                <span class="airport-city">Hong Kong International Airport</span>
+                                <!----><span class="airport-terminal ng-tns-c0-30 ng-star-inserted">Terminal 2</span>
+                                <span class="airport-code">(HKG)</span>
+                              </span>
+                            </div>
+                          </div>
+                          <div class="colDuration">
+                            <div class="icon"><span class="hide-visually">to</span></div>
+                            <div class="time">
+                              <span class="hide-visually">flight duration</span> 3:50h </div>
+                            <!---->
+                            <span class="connection ng-tns-c0-0 ng-star-inserted" data-toggle="modal" data-target="#exampleModal">
+                              <ibe-modal class="ng-tns-c0-0">
+                                <!----><button class="info-link ng-star-inserted">
+                                  <span class="hide-visually">flight connections:</span>
+                                  <span>1 Stop</span>
+                                </button>
+                                <!---->
+                              </ibe-modal>
+                            </span>
+                            <div class="flight-number">
+                              <!---->
+                              <!---->
+                              <ul class="flight-number_list ng-tns-c0-30 ng-star-inserted">
+                                <li class="ng-tns-c0-30">UO850</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="colReturn">
+                            <div class="route">
+                              <span class="time">11:55</span>
+                              <!---->
+                              <span class="airport-name">
+                                <span class="airport-city">Kansai International Airport</span>
+                                <!----><span class="airport-terminal ng-tns-c0-30 ng-star-inserted">Terminal 1</span>
+                                <span class="airport-code">(KIX)</span>
+                              </span>
+                            </div>
+                          </div>
+                          <div class="colPrices">
+                            <!---->
+                            <!---->
+                            <!---->
+                            <div class="ui-checkbox">
+                              <input name="mr" type="radio" id="genderMS4" class="ng-untouched ng-pristine ng-valid">                              
+								<label for="genderMS4" class="price-rate ng-tns-c0-30 ng-star-inserted collapsed">                            
+								  <span class="currency">USD</span>
+								  <span class="price"> 287.82 </span>
+								  <span class="hide-visually">Click if you want to change fare</span>
+								</label>
+                            </div>
+                            <!---->
+                          </div>
+                        </div>
+                      </flight>
+                      <!---->
+                    </div>
+                  </div>
+                </ibe-tab-panel>
+              </div></schedule-tabs>
+            <!---->
+            <div class="page_buttons ng-star-inserted">
+			  <button id="btn1" class="btn float-right mt-2 mb-3 cancelBtn" style="width:148px; height:35px; color:white; background-color:#6e2d91; border-radius: 0.5em;margin-top:20px;margin-right:20px;">Back to previous</button>
+              <button id="btn2" class="btn float-right mt-2 mb-3 cancelBtn" style="width:148px; height:35px; color:white; background-color:#6e2d91; border-radius: 0.5em;margin-top:20px;">Proceed Payment</button>
+            </div>
+          </div>
+        </div>
+      </div>
+        </div>
+	  
+					
+					</div>
+		</main>
+		<footer class="footer">
+			<div class="content">
+				<div class="footer_logo">
+					<a href="###########" class="logo">
+						<img src="./images/logo-neg.svg">
+					</a>
+				</div>
+				<div class="footer_right">
+					<span class="poweredby"> Powered by
+						<span class="poweredby_logo">
+							<span class="hide-visually">newshore</span>
+							<a href="##########" target="_blank" class="logo" rel="noopener"> newshore_ </a>
+						</span>
+					</span>
+				</div>
+			</div>
+		</footer>
+		</div>
+<!-- modal -->
+  <ngb-modal-window id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade ">
+    <div role="document" class="modal-dialog">
+      <div class="modal-content">
+        <button aria-label="Close" class="close" type="button" data-dismiss="modal">
+          <span class="icon" aria-hidden="true"></span>
+        </button>
+        <div class="modal-inner">
+          <div class="modal-header">
+            <h3 class="modal-title">Flight Details</h3>
+            <h4 class="modal-subtitle">Thursday 11 October 2018</h4>
+          </div>
+          <div class="modal-body">
+            <div class="connections">
+              <!---->
+              <!---->
+              <ul class="connections_separator ng-tns-c0-0 ng-star-inserted">
+                <li class="connections_item connections_route departure">
+                  <span class="time">18:55</span>
+                  <span class="airport">
+                    <span class="airport-code">Nagoya Chubu Centrair International Airport (NGO)</span>
+                  </span>
+                </li>
+                <li class="connections_item">
+                  <span class="time">4h 15m</span>
+                  <span class="flightnumber">Flight UO591</span>
+                </li>
+              </ul>
+              <!---->
+              <!---->
+              <ul class="connections_separator transit ng-tns-c0-0 ng-star-inserted">
+                <li class="connections_item connections_route">
+                  <span class="time">22:10</span>
+                  <span class="airport">
+                    <span class="airport-code">Hong Kong International Airport (HKG)</span>
+                  </span>
+                </li>
+                <li class="connections_item transit-step">
+                  <span class="time">9h 25m</span>
+                  <span class="label">Transit in</span>
+                </li>
+              </ul>
+              <!---->
+              <ul class="connections_separator ng-tns-c0-0 ng-star-inserted">
+                <li class="connections_item connections_route departure">
+                  <span class="time">07:35</span>
+                  <span class="airport">
+                    <span class="airport-code">Hong Kong International Airport (HKG)</span>
+                  </span>
+                </li>
+                <li class="connections_item">
+                  <span class="time">1h 45m</span>
+                  <span class="flightnumber">Flight UO192</span>
+                </li>
+              </ul>
+              <!---->
+              <ul class="connections_separator ng-tns-c0-0 ng-star-inserted">
+                <li class="connections_item connections_route">
+                  <span class="time">09:20</span>
+                  <span class="airport">
+                    <span class="airport-code">Taichung International Airport (RMQ)</span>
+                  </span>
+                </li>
+              </ul>
+              <!---->
+            </div>
+            <div class="connections_total">
+              <span class="ng-tns-c0-0">Total travel time:</span>
+              <span class="time">15h 25m</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ngb-modal-window>
+  <!-- modal -->
+
+		<link rel="stylesheet" href="./css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="./css/bootstrap-datetimepicker.min.css">
+		<script src="./css/moment.min.js"></script>
+
+		<script src="./css/bootstrap-datetimepicker.min.js"></script>
+		<script>
+		
+    $(function() {
+      $('input[name="startDate"]').daterangepicker({
+        timePicker: true,
+        startDate: moment().startOf('hour'),
+        endDate: moment().startOf('hour').add(32, 'hour'),
+        locale: {
+          format: 'D MMM ddd '
+        }
+      });
+    });
+			$(document).ready(function () {
+				$(".colorone").attr('style', 'color: #6e2d91 !important; background: white !important');
+				$('.dropdown-submenu a.test').on("click", function (e) {
+					$(this).next('ul').toggle();
+					e.stopPropagation();
+					e.preventDefault();
+				});
+				var counterdown = 31;
+				var interval = setInterval(function() {
+					counterdown--;
+					// Display 'counter' wherever you want to display it.
+					$('.time-remaining span').html(counterdown);
+					if (counterdown == 0) {
+						// Display a login box
+						clearInterval(interval);
+					}
+				}, 1000);
+			})
+
+			$('.dropmenu1 li a').click(function () {
+				$("#selected1").text($(this).text());
+				$(".colorone").attr('style', 'color: #6e2d91 !important; background: white !important')
+				$(".colortwo").attr('style', 'color: white !important; background: #6e2d91 !important')
+			})
+
+			$('.dropmenu2 li a').click(function () {
+				$("#selected2").text($(this).text())
+				$(".colortwo").attr('style', 'color: #6e2d91 !important; background: white !important')
+				$(".colorone").attr('style', 'color: white !important; background: #6e2d91 !important')
+			})
+			$('#btn1').click(function (evt) {
+				evt.preventDefault();
+				window.location.href = './MBkg-FltChg.html';
+			});
+			$('#btn2').click(function (evt) {
+				evt.preventDefault();
+				window.location.href = './BkAH-Flt2Pay.html';
+			});
+		</script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+</body>
+
+</html>

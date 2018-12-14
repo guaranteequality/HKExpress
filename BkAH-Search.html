@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="./css/daterangepicker.css">
+	<link rel="stylesheet" href="./css/styles.min.css" type="text/css">
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="./css/bootstrap-treefy.js"></script>
+	<script src="./css/bootstrap.min.js"></script>
+	<script>
+		$(function () {
+			$("#table").treeFy({
+				treeColumn: 2
+			})
+		})
+	</script>
+	<style>
+		.header_link {
+			font-size: 1.5rem;
+		}
+
+		.header_link::before {
+			font-size: 1.5rem;
+		}
+
+		i.fa.fa-pencil {
+			color: white;
+			background: orange;
+			border-radius: 50px;
+			height: 25px;
+			width: 25px;
+			top: 25px !important;
+		}
+
+		.fa-pencil:before {
+			top: 5px !important;
+			content: "\f040";
+			position: relative;
+		}
+
+		label.pink11 {
+			color: white;
+			background: #6e2d91;
+			padding: 5px 10px;
+		}
+
+		.green {
+			color: white;
+			background: #00b14d;
+			padding: 5px 10px;
+		}
+
+		a.link_section {
+			font-size: 13px;
+			text-decoration: underline;
+			color: #6e2d91 !important;
+			position: relative;
+		}
+
+		.nav-pills>li>a {
+			border-radius: 0 !important;
+		}
+
+		ul.float-right {
+			float: right;
+			text-align: right;
+			padding-right: 15px;
+			padding-left: 15px;
+		}
+
+		ul.float-right li {
+			background-color: gray;
+			color: #fff;
+		}
+
+			ul.float-right li a {
+			color: #fff;
+		}
+
+		ul.float-right li a.active,
+		ul.float-right li a:hover {
+			background-color: #eee;
+			color: #000;
+		}
+
+		ul.float-left {
+			margin-top: 15px;
+			margin-bottom: -0px;
+			z-index: 999;
+			float: left;
+			text-align: left;
+			padding-right: 15px;
+			padding-left: 15px;
+		}
+
+		ul.float-left li {
+			border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
+			background-color: #bbb;
+			color: #fff;
+		}
+
+		ul.float-left li a {
+			color: #fff;
+		}
+
+		ul.float-left li a.active,
+		ul.float-left li a:hover {
+			border-top-left-radius: 5px !important;
+			border-top-right-radius: 5px !important;
+			background-color: #eee;
+			color: #000;
+		}
+
+		.border_section {
+			border: 1px solid black;
+			padding: 1px;
+		}
+
+		.border_section label {
+			margin-bottom: 0px;
+		}
+
+		.border_section label select.form-control.form-control-lg {
+			border: 1px solid #6e2d91;
+			height: 40px;
+		}
+
+		button.pink {
+			position: relative;
+			padding: 12px 52px;
+			margin-top: 35px;
+			left: -31px;
+		}
+
+		th,
+		td {
+		}
+
+		.pink {
+			color: white;
+			background: #6e2d91;
+			border: 1px solid white !important;
+		}
+
+		td.green {
+			background: #00b14d;
+			color: white;
+			border: 1px solid white !important;
+		}
+
+		td.rd {
+			border: 1px solid black;
+			color: red;
+			text-decoration: underline;
+		}
+
+		td.rd1 {
+			color: red;
+			text-decoration: underline;
+		}
+
+		th.pink1 {
+			color: #6e2d91;
+			font-weight: 600;
+			text-decoration: underline;
+		}
+
+		.pink p {
+			padding: 12px;
+		}
+
+
+		.form-control {
+			border: 1px solid #6e2d91;
+		}
+
+		.form-control {
+			border: 1px solid #6e2d91;
+			height: 40px;
+		}
+
+		input::placeholder {
+			text-align: center;
+			color: #6e2d91;
+		}
+
+		input.form-control::placeholder {
+			color: #6e2d91;
+		}
+
+		span.input-group-addon.pink {
+			background: #6e2d91;
+			color: white;
+			border-radius: 0px !important;
+		}
+
+		.reds {
+			color: red;
+		}
+
+		.table>thead>tr>th {
+			border-bottom: 2px solid #333 !important;
+		}
+
+		.table>tbody>tr>td {
+			border-top: none !important;
+			padding:5px 0;
+			vertical-align  :middle;
+		}
+
+		tr .rd {
+			font-size: 18px;
+		}
+
+		form {
+		}
+
+		.checkbox label input {
+			width: 15px;
+			height: 15px;
+		}
+
+		thead {
+			background-color: gray;
+		}
+
+		thead tr th {
+			padding: 5px 0 !important;
+			color: #ffffff !important;
+		}
+
+		.btn-primary {
+			background-image: linear-gradient(to bottom, #6e2d91 0, #6e2d91 100%) !important;
+		}
+
+		.btn-primary:hover,
+		.btn-primary:focus {
+			color: #fff !important;
+			background-color: #6e2d91 !important;
+			border-color: #6e2d91 !important;
+		}
+
+		.btn-group {
+			padding: 0 10px 10px 0;
+		}
+
+		input {
+			
+		}
+
+		select {
+			height: 30px !important;
+		}
+
+		.reviewsection {
+			margin-top: 5px;
+			padding-top: 20px;
+			border-top: 2px solid #bd2c92;
+		}
+
+		.paymentdetail {
+			float: left;
+			min-width: 270px;
+			margin-bottom: 10px;
+			margin-right: 20px;
+		}
+
+		.reviewsection label {
+			margin-bottom: 0 !important;
+			font-weight: 500;
+		}
+
+		.paymentdetail .text1line {
+			height: 22px;
+		}
+
+		.boxgroup .text2line {
+			height: 42px;
+			text-align: center;
+		}
+
+		.paymentdetail table {
+			height: 64px;
+			margin: 0 !important;
+		}
+
+		.paymentdetail .tdgray {
+			background-color: #eee;
+		}
+
+		.paymentdetail tr {
+			border-top: 1px solid #333;
+			border-right: 1px solid #333;
+		}
+
+		.paymentdetail td {
+			border-bottom: 1px solid #333;
+			border-left: 1px solid #333;
+			padding: 0 !important;
+		}
+
+		.boxgroups {
+			float: left;
+			margin-bottom: 10px;
+		}
+		.boxgroup {
+			float: left;
+			min-width: 50px;
+			margin-bottom: 5px;
+			margin-right: 20px;
+		}
+
+		.numbox {
+			text-align: center;
+			padding-top: 10px;
+			height: 44px;
+			border: 1px solid #6e2d91;
+		}
+
+		.textdesc {
+			clear: both;
+			font-size:1.2rem;
+			font-style:italic;
+		}
+
+		.listsection {
+			z-index: 1;
+			margin-top: -1px;
+			border: 1px solid gray;
+			padding: 15px;
+		}
+
+		.pnrlabel {
+			float: left;
+			padding: 15px;
+		}
+
+		.listsection .table>thead>tr>th:first-child {
+			border: 0 !important;
+		}
+
+		.listsection .table>tbody>tr>td:first-child {
+			border: 0 !important;
+		}
+
+		tr.trbb {
+			background-color: #bbb;
+		}
+
+		tr.trbb td {
+			color: #fff !important;
+		}
+
+		tr.trcc {
+			background-color: #ccc;
+		}
+
+		tr.trdd {
+			background-color: #ddd;
+		}
+
+		tr.tree {
+			background-color: #eee;
+		}
+
+		.nav-tabs>li+li {
+			margin-left: 2px;
+		}
+		button.ui-input, input.ui-input {
+			
+		}
+		.formcol label {
+			padding: 8px 5px 0 0;
+			margin: 0;
+			font-weight: normal;
+		}
+		.formcol {
+			padding: 0 5px 0 0;
+			margin: 0;
+		}
+		.nopadding{
+			padding:0 0 0 0;
+		}
+		.paddingbottom{
+			padding-bottom:5px;
+		}
+		.paddingtop{
+			padding-top:5px;
+		}
+		input[type=radio]+label {
+			padding:0;
+		}
+		.ui-checkbox input[type=radio]:checked+label:after {
+			left: 4px;
+			top: 4px;
+			background: #6e2d91;
+			width: 12px;
+			height: 12px;
+		}
+		.changeflightbox{
+			border: 1px solid #ddd;
+			padding: 15px;
+			margin-bottom:15px;
+			background-color:#eee;
+		}
+		span.code-ah {
+			color: white;
+			background: #6e2d91;
+			margin-right: 10px;
+			padding: 5px;
+		}
+
+		span.code-sr {
+			color: white;
+			background: #00b14d;
+			margin-right: 10px;
+			padding: 5px;
+		}
+
+		span.code-as {
+			color: white;
+			background: #ed1d24;
+			margin-right: 10px;
+			padding: 5px;
+		}
+.searchflight, .searchflight form {
+    background: none;
+    border: none;
+}
+	</style>
+	<style>
+	.booking-steps {
+		position: relative;
+		display: table;
+		width: 340px;
+		margin: 10px 0 0 0;
+		counter-reset: booking_steps_counter;
+	}
+	.booking-steps li .label {
+		white-space: normal; 
+	}
+	.time-remaining{
+		padding-top:40px;
+		text-align:right;
+	}
+	.time-remaining span{ color:red}
+	.summary_header .label{text-align:left;padding:0}
+	.flightselect_header_route .label+.route{    margin-top: 0;}
+	.tripselector_outbound  .label{text-align:left;padding:0}
+	.airport-name span{display:block;}
+	.ui-checkbox input[type=radio]{}
+	.flights_table .price-rate {width:auto;display:inline-block;float:right}
+	.rowFlight .ui-checkbox input[type=checkbox]+label::after, 
+	.rowFlight .ui-checkbox input[type=checkbox]+label::before, 
+	.rowFlight .ui-checkbox input[type=radio]+label::after, 
+	.rowFlight .ui-checkbox input[type=radio]+label::before {
+		content: '';
+		position: absolute;
+		right: 0;
+		left:auto;
+		top: 0;
+		margin: 17px -30px 0 0;
+	}
+	.rowFlight .ui-checkbox input[type=radio]:checked+label:after {
+		right: 0;
+		left:auto;
+		top: 0;
+		background: #6e2d91;
+		width: 12px;
+		height: 12px;
+		margin: 21px -26px 0 0;
+	}.rowFlight .ui-checkbox input[type=radio]:checked+label{ background-color: #ae8dc1; }
+	
+		.btn-primary {
+			background-image: linear-gradient(to bottom, #6e2d91 0, #6e2d91 100%) !important;
+		}
+
+		.btn-primary:hover,
+		.btn-primary:focus {
+			color: #fff !important;
+			background-color: #6e2d91 !important;
+			border-color: #6e2d91 !important;
+		}
+
+		.btn-group {
+			padding: 0 10px 10px 0;
+		}
+		.show {
+			display: inline-block !important;
+		}
+		.group_combo{margin:0 !important;}
+		.col-9  .context-table{
+		    margin: 16px 0 16px 3%;
+		}
+	
+		.upperline-tb .fare3-label {top:0}
+		.summary_details_price.collapse.show{display: block !important;}
+		.group_combo.grid.padding15{
+			padding: 15px 3%;
+		}
+		.summary_typology_item{font-size:1.6rem;color:#6e2d91;}
+		.combined_summary_bar-left .right .button.btn-inverse {padding-right:40px}
+		.btn-inverse::after {
+			
+			content: "\e908";
+			font-family: FontAwesome;
+			font-weight: 400;
+			position: absolute;
+			display: block;
+			right: 10px;
+			line-height: 1;
+			color: #6e2d91;
+			transition: transform .18s ease;
+			top: 8px;
+			font-size: 1.75rem;
+		    transform: scaleY(-1);
+
+		}
+		.collapsing {
+			position: absolute;
+			height: 0;
+			transition: height .35s ease;
+		}
+		.summary_collapse {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		z-index: 1000;
+	}
+	.titlebar .title {
+    font-family: BiomeStd-Regular,sans-serif;
+    font-size: 2.375rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+.titlebar .subtitle {
+    margin-top: 4px;
+    font-size: 1.775rem;
+    line-height: 1.2;
+    font-weight: 300;
+}
+.summary_total_list .price {
+    font-family: BiomeStd-Regular,sans-serif;
+    font-size: 2.65rem;
+    line-height: 1;
+}
+.summary_total_list .label {
+    position: relative;
+    display: block;
+    font-size: 1.7rem;
+    line-height: 1.3;
+}
+.payment_methods .tabs-pill a {
+	font-size:1.8rem;
+	font-weight:700;
+}
+.ui-checkbox label{font-weight:400;}
+.contact_data .ui-form_group.full {margin-left:10px;}
+.payment_partials_trigger .icon {top:0}
+.summary_details_trigger .label{color:#6e2d91;font-size:1.2rem;}
+.summary_details_content{padding:0 15px;}
+.sborder {
+    border: 1px solid #6e2d91;
+    padding: 2px 5px;
+}
+.sbagr {
+    border-bottom: 1px solid #6e2d91;
+    padding: 2px 2px;
+}
+	</style>
+
+	</head>
+<body>
+	<div class="page-wrap">
+		<header class="header">
+			<div class="header_container">
+				<div class="header_logo">
+					<a class="logo" href="#">
+						<img src="./images/logoHK.svg">
+					</a>
+				</div>
+				<div class="header_right">
+					<div class="header_links">
+						<ul>
+							<li class="header_links_item link-home">
+								<!---->
+								<!---->
+								<div>
+									<button class="header_link" role="link">
+										<i class="fa fa-home"></i> home </button>
+								</div>
+							</li>
+							<!---->
+							<li class="header_links_item link-user">
+								<!---->
+								<!---->
+								<div>
+									<button class="header_link" role="link"> Welcome back Sally </button>
+								</div>
+							</li>
+							<li class="header_links_item link-language">
+								<ibe-language-selector listlabel="Language">
+									<div class="ui-dropdown">
+										<button data-toggle="dropdown" attr.aria-controls="languageTopListId" attr.aria-haspopup="true" class="header_link">
+										</button>
+										<!---->
+										<ul class="dropdown-menu ui-dropdown_list ng-star-inserted" id="languageTopListId" tabindex="-1" aria-hidden="false">
+											<!---->
+											<li class="ng-star-inserted">
+												<button>日本(日本語)</button>
+											</li>
+											<li class="ng-star-inserted">
+												<button>한국(한국어)</button>
+											</li>
+											<li class="ng-star-inserted">
+												<button>中国大陆 (简体)</button>
+											</li>
+											<li class="ng-star-inserted">
+												<button>中國台灣 (繁體)</button>
+											</li>
+											<li class="ng-star-inserted">
+												<button>香港特別行政區 (繁體)</button>
+											</li>
+										</ul>
+									</div>
+								</ibe-language-selector>
+							</li>
+							<!---->
+							<li class="header_links_item link-Logout">
+								<!---->
+								<!---->
+								<div>
+									<button class="header_link" role="link">
+										<i class="fa fa-lock"></i> Logout </button>
+								</div>
+							</li>
+						</ul>
+						<div class="company-info">
+							<div class="des">
+								<strong>B2G Group Booking Portal</strong>
+							</div>
+							<strong>Company:</strong> ABC Travel Services Ltd.
+							<strong>Account Balance:</strong> HKD 150.000
+							<button id="btnrefesh" class="header_link">
+								<i class="fa fa-redo-alt" style="font-size:12px"></i>
+							</button>
+							<span class="balup">Bal. update: 30Sep’18 15:35</span>
+						</div>
+					</div>
+				</div>
+				<div class="header_bottom">
+					<div class="header_links">
+						<div class="dropdown btn-group">
+							<button class="btn btn-primary dropdown-toggle colorone" type="button" data-toggle="dropdown">
+								<span id="selected1">Book Ad-Hoc Group</span>
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu dropmenu1">
+								<li>
+									<a tabindex="-1" href="#">B2G</a>
+								</li>
+								<li>
+									<a tabindex="-1" href="#">Book Ad-Hoc Group</a>
+								</li>
+							</ul>
+						</div>
+						<div class="dropdown btn-group">
+							<button class="btn btn-primary dropdown-toggle colortwo" type="button" data-toggle="dropdown">
+								<span id="selected2">Admin</span>
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu dropmenu2">
+								<li>
+									<a tabindex="-1" href="#">Admin</a>
+								</li>
+								<li>
+									<a tabindex="-1" href="#">Profile</a>
+								</li>
+								<li>
+									<a tabindex="-1" href="#">Users Management</a>
+								</li>
+								<li class="dropdown-submenu">
+									<a class="test" tabindex="-1" href="#">Reports
+										<span class="caret"></span>
+									</a>
+									<ul class="dropdown-menu">
+										<li>
+											<a tabindex="-1" href="#">UO Alerts</a>
+										</li>
+										<li>
+											<a tabindex="-1" href="#">Payments</a>
+										</li>
+										<li>
+											<a tabindex="-1" href="#">Monthly Statement</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						
+					</div>
+					
+				</div>
+			</div>
+		</header>
+		<main id="maincontent">
+			
+			<div class="container-wrap">
+			<p>Start your flight search here</p>	
+				<div class="col-md-12  tab-content">
+					<div class="row mt-2 table-section tab-pane fade active in" id="pills-flights" role="tabpanel" aria-labelledby="pills-filghts-tab">
+						<div class="container-wrap">
+        <div class="grid ">
+			
+           <div class="container-wrap summary_collapse " id="collapseSearch" style="background: rgb(244, 244, 247);">
+					
+					<div class="grid">
+					  <div class="col-12_lg-12">
+						<!---->
+						<!---->
+						
+						<div class=" ng-star-inserted">
+						  <!---->
+						  <ibe-tab-panel id="tab-panel">
+							<!---->
+							<!---->
+							<ul class="tab-panel-buttons ng-star-inserted">
+							  <!---->
+							  <li class="selected ng-star-inserted">
+							  </li>
+							</ul>
+							
+							<ibe-tab>
+							  <!---->
+							  <!---->
+							  <flight-search class="ng-star-inserted">
+								<div class="searchflight multicity">
+								
+								  <form autocomplete="off" novalidate="" class="ng-pristine ng-valid ng-touched">
+									<div class="inner">
+									  <div class="route">
+										<ibe-input-station class="ng-tns-c0-0">
+										  <div class="ng-tns-c0-0">
+											<div class="ui-input-container has-value" data-toggle="dropdown">
+											  <div class="ui-input-multiline">
+												<div class="ui-input-multiline_group outbound">
+												  <div class="ui-input-multiline_group_inner" id="originDiv">
+													<button class="ui-input" aria-haspopup="true" id="originBtn" aria-expanded="false">
+													  <span class="hide-visually">From</span>
+													  <span class="value-selected" id="originStationSelected">
+														<span class="value-large" id="originStationBig" title="Hong Kong (HKG)">Hong Kong (HKG)</span>
+														<span class="value-small" id="originStationSmall">Hong Kong SAR</span>
+													  </span>
+													</button>
+												  </div>
+												  <div class="ui-input-multiline_group_inner" hidden="">
+													<label class="hide-visually" for="outboundDepartureStation">Choose an Origin</label>
+													<input class="ui-input" aria-haspopup="true" type="text" aria-expanded="false" name="outboundDepartureStation" id="outboundDepartureStation" placeholder="From">
+												  </div>
+												</div>
+												<div class="ui-input-multiline_group inbound">
+												  <div class="ui-input-multiline_group_inner">
+													<button class="ui-input" aria-haspopup="true" tabindex="0" aria-expanded="false">
+													  <span class="hide-visually">To</span>
+													  <span class="value-selected">
+														<span class="value-large" title="Tokyo (All Airports) (TYO)">Tokyo (All Airports) (TYO)</span>
+														<span class="value-small">Japan </span>
+													  </span>
+													</button>
+												  </div>
+												  <div class="ui-input-multiline_group_inner" hidden="">
+													<label class="hide-visually" for="outboundArrivalStation">Choose a Destination</label>
+													<input class="ui-input" aria-haspopup="true" type="text" aria-expanded="false" name="outboundArrivalStation" id="outboundArrivalStation" placeholder="To" tabindex="0">
+												  </div>
+												</div>
+											  </div>
+											</div>
+											<!---->
+											<div class="dropdown-menu search_tt ng-tns-c0-0 ng-trigger ng-trigger-curtainEffec ng-star-inserted" ibe-content-stations="" id="originStationsListId">
+											  <div class="search_tt_inner">
+												<div class="search_tt_title">Choose an Origin</div>
+												<div class="search_tt_menu_scroll">
+												  <div class="search_tt_menu">
+													<!---->
+													<ul class="ng-star-inserted" style="">
+													  <li class="title">Hong Kong SAR</li>
+													  <!---->
+													  <li class="ng-star-inserted">
+														<a href=""> Hong Kong (HKG) </a>
+													  </li>
+													</ul>
+													<ul class="ng-star-inserted" style="">
+													  <li class="title">Cambodia</li>
+													  <!---->
+													  <li class="ng-star-inserted">
+														<a href=""> Siem Reap (REP) </a>
+													  </li>
+													</ul>
+													<ul class="ng-star-inserted" style="">
+													  <li class="title">Mainland China</li>
+													  <!---->
+													  <li class="ng-star-inserted">
+														<a href=""> Ningbo (NGB) </a>
+													  </li>
+													  <li class="ng-star-inserted">
+														<a href=""> Zhangjiajie (DYG) </a>
+													  </li>
+													</ul>
+													<ul class="ng-star-inserted" style="">
+													  <li class="title">Japan</li>
+													  <!---->
+													  <li class="ng-star-inserted">
+														<a href=""> Fukuoka (FUK) </a>
+													  </li>
+													  <li class="ng-star-inserted">
+														<a href=""> Hiroshima (HIJ) </a>
+													  </li>
+													  <li class="ng-star-inserted">
+														<a href=""> Ishigaki (ISG) </a>
+													  </li>
+													  <li class="ng-star-inserted">
+														<a href=""> Kagoshima (KOJ) </a>
+													  </li>
+													  <li class="ng-star-inserted">
+														<a href=""> Kumamoto (KMJ) </a>
+													  </li>
+													  <li class="ng-star-inserted">
+														<a href=""> Nagoya (NGO) </a>
+													  </li>
+													  <li class="ng-star-inserted">
+														<a href=""> Osaka (Kansai) (KIX) </a>
+													  </li>
+													  <li class="ng-star-inserted">
+														<a href=""> Takamatsu (TAK) </a>
+													  </li>
+													  <li class="ng-star-inserted">
+														<a href=""> Tokyo (All Airports) (TYO) </a>
+													  </li>
+													  <li class="ng-star-inserted">
+														<a href=""> Tokyo (Haneda) (HND) </a>
+													  </li>
+													  <li class="ng-star-inserted">
+														<a href=""> Tokyo (Narita) (NRT) </a>
+													  </li>
+													</ul>
+													<ul class="ng-star-inserted" style="">
+													  <li class="title">South Korea</li>
+													  <!---->
+													  <li class="ng-star-inserted">
+														<a href=""> Busan (PUS) </a>
+													  </li>
+													  <li class="ng-star-inserted">
+														<a href=""> Jeju (CJU) </a>
+													  </li>
+													  <li class="ng-star-inserted">
+														<a href=""> Seoul (Incheon) (ICN) </a>
+													  </li>
+													</ul>
+													<ul class="ng-star-inserted" style="">
+													  <li class="title">Taiwan, China</li>
+													  <!---->
+													  <li class="ng-star-inserted">
+														<a href=""> Hualien (HUN) </a>
+													  </li>
+													  <li class="ng-star-inserted">
+														<a href=""> Taichung (RMQ) </a>
+													  </li>
+													</ul>
+													<ul class="ng-star-inserted" style="">
+													  <li class="title">Thailand</li>
+													  <!---->
+													  <li class="ng-star-inserted">
+														<a href=""> Chiang Mai (CNX) </a>
+													  </li>
+													  <li class="ng-star-inserted">
+														<a href=""> Chiang Rai (CEI) </a>
+													  </li>
+													  <li class="ng-star-inserted">
+														<a href=""> Phuket (HKT) </a>
+													  </li>
+													</ul>
+													<ul class="ng-star-inserted" style="">
+													  <li class="title">Northern Mariana Islands</li>
+													  <!---->
+													  <li class="ng-star-inserted">
+														<a href=""> Saipan (SPN) </a>
+													  </li>
+													</ul>
+													<ul class="ng-star-inserted" style="">
+													  <li class="title">Vietnam</li>
+													  <!---->
+													  <li class="ng-star-inserted">
+														<a href=""> Da Nang (DAD) </a>
+													  </li>
+													  <li class="ng-star-inserted">
+														<a href=""> Nha Trang (CXR) </a>
+													  </li>
+													</ul>
+												  </div>
+												</div>
+											  </div>
+											</div>
+											<!---->
+										  </div>
+										</ibe-input-station>
+									  </div>
+									  <div class="dates">
+										<div ibe-calendar="" class="ng-tns-c1-1">
+										  <div class="ui-input-container">
+											<div class="ui-input-multiline" id="outboundStartDate">
+											  <div class="ui-input-multiline_group outbound">
+												<div class="ui-input-multiline_group_inner">
+												  <!---->
+												  <label class="hide-visually ng-tns-c1-1 ng-star-inserted" for="departureDateInput"> Departure Date: format dd/mm/yyyy </label>
+												  <input class="ui-input ng-tns-c1-1 ng-untouched ng-pristine ng-valid ng-star-inserted" id="departureDateInput" name="startDate" type="text" maxlength="10" placeholder="Outbound">
+												  <!---->
+												  <!---->
+												</div>
+											  </div>
+											</div>
+										  </div>
+										  <!---->
+										</div>
+									  </div>
+									  <div class="triptype ng-star-inserted">
+                            <ibe-select listid="triptype" listlabel="Trip type" name="tripType">
+                              <!---->
+                              <!---->
+                              <div class="ui-input-container has-value ng-star-inserted">
+                                <!---->
+                                <!---->
+                                <div class="ui-dropdown dropdown ng-star-inserted">
+                                  <button class="ui-input " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                                    <!---->
+                                    <div class="ui-dropdown_value ng-star-inserted">
+                                      <span class="hide-visually">Trip type</span> Round Trip </div>
+                                    <!---->
+                                  </button>
+                                  <ul class="dropdown-menu ui-dropdown_list ng-star-inserted" aria-labelledby="dropdownMenuButton" tabindex="-1" id="triptype" aria-hidden="" aria-activedescendant="triptype-2" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 50px, 0px); top: 0px; left: 0px; will-change: transform;">
+                                    <!---->
+                                    <!---->
+                                    <li class="ng-star-inserted">
+                                      <button id="triptype-0" aria-selected="false"> One way </button>
+                                    </li>
+                                    <li class="ng-star-inserted">
+                                      <button id="triptype-1" aria-selected="false"> Round Trip </button>
+                                    </li>
+                                  </ul>
+                                  <!---->
+                                </div>
+                              </div>
+                              <!---->
+                            </ibe-select>
+                          </div>
+									  <div class="typology">
+										  <div class="ui-input-container has-value">
+											<div class="ui-dropdown">
+											  <button data-toggle="dropdown" aria-haspopup="true" class="ui-input" name="typology" type="button" aria-label="Passengers type 3 Adults, 1 Child, 1 Infant">
+												<div class="ui-dropdown_value"> 3 Adults, 1 Child, 1 Infant </div>
+											  </button>
+											  <!---->
+											  <div class="dropdown-menu typology_option ng-star-inserted" tabindex="-1">
+												<fieldset class="typology_option_list ng-untouched ng-pristine ng-valid">
+												  <legend class="hide-visually">Passengers type selection</legend>
+												  <div class="typology_option_item">
+													<label class="typology_option_label" for="paxAdultInput" id="paxAdultInput_label"> Adult <span class="label-small">(&gt;12 years)</span>
+													</label>
+													<div class="typology_option_select">
+													  <ibe-minus-plus id="paxAdultInput" labelledby="paxAdultInput_label">
+														<div class="ui-num-ud">
+														  <button class="ui-num-ud_button minus" tabindex="0" aria-labelledby="paxAdultInput_label numLabelDecrease">
+															<span class="hide-visually" id="numLabelDecrease">decrease</span>
+														  </button>
+														  <div class="ui-num-ud_input">
+															<input readonly="readonly" tabindex="-1" type="text" id="paxAdultInput" value="3">
+														  </div>
+														  <button class="ui-num-ud_button plus" tabindex="0" aria-labelledby="paxAdultInput_label numLabelIncrease">
+															<span class="hide-visually" id="numLabelIncrease">increase</span>
+														  </button>
+														</div>
+													  </ibe-minus-plus>
+													</div>
+												  </div>
+												  <div class="typology_option_item">
+													<label class="typology_option_label" for="paxChildrenInput" id="paxChildrenInput_label"> Children <span class="label-small">(2-11 years)</span>
+													</label>
+													<div class="typology_option_select">
+													  <ibe-minus-plus id="paxChildrenInput" labelledby="paxChildrenInput_label">
+														<div class="ui-num-ud">
+														  <button class="ui-num-ud_button minus disabled" tabindex="-1" aria-labelledby="paxChildrenInput_label numLabelDecrease">
+															<span class="hide-visually" id="numLabelDecrease">decrease</span>
+														  </button>
+														  <div class="ui-num-ud_input">
+															<input readonly="readonly" tabindex="-1" type="text" id="paxChildrenInput" value="1">
+														  </div>
+														  <button class="ui-num-ud_button plus" tabindex="0" aria-labelledby="paxChildrenInput_label numLabelIncrease">
+															<span class="hide-visually" id="numLabelIncrease">increase</span>
+														  </button>
+														</div>
+													  </ibe-minus-plus>
+													</div>
+												  </div>
+												  <div class="typology_option_item">
+													<label class="typology_option_label" for="paxInfantInput" id="paxInfantInput_label"> Infant <span class="label-small">(&lt;2 years)</span>
+													  <button class="ui-tooltip_info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Please note, by selecting the below you must seat your infant in your lap. Should you choose to purchase a seat for your infant, please contact our call center at (852) 3902 0288.">
+														<span class="hide-visually">Infant information</span>
+													  </button>
+													</label>
+													<div class="typology_option_select">
+													  <ibe-minus-plus id="paxInfantInput" labelledby="paxInfantInput_label">
+														<div class="ui-num-ud">
+														  <button class="ui-num-ud_button minus" tabindex="0" aria-labelledby="paxInfantInput_label numLabelDecrease">
+															<span class="hide-visually" id="numLabelDecrease">decrease</span>
+														  </button>
+														  <div class="ui-num-ud_input">
+															<input readonly="readonly" tabindex="-1" type="text" id="paxInfantInput" value="1">
+														  </div>
+														  <button class="ui-num-ud_button plus disabled" tabindex="-1" aria-labelledby="paxInfantInput_label numLabelIncrease">
+															<span class="hide-visually" id="numLabelIncrease">increase</span>
+														  </button>
+														</div>
+													  </ibe-minus-plus>
+													</div>
+												  </div>
+												</fieldset>
+												<div class="typology_option_button">
+												  <button class="button">Done</button>
+												</div>
+											  </div>
+											</div>
+										  </div>
+										</div>
+									  
+									  <div class="searchflight_button">
+										<button id="btnf" class="btn float-right mt-2 mb-3 cancelBtn" style="width:128px; height:35px; color:white; background-color:#6e2d91; border-radius: 0.5em;margin-top:20px;"> Find flights </button>
+									  </div>
+									</div>
+								  </form>
+								</div>
+							  </flight-search>
+							</ibe-tab>
+						  </ibe-tab-panel>
+						</div>
+					  </div>
+					</div>
+				  </div>
+                </div>
+            
+			</div>
+        </div>
+      </div>
+	 </div></div>
+		</main>
+		<footer class="footer">
+			<div class="content">
+				<div class="footer_logo">
+					<a href="###########" class="logo">
+						<img src="./images/logo-neg.svg">
+					</a>
+				</div>
+				<div class="footer_right">
+					<span class="poweredby"> Powered by
+						<span class="poweredby_logo">
+							<span class="hide-visually">newshore</span>
+							<a href="##########" target="_blank" class="logo" rel="noopener"> newshore_ </a>
+						</span>
+					</span>
+				</div>
+			</div>
+		</footer>
+		</div>
+
+
+		<link rel="stylesheet" href="./css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="./css/bootstrap-datetimepicker.min.css">
+		<script src="./css/moment.min.js"></script>
+
+		<script src="./css/bootstrap-datetimepicker.min.js"></script>
+<script>
+		
+    $(function() {
+      $('input[name="startDate"]').daterangepicker({
+        timePicker: true,
+        startDate: moment().startOf('hour'),
+        endDate: moment().startOf('hour').add(32, 'hour'),
+        locale: {
+format: 'D MMM ddd '
+        }
+      });
+    });
+			$(document).ready(function () {
+				$(".colorone").attr('style', 'color: #6e2d91 !important; background: white !important');
+				$('.dropdown-submenu a.test').on("click", function (e) {
+					$(this).next('ul').toggle();
+					e.stopPropagation();
+					e.preventDefault();
+				});
+				var counterdown = 31;
+				var interval = setInterval(function() {
+					counterdown--;
+					// Display 'counter' wherever you want to display it.
+					$('.time-remaining span').html(counterdown);
+					if (counterdown == 0) {
+						// Display a login box
+						clearInterval(interval);
+					}
+				}, 1000);
+			})
+
+			$('.dropmenu1 li a').click(function () {
+				$("#selected1").text($(this).text());
+				$(".colorone").attr('style', 'color: #6e2d91 !important; background: white !important')
+				$(".colortwo").attr('style', 'color: white !important; background: #6e2d91 !important')
+			})
+
+			$('.dropmenu2 li a').click(function () {
+				$("#selected2").text($(this).text())
+				$(".colortwo").attr('style', 'color: #6e2d91 !important; background: white !important')
+				$(".colorone").attr('style', 'color: white !important; background: #6e2d91 !important')
+			})
+			$('#btn1').click(function (evt) {
+				evt.preventDefault();
+				window.location.href = './MBkg-FltChgSelect.html';
+			});
+			$('#btn2').click(function (evt) {
+				evt.preventDefault();
+				window.location.href = './MBkg-AddPax.html';
+			});
+			$('#btn3').click(function (evt) {
+				evt.preventDefault();
+				window.location.href = './MBkg-FltChg.html';
+			});
+		</script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+</body>
+
+</html>

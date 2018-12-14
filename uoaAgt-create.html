@@ -1,0 +1,3369 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="./css/daterangepicker.css">
+	<link rel="stylesheet" href="./css/styles.min.css" type="text/css">
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="./css/bootstrap-treefy.js"></script>
+	<script src="./css/bootstrap.min.js"></script>
+	<script>
+		$(function () {
+			$("#table").treeFy({
+				treeColumn: 2
+			})
+		})
+	</script>
+	<style>
+		.header_link {
+			font-size: 1.5rem;
+		}
+
+		.header_link::before {
+			font-size: 1.5rem;
+		}
+
+		i.fa.fa-pencil {
+			color: white;
+			background: orange;
+			border-radius: 50px;
+			height: 25px;
+			width: 25px;
+			top: 25px !important;
+		}
+
+		.fa-pencil:before {
+			top: 5px !important;
+			content: "\f040";
+			position: relative;
+		}
+
+		label.pink11 {
+			color: white;
+			background: #6e2d91;
+			padding: 5px 10px;
+		}
+
+		.green {
+			color: white;
+			background: #00b14d;
+			padding: 5px 10px;
+		}
+
+		a.link_section {
+			font-size: 13px;
+			text-decoration: underline;
+			color: #6e2d91 !important;
+			position: relative;
+		}
+
+		.nav-pills>li>a {
+			border-radius: 0 !important;
+		}
+
+		ul.float-right {
+			float: right;
+			text-align: right;
+			padding-right: 15px;
+			padding-left: 15px;
+		}
+
+		ul.float-right li {
+			background-color: gray;
+			color: #fff;
+		}
+
+		ul.float-right li a {
+			color: #fff;
+		}
+
+		ul.float-right li a.active,
+		ul.float-right li a:hover {
+			background-color: #eee;
+			color: #000;
+		}
+
+		ul.float-left {
+			margin-top: 15px;
+			margin-bottom: -0px;
+			z-index: 999;
+			float: left;
+			text-align: left;
+			padding-right: 15px;
+			padding-left: 15px;
+		}
+
+		ul.float-left li {
+			border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
+			background-color: #bbb;
+			color: #fff;
+		}
+
+		ul.float-left li a {
+			color: #fff;
+		}
+
+		ul.float-left li a.active,
+		ul.float-left li a:hover {
+			border-top-left-radius: 5px !important;
+			border-top-right-radius: 5px !important;
+			background-color: #eee;
+			color: #000;
+		}
+
+		.border_section {
+			border: 1px solid black;
+			padding: 1px;
+		}
+
+		.border_section label {
+			margin-bottom: 0px;
+		}
+
+		.border_section label select.form-control.form-control-lg {
+			border: 1px solid #6e2d91;
+			height: 40px;
+		}
+
+		button.pink {
+			position: relative;
+			padding: 12px 52px;
+			margin-top: 35px;
+			left: -31px;
+		}
+
+		th,
+		td {
+			text-align: center !important;
+		}
+
+		.pink {
+			color: white;
+			background: #6e2d91;
+			border: 1px solid white !important;
+		}
+
+		td.green {
+			background: #00b14d;
+			color: white;
+			border: 1px solid white !important;
+		}
+
+		td.rd {
+			border: 1px solid black;
+			color: red;
+			text-decoration: underline;
+		}
+
+		td.rd1 {
+			color: red;
+			text-decoration: underline;
+		}
+
+		th.pink1 {
+			color: #6e2d91;
+			font-weight: 600;
+			text-decoration: underline;
+		}
+
+		.pink p {
+			padding: 12px;
+		}
+
+		.col-sm-6.col-md-6 {
+			padding-top: 35px;
+		}
+
+		.form-control {
+			border: 1px solid #6e2d91;
+		}
+
+		.form-control {
+			border: 1px solid #6e2d91;
+			height: 40px;
+		}
+
+		input::placeholder {
+			text-align: center;
+			color: #6e2d91;
+		}
+
+		input.form-control::placeholder {
+			color: #6e2d91;
+		}
+		.placeitalic::placeholder {font-style:italic;}
+		span.input-group-addon.pink {
+			background: #6e2d91;
+			color: white;
+			border-radius: 0px !important;
+		}
+
+		.reds {
+			color: red;
+		}
+
+		.table>thead>tr>th {
+			border-bottom: none !important;
+			vertical-align: middle !important;
+			padding: 0 !important;
+			line-height: 1rem;
+		}
+
+		.table>tbody>tr>td {
+			
+			padding: 0;
+			vertical-align: middle;
+		}
+
+		tr .rd {
+			font-size: 18px;
+		}
+
+		form {
+			border: solid 1px black;
+			padding: 5px;
+			background-color: rgb(212, 211, 211);
+		}
+
+		.checkbox label input {
+			width: 15px;
+			height: 15px;
+		}
+
+		thead {
+			background-color: gray;
+		}
+
+		thead tr th {
+			padding: 5px 0 !important;
+			color: #ffffff !important;
+			text-decoration:underline;
+		}
+		.table tr:first-child td:first-child{padding:0;}
+		.btn-primary {
+			background-image: linear-gradient(to bottom, #6e2d91 0, #6e2d91 100%) !important;
+		}
+
+		.btn-primary:hover,
+		.btn-primary:focus {
+			color: #fff !important;
+			background-color: #6e2d91 !important;
+			border-color: #6e2d91 !important;
+		}
+
+		.btn-group {
+			padding: 0 10px 10px 0;
+		}
+
+		input {
+			height: 30px !important;
+		}
+
+		select {
+			height: 30px !important;
+		}
+
+		.reviewsection {
+			margin-top: 5px;
+			padding-top: 20px;
+			border-top: 2px solid #bd2c92;
+		}
+
+		.paymentdetail {
+			float: left;
+			min-width: 270px;
+			margin-bottom: 10px;
+			margin-right: 20px;
+		}
+
+		.reviewsection label {
+			margin-bottom: 0 !important;
+			font-weight: 500;
+		}
+
+		.paymentdetail .text1line {
+			height: 22px;
+		}
+
+		.boxgroup .text2line {
+			height: 42px;
+			text-align: center;
+		}
+
+		.paymentdetail table {
+			height: 64px;
+			margin: 0 !important;
+		}
+
+		.paymentdetail .tdgray {
+			background-color: #eee;
+		}
+
+		.paymentdetail tr {
+			border-top: 1px solid #333;
+			border-right: 1px solid #333;
+		}
+
+		.paymentdetail td {
+			border-bottom: 1px solid #333;
+			border-left: 1px solid #333;
+			padding: 0 !important;
+		}
+
+		.boxgroup {
+			float: left;
+			min-width: 50px;
+			margin-bottom: 10px;
+			margin-right: 20px;
+		}
+
+		.numbox {
+			text-align: center;
+			padding-top: 10px;
+			height: 44px;
+			border: 1px solid #6e2d91;
+		}
+
+		.textdesc {
+			clear: both;
+		}
+
+		.listsection {
+			z-index: 1;
+			margin-top: -1px;
+			border: 1px solid gray;
+			padding: 15px;
+		}
+
+		.pnrlabel {
+			float: left;
+			padding: 15px;
+		}
+
+		.listsection .table>thead>tr>th:first-child {
+			background-color: #fff !important;
+			border: 0 !important;
+		}
+
+		.listsection .table>tbody>tr>td:first-child {
+			background-color: #fff !important;
+			border: 0 !important;
+		}
+
+		tr.trbb {
+			background-color: #bbb;
+		}
+
+		tr.trbb td {
+			color: #fff !important;
+		}
+
+		tr.trcc {
+			background-color: #ccc;
+		}
+
+		tr.trdd {
+			background-color: #ddd;
+		}
+
+		tr.tree {
+			background-color: #eee;
+		}
+
+		.nav-tabs>li+li {
+			margin-left: 2px;
+		}
+
+		.header_link {}
+
+		#login {
+			width: 320px;
+			margin: auto;
+			font-family: BiomeStd-Regular, sans-serif;
+			color: #6e2d91;
+			font-weight: 600;
+			font-size: 1.4rem;
+			line-height: 2.2;
+		}
+
+		#login form {
+			padding: 0 10px;
+			border: none;
+		}
+
+		#login h1 {
+			font-size: 1.8rem;
+			color: #fff;
+			padding: 10px 10px;
+			margin: 0 0 0 0;
+			background-color: #7d429c;
+		}
+
+		#login p {
+			margin: 0;
+			padding: 10px 0 0 0;
+		}
+
+		#login label {
+			display: block;
+			color: #bd2c92;
+			margin: 0;
+		}
+
+		#login input[type=text],
+		#login input[type=password] {
+			width: 100%;
+			padding: 3px;
+			;
+		}
+
+		.apply-reset {
+			text-align: right;
+		}
+
+		.apply-reset a {
+			margin-left: 20px;
+			color: #7d429c;
+			font-weight: normal;
+			font-style: italic;
+			border-bottom: 1px solid #7d429c;
+			font-size: 1.2rem;
+		}
+
+		.apply-reset a:hover {
+			text-decoration: none;
+		}
+
+		#login p.submit {
+			padding: 0 0 20px 0;
+			margin-top: -15px;
+		}
+
+		#login .btn {
+			height: 40px !important;
+			color: white;
+			background-color: #6e2d91;
+		}
+
+		div.nospace {
+			clear: both;
+		}
+
+		div.nospace label {
+			float: left;
+			margin-right: 1px;
+		}
+
+		label.admin-mnu-b2g {
+			color: white;
+			background: #6e2d91;
+			padding: 2px 15px;
+			font-size: 1.2rem;
+		}
+
+		label.admin-mnu-admin {
+			color: #6e2d91;
+			background: rgb(212, 211, 211);
+			padding: 2px 15px;
+			font-size: 1.2rem;
+		}
+
+		ul.users-menu {
+			clear: both;
+			width: 100%;
+		}
+
+		ul.users-menu li {
+			float: left;
+			padding: 0 10px 0 0;
+			color: #6e2d91;
+		}
+
+		ul.users-menu li a {
+			color: #6e2d91;
+			font-size: 1.2rem;
+			font-weight: 700;
+			text-decoration: underline;
+		}
+
+		ul.users-menu li span {
+			margin-left: 10px;
+		}
+
+		ul.users-menu li a.active {
+			color: #000;
+			text-decoration: none;
+		}
+
+		.searchuserform {
+			margin: 0 0 30px 0;
+			padding: 0 0 10px 0;
+			border: 1px solid gray;
+		}
+
+		.searchuserform form {
+			background: none;
+			border: none 
+		}
+
+		.searchuserform .formcol {
+			padding: 0 5px 0 0;
+			margin: 0;
+		}
+
+		.searchuserform .formcol label {
+			padding: 8px 0;
+			margin: 0;
+			font-weight: normal;
+		}
+
+		.searchuserform .formcol input[type=text] {
+			width: 100%;
+			background-clip: border-box;
+		}
+
+		.searchuserform .formcol input[type=text]::-webkit-input-placeholder {
+			text-align: left;
+			color: #ccc;
+		}
+
+		.searchuserform .formcol select {
+			width: 100%;
+		}
+
+		.searchuserform .firstcol {
+			text-align: right;
+		}
+
+		.searchuserform .checkbox {
+			position: relative;
+			display: block;
+			float: left;
+			margin: 0;
+			padding: 8px 0;
+		}
+
+		.searchuserform .checkbox label {
+			margin: 0;
+			padding: 0 0 0 20px;
+		}
+
+		.searchuserform .checkbox input[type=checkbox] {
+			padding: 0;
+			width: 20px;
+			height: 14px !important;
+			margin: 4px 0 0 -20px
+		}
+
+		.searchuserform .btnsearch {
+			width: 80px;
+			height: 32px;
+			color: white;
+			background-color: #6e2d91;
+			border-radius: 0.3em;
+			float: right;
+		}
+
+		.code-list {
+			padding: 0 0 7px 0;
+		}
+
+		.code-list span {
+			padding: 1px 3px;
+			margin-right: 5px
+		}
+
+		.downcol {
+			float: left;
+			padding: 0px 0 0 0;
+			text-align: right;
+		}
+
+		.downcol a {
+			text-decoration: underline;
+			margin-right: 25px;
+		}
+
+		span.code-ah {
+			color: white;
+			background: #6e2d91;
+			margin-right: 0;
+			padding: 5px;
+		}
+
+		span.code-sr {
+			color: white;
+			background: #00b14d;
+			margin-right: 0;
+			padding: 5px;
+		}
+
+		span.code-as {
+			color: white;
+			background: #ed1d24;
+			margin-right: 0;
+			padding: 5px;
+		}
+
+		.table-section {
+			clear: both;
+		}
+
+		.table-section .table-responsive tr td a:link {
+			text-decoration: underline;
+		}
+
+		input.ui-input,button.ui-input {
+			height: 34px !important;
+		}
+		h1.h2title{font-size: 1.6rem; color: #6e2d91; font-weight: 600;margin:0;}
+		.nopadding{padding:0}
+		.pagebound {
+			border: 1px solid gray;
+			border-top-right-radius: 4em;
+			padding: 25px 15px 15px 15px;
+		}
+		.pagebound h1 {
+			font-size: 1.6rem;
+			font-weight: bold;
+		}
+		.pagebound h2 {
+			font-size: 1.2rem;
+			font-weight: bold;
+			background-color: rgb(212, 211, 211);
+			padding: 8px 0 5px 5px;
+		}
+		.pagebound .col-md-6 {
+			padding: 0 15px 0 0;
+		}
+		.doublecol input[type=text] {
+			width: 60% !important;
+			float: right;
+		}
+		.doublecol label {
+			width: 40% !important;
+			float: left;
+			display:block;
+			text-align:right;
+		}
+		.minirow {
+			height: 1rem;
+			margin-top: -15px;
+		}
+		.minirow label {
+			display: block;
+			width: 100%;
+			font-size: 1rem;
+			float: right;
+			text-align: right;
+		}
+		#herebychb{}
+	</style>
+</head>
+
+<body>
+	<div class="page-wrap">
+		<header class="header">
+			<div class="header_container">
+				<div class="header_logo">
+					<a class="logo" href="#">
+						<img src="./images/logoHK.svg">
+					</a>
+				</div>
+				<div class="header_right">
+					<div class="header_links">
+						<ul>
+							<li class="header_links_item link-home">
+								<!---->
+								<!---->
+								<div>
+									<button class="header_link" role="link">
+										<i class="fa fa-home"></i> home </button>
+								</div>
+							</li>
+							<!---->
+							<li class="header_links_item link-user">
+								<!---->
+								<!---->
+								<div>
+									<button class="header_link" role="link"> Welcome back Sally </button>
+								</div>
+							</li>
+							<li class="header_links_item link-language">
+								<ibe-language-selector listlabel="Language">
+									<div class="ui-dropdown">
+										<button data-toggle="dropdown" attr.aria-controls="languageTopListId" attr.aria-haspopup="true" class="header_link">
+										</button>
+										<!---->
+										<ul class="dropdown-menu ui-dropdown_list ng-star-inserted" id="languageTopListId" tabindex="-1" aria-hidden="false">
+											<!---->
+											<li class="ng-star-inserted">
+												<button>日本(日本語)</button>
+											</li>
+											<li class="ng-star-inserted">
+												<button>한국(한국어)</button>
+											</li>
+											<li class="ng-star-inserted">
+												<button>中国大陆 (简体)</button>
+											</li>
+											<li class="ng-star-inserted">
+												<button>中國台灣 (繁體)</button>
+											</li>
+											<li class="ng-star-inserted">
+												<button>香港特別行政區 (繁體)</button>
+											</li>
+										</ul>
+									</div>
+								</ibe-language-selector>
+							</li>
+							<!---->
+							<li class="header_links_item link-Logout">
+								<!---->
+								<!---->
+								<div>
+									<button class="header_link" role="link">
+										<i class="fa fa-lock"></i> Logout </button>
+								</div>
+							</li>
+						</ul>
+						<div class="company-info">
+							<div class="des">
+								<strong>B2G Group Booking Portal</strong>
+							</div>
+							<strong>Company:</strong> ABC Travel Services Ltd.
+							<strong>Account Balance:</strong> HKD 150.000
+							<button id="btnrefesh" class="header_link">
+								<i class="fa fa-redo-alt" style="font-size:12px"></i>
+							</button>
+							<span class="balup">Bal. update: 30Sep’18 15:35</span>
+						</div>
+					</div>
+				</div>
+				<div class="header_bottom">
+					<div class="dropdown btn-group">
+							<button class="btn btn-primary dropdown-toggle colorone" type="button" data-toggle="dropdown">
+								<span id="selected1">B2G</span>
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu dropmenu1">
+								<li>
+									<a tabindex="-1" href="#">B2G</a>
+								</li>
+								<li>
+									<a tabindex="-1" href="#">Book Ad-Hoc</a>
+								</li>
+							</ul>
+						</div>
+						<div class="dropdown btn-group">
+							<button class="btn btn-primary dropdown-toggle colortwo" type="button" data-toggle="dropdown">
+								<span id="selected2">Admin</span>
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu dropmenu2">
+								<li><a tabindex="-1" href="./uoaAgt-listing.html">Agents</a></li>
+								<li><a tabindex="-1" href="./uoaUsers-listing.html" >Users</a></li>
+								<li><a tabindex="-1" href="./uoaAdhoc-PCollectionslist.html">Ad-hoc</a></li>
+								<li><a tabindex="-1" href="./uoaAlerts-list.html">UO Alerts</a></li>
+								<li><a tabindex="-1" href="./uoaOthers-Email.html">Others</a></li>
+								<li class="dropdown-submenu">
+									<a class="test" tabindex="-1" href="./uoaReports-PaymentForfeit.html">Reports<span class="caret"></span></a>
+									<ul class="dropdown-menu">
+										<li><a tabindex="-1" href="./uoaReports-Payment.html">Payment</a></li>
+										<li><a tabindex="-1" href="./uoaReports-MonthlyS.html">Monthly Statement</a></li>
+										<li><a tabindex="-1" href="./uoaReports-PaymentForfeit.html">Payment Forfeit</a></li>
+										<li><a tabindex="-1" href="./uoaReports-AG.html">AG</a></li>
+										<li><a tabindex="-1" href="./uoaReports-Expiry.html">Expiry</a></li>
+										<li><a tabindex="-1" href="./uoaReports-COC.html">COC</a></li>										
+									</ul>
+								</li>
+								<li><a tabindex="-1" href="./uoaSupport-CallCenter.html">Support</a></li>								
+							</ul>
+						</div>
+					</div>
+			</div>
+		</header>
+		<main id="maincontent">
+			<div class="container-wrap">
+				<div class="pagebound col-md-12 searchuserform">
+					<div class="col-sm-12 col-md-12 nopadding">
+					<div class="col-sm-4 col-md-4 nopadding">
+						<h1 class="h2title">Agency Profile</h1>
+					</div>
+					<div class="col-md-5 col-sm-5 formcol firstcol">
+						<label>Status</label>
+					</div>		
+					<div class="col-md-2 col-sm-2 formcol">
+					<div class="col-md-9 col-sm-9 formcol">
+								<ibe-select listid="selectstatus" name="selectstatus">
+									<div class="ui-input-container has-value">
+										<div class="ui-dropdown">
+											<button data-toggle="dropdown" aria-haspopup="true" class="ui-input" type="button" aria-expanded="false">
+												<div class="ui-dropdown_value" style="color:red">Pending</div>
+											</button>
+											<ul class="dropdown-menu ui-dropdown_list" tabindex="-1" id="grouptype" aria-hidden="false" aria-activedescendant="grouptype-0">
+												<li>
+													<button id="Select-0" aria-selected="true" class="is-focus">All</button>
+												</li>
+												<li>
+													<button id="Select-1" aria-selected="false">Active</button>
+												</li>
+												<li>
+													<button id="Select-2" aria-selected="false">Inactive</button>
+												</li>
+												<li>
+													<button id="Select-2" aria-selected="false">Rejected</button>
+												</li>
+												<li>
+													<button id="Select-2" aria-selected="false">Suspended</button>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<!---->
+								</ibe-select>
+					</div>
+					</div>
+
+					</div>
+					<div class="col-sm-6 col-md-6">
+						<h2>COMPANY</h2>
+						<div class="col-md-12 col-sm-12">
+							<div class="col-md-4 col-sm-4 formcol firstcol">
+								<label>Travel Agent Name</label>
+							</div>
+							<div class="col-md-8 col-sm-8 formcol">
+								<input type="text" name="name" class="ui-input ng-touched ng-dirty ng-valid" value="">
+							</div>
+						</div>
+						<div class="col-md-12 col-sm-12">
+							<div class="col-md-4 col-sm-4 formcol firstcol">
+								<label>Travel Agent License No.</label>
+							</div>
+							<div class="col-md-4 col-sm-4 formcol">
+								<input type="text" name="bussiness" id="bussiness" class="ui-input ng-touched ng-dirty ng-valid" value="">
+							</div>
+							<div class="col-md-4 col-sm-4 formcol doublecol">
+								<label>IATA No.</label>
+								<input type="text" name="iata" class="ui-input ng-touched ng-dirty ng-valid" value="">
+							</div>
+						</div>
+						<div class="col-md-12 col-sm-12">
+							<div class="col-md-4 col-sm-4 formcol firstcol">
+								<label>Website URL</label>
+							</div>
+							<div class="col-md-4 col-sm-4 formcol">
+								<input type="text" name="url" class="ui-input ng-touched ng-dirty ng-valid" placeholder="Optional">
+							</div>
+							<div class="col-md-4 col-sm-4 formcol"></div>
+						</div>
+						<div class="col-md-12 col-sm-12">
+							<div class="col-md-4 col-sm-4 formcol firstcol">
+								<label>Address Line 1</label>
+							</div>
+							<div class="col-md-8 col-sm-8 formcol">
+								<input type="text" name="line1" class="ui-input ng-touched ng-dirty ng-valid" placeholder="">
+							</div>
+						</div>
+						
+						<div class="col-md-12 col-sm-12">
+							<div class="col-md-4 col-sm-4 formcol firstcol">
+								<label>Address Line 2</label>
+							</div>
+							<div class="col-md-8 col-sm-8 formcol">
+								<input type="text" name="line1" class="ui-input ng-touched ng-dirty ng-valid" placeholder="Optional">
+							</div>
+						</div>
+						<div class="col-md-12 col-sm-12">
+							<div class="col-md-4 col-sm-4 formcol firstcol">
+								<label>Country</label>
+							</div>
+							<div class="col-md-4 col-sm-4 formcol">
+								<div class="">
+                          <ibe-select listid="countrySelect" name="countries">
+                            <!---->
+                            <!---->
+                            <div class="ui-input-container has-value">
+                              <!---->
+                              <!---->
+                             <div class="ui-dropdown">
+                                <button data-toggle="dropdown" aria-haspopup="true" class="ui-input" type="button" aria-expanded="false">
+                                  <!---->
+                                  <div class="ui-dropdown_value">
+                                    <span class="hide-visually">Country/Region*</span>Country</div>
+                                  <!---->
+                                </button>
+                                <!---->
+                                <ul class="dropdown-menu ui-dropdown_list" tabindex="-1" id="countrySelect" aria-hidden="false" aria-activedescendant="countrySelect-0">
+                                    <!---->
+                                    <!----><li>
+                                        <button id="countrySelect-0" aria-selected="true" class="is-focus">
+                                            Afghanistan
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-1" aria-selected="false">
+                                            Åland Islands
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-2" aria-selected="false">
+                                            Albania
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-3" aria-selected="false">
+                                            Algeria
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-4" aria-selected="false">
+                                            American Samoa
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-5" aria-selected="false">
+                                            Andorra
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-6" aria-selected="false">
+                                            Angola
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-7" aria-selected="false">
+                                            Anguilla
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-8" aria-selected="false">
+                                            Antigua &amp; Barbuda
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-9" aria-selected="false">
+                                            Argentina
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-10" aria-selected="false">
+                                            Armenia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-11" aria-selected="false">
+                                            Aruba
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-12" aria-selected="false">
+                                            Australia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-13" aria-selected="false">
+                                            Austria
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-14" aria-selected="false">
+                                            Azerbaijan
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-15" aria-selected="false">
+                                            Bahamas
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-16" aria-selected="false">
+                                            Bahrain
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-17" aria-selected="false">
+                                            Bangladesh
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-18" aria-selected="false">
+                                            Barbados
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-19" aria-selected="false">
+                                            Belarus
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-20" aria-selected="false">
+                                            Belgium
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-21" aria-selected="false">
+                                            Belize
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-22" aria-selected="false">
+                                            Benin
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-23" aria-selected="false">
+                                            Bermuda
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-24" aria-selected="false">
+                                            Bhutan
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-25" aria-selected="false">
+                                            Bolivia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-26" aria-selected="false">
+                                            Bosnia &amp; Herzegovina
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-27" aria-selected="false">
+                                            Botswana
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-28" aria-selected="false">
+                                            Brazil
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-29" aria-selected="false">
+                                            British Indian Ocean Territory
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-30" aria-selected="false">
+                                            British Virgin Islands
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-31" aria-selected="false">
+                                            Brunei
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-32" aria-selected="false">
+                                            Bulgaria
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-33" aria-selected="false">
+                                            Burkina Faso
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-34" aria-selected="false">
+                                            Burundi
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-35" aria-selected="false">
+                                            Cambodia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-36" aria-selected="false">
+                                            Cameroon
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-37" aria-selected="false">
+                                            Canada
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-38" aria-selected="false">
+                                            Cape Verde
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-39" aria-selected="false">
+                                            Caribbean Netherlands
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-40" aria-selected="false">
+                                            Cayman Islands
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-41" aria-selected="false">
+                                            Central African Republic
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-42" aria-selected="false">
+                                            Chad
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-43" aria-selected="false">
+                                            Chile
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-44" aria-selected="false">
+                                            China
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-45" aria-selected="false">
+                                            Christmas Island
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-46" aria-selected="false">
+                                            Cocos (Keeling) Islands
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-47" aria-selected="false">
+                                            Colombia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-48" aria-selected="false">
+                                            Comoros
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-49" aria-selected="false">
+                                            Congo - Brazzaville
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-50" aria-selected="false">
+                                            Congo - Kinshasa
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-51" aria-selected="false">
+                                            Cook Islands
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-52" aria-selected="false">
+                                            Costa Rica
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-53" aria-selected="false">
+                                            Côte d’Ivoire
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-54" aria-selected="false">
+                                            Croatia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-55" aria-selected="false">
+                                            Cuba
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-56" aria-selected="false">
+                                            Curaçao
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-57" aria-selected="false">
+                                            Cyprus
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-58" aria-selected="false">
+                                            Czechia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-59" aria-selected="false">
+                                            Denmark
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-60" aria-selected="false">
+                                            Djibouti
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-61" aria-selected="false">
+                                            Dominica
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-62" aria-selected="false">
+                                            Dominican Republic
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-63" aria-selected="false">
+                                            Ecuador
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-64" aria-selected="false">
+                                            Egypt
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-65" aria-selected="false">
+                                            El Salvador
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-66" aria-selected="false">
+                                            Equatorial Guinea
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-67" aria-selected="false">
+                                            Eritrea
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-68" aria-selected="false">
+                                            Estonia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-69" aria-selected="false">
+                                            Ethiopia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-70" aria-selected="false">
+                                            Falkland Islands
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-71" aria-selected="false">
+                                            Faroe Islands
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-72" aria-selected="false">
+                                            Fiji
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-73" aria-selected="false">
+                                            Finland
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-74" aria-selected="false">
+                                            France
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-75" aria-selected="false">
+                                            French Guiana
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-76" aria-selected="false">
+                                            French Polynesia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-77" aria-selected="false">
+                                            Gabon
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-78" aria-selected="false">
+                                            Gambia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-79" aria-selected="false">
+                                            Georgia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-80" aria-selected="false">
+                                            Germany
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-81" aria-selected="false">
+                                            Ghana
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-82" aria-selected="false">
+                                            Gibraltar
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-83" aria-selected="false">
+                                            Greece
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-84" aria-selected="false">
+                                            Greenland
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-85" aria-selected="false">
+                                            Grenada
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-86" aria-selected="false">
+                                            Guadeloupe
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-87" aria-selected="false">
+                                            Guam
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-88" aria-selected="false">
+                                            Guatemala
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-89" aria-selected="false">
+                                            Guernsey
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-90" aria-selected="false">
+                                            Guinea
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-91" aria-selected="false">
+                                            Guinea-Bissau
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-92" aria-selected="false">
+                                            Guyana
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-93" aria-selected="false">
+                                            Haiti
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-94" aria-selected="false">
+                                            Honduras
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-95" aria-selected="false">
+                                            Hong Kong SAR
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-96" aria-selected="false">
+                                            Hungary
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-97" aria-selected="false">
+                                            Iceland
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-98" aria-selected="false">
+                                            India
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-99" aria-selected="false">
+                                            Indonesia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-100" aria-selected="false">
+                                            Iran
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-101" aria-selected="false">
+                                            Iraq
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-102" aria-selected="false">
+                                            Ireland
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-103" aria-selected="false">
+                                            Isle of Man
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-104" aria-selected="false">
+                                            Israel
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-105" aria-selected="false">
+                                            Italy
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-106" aria-selected="false">
+                                            Jamaica
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-107" aria-selected="false">
+                                            Japan
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-108" aria-selected="false">
+                                            Jersey
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-109" aria-selected="false">
+                                            Jordan
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-110" aria-selected="false">
+                                            Kazakhstan
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-111" aria-selected="false">
+                                            Kenya
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-112" aria-selected="false">
+                                            Kiribati
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-113" aria-selected="false">
+                                            Kuwait
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-114" aria-selected="false">
+                                            Kyrgyzstan
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-115" aria-selected="false">
+                                            Laos
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-116" aria-selected="false">
+                                            Latvia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-117" aria-selected="false">
+                                            Lebanon
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-118" aria-selected="false">
+                                            Lesotho
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-119" aria-selected="false">
+                                            Liberia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-120" aria-selected="false">
+                                            Libya
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-121" aria-selected="false">
+                                            Liechtenstein
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-122" aria-selected="false">
+                                            Lithuania
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-123" aria-selected="false">
+                                            Luxembourg
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-124" aria-selected="false">
+                                            Macau SAR China
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-125" aria-selected="false">
+                                            Macedonia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-126" aria-selected="false">
+                                            Madagascar
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-127" aria-selected="false">
+                                            Malawi
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-128" aria-selected="false">
+                                            Malaysia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-129" aria-selected="false">
+                                            Maldives
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-130" aria-selected="false">
+                                            Mali
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-131" aria-selected="false">
+                                            Malta
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-132" aria-selected="false">
+                                            Marshall Islands
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-133" aria-selected="false">
+                                            Martinique
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-134" aria-selected="false">
+                                            Mauritania
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-135" aria-selected="false">
+                                            Mauritius
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-136" aria-selected="false">
+                                            Mayotte
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-137" aria-selected="false">
+                                            Mexico
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-138" aria-selected="false">
+                                            Micronesia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-139" aria-selected="false">
+                                            Moldova
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-140" aria-selected="false">
+                                            Monaco
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-141" aria-selected="false">
+                                            Mongolia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-142" aria-selected="false">
+                                            Montenegro
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-143" aria-selected="false">
+                                            Montserrat
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-144" aria-selected="false">
+                                            Morocco
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-145" aria-selected="false">
+                                            Myanmar (Burma)
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-146" aria-selected="false">
+                                            Namibia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-147" aria-selected="false">
+                                            Nauru
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-148" aria-selected="false">
+                                            Nepal
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-149" aria-selected="false">
+                                            Netherlands
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-150" aria-selected="false">
+                                            New Caledonia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-151" aria-selected="false">
+                                            New Zealand
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-152" aria-selected="false">
+                                            Nicaragua
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-153" aria-selected="false">
+                                            Niger
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-154" aria-selected="false">
+                                            Nigeria
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-155" aria-selected="false">
+                                            Niue
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-156" aria-selected="false">
+                                            Norfolk Island
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-157" aria-selected="false">
+                                            North Korea
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-158" aria-selected="false">
+                                            Northern Mariana Islands
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-159" aria-selected="false">
+                                            Norway
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-160" aria-selected="false">
+                                            Oman
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-161" aria-selected="false">
+                                            Pakistan
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-162" aria-selected="false">
+                                            Palau
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-163" aria-selected="false">
+                                            Palestinian Territories
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-164" aria-selected="false">
+                                            Panama
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-165" aria-selected="false">
+                                            Papua New Guinea
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-166" aria-selected="false">
+                                            Paraguay
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-167" aria-selected="false">
+                                            Peru
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-168" aria-selected="false">
+                                            Philippines
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-169" aria-selected="false">
+                                            Pitcairn Islands
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-170" aria-selected="false">
+                                            Poland
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-171" aria-selected="false">
+                                            Portugal
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-172" aria-selected="false">
+                                            Puerto Rico
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-173" aria-selected="false">
+                                            Qatar
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-174" aria-selected="false">
+                                            Qatar
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-175" aria-selected="false">
+                                            Réunion
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-176" aria-selected="false">
+                                            Romania
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-177" aria-selected="false">
+                                            Russia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-178" aria-selected="false">
+                                            Rwanda
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-179" aria-selected="false">
+                                            Samoa
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-180" aria-selected="false">
+                                            San Marino
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-181" aria-selected="false">
+                                            São Tomé &amp; Príncipe
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-182" aria-selected="false">
+                                            Saudi Arabia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-183" aria-selected="false">
+                                            Senegal
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-184" aria-selected="false">
+                                            Serbia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-185" aria-selected="false">
+                                            Seychelles
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-186" aria-selected="false">
+                                            Sierra Leone
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-187" aria-selected="false">
+                                            Singapore
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-188" aria-selected="false">
+                                            Sint Maarten
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-189" aria-selected="false">
+                                            Slovakia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-190" aria-selected="false">
+                                            Slovenia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-191" aria-selected="false">
+                                            Solomon Islands
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-192" aria-selected="false">
+                                            Somalia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-193" aria-selected="false">
+                                            South Africa
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-194" aria-selected="false">
+                                            South Korea
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-195" aria-selected="false">
+                                            South Sudan
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-196" aria-selected="false">
+                                            Spain
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-197" aria-selected="false">
+                                            Sri Lanka
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-198" aria-selected="false">
+                                            St. Barthélemy
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-199" aria-selected="false">
+                                            St. Helena
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-200" aria-selected="false">
+                                            St. Kitts &amp; Nevis
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-201" aria-selected="false">
+                                            St. Lucia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-202" aria-selected="false">
+                                            St. Martin
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-203" aria-selected="false">
+                                            St. Pierre &amp; Miquelon
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-204" aria-selected="false">
+                                            St. Vincent &amp; Grenadines
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-205" aria-selected="false">
+                                            Sudan
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-206" aria-selected="false">
+                                            Suriname
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-207" aria-selected="false">
+                                            Svalbard &amp; Jan Mayen
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-208" aria-selected="false">
+                                            Swaziland
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-209" aria-selected="false">
+                                            Sweden
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-210" aria-selected="false">
+                                            Switzerland
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-211" aria-selected="false">
+                                            Syria
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-212" aria-selected="false">
+                                            Taiwan, China
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-213" aria-selected="false">
+                                            Tajikistan
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-214" aria-selected="false">
+                                            Tanzania
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-215" aria-selected="false">
+                                            Thailand
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-216" aria-selected="false">
+                                            Timor-Leste
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-217" aria-selected="false">
+                                            Togo
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-218" aria-selected="false">
+                                            Tonga
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-219" aria-selected="false">
+                                            Trinidad &amp; Tobago
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-220" aria-selected="false">
+                                            Tunisia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-221" aria-selected="false">
+                                            Turkey
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-222" aria-selected="false">
+                                            Turkmenistan
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-223" aria-selected="false">
+                                            Turks &amp; Caicos Islands
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-224" aria-selected="false">
+                                            Tuvalu
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-225" aria-selected="false">
+                                            U.S. Outlying Islands
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-226" aria-selected="false">
+                                            U.S. Virgin Islands
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-227" aria-selected="false">
+                                            Uganda
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-228" aria-selected="false">
+                                            Ukraine
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-229" aria-selected="false">
+                                            United Arab Emirates
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-230" aria-selected="false">
+                                            United Kingdom
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-231" aria-selected="false">
+                                            United States
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-232" aria-selected="false">
+                                            Uruguay
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-233" aria-selected="false">
+                                            Uzbekistan
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-234" aria-selected="false">
+                                            Vanuatu
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-235" aria-selected="false">
+                                            Venezuela
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-236" aria-selected="false">
+                                            Vietnam
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-237" aria-selected="false">
+                                            Wallis &amp; Futuna
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-238" aria-selected="false">
+                                            Western Sahara
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-239" aria-selected="false">
+                                            Yemen
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-240" aria-selected="false">
+                                            Zambia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-241" aria-selected="false">
+                                            Zimbabwe
+                                        </button>
+                                    </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <!---->
+                          </ibe-select>
+                        </div>
+							</div>
+							<div class="col-md-4 col-sm-4 formcol">
+							</div>
+						</div>
+						<div class="col-md-12 col-sm-12">
+							<div class="col-md-4 col-sm-4 formcol firstcol">
+								<label>City</label>
+							</div>
+							<div class="col-md-4 col-sm-4 formcol">
+								<input type="text" name="city" class="ui-input ng-touched ng-dirty ng-valid" placeholder="">
+							</div>
+							<div class="col-md-4 col-sm-4 formcol doublecol">
+								<label>Postcode&nbsp;</label>
+								<input type="text" name="postcode" class="ui-input ng-touched ng-dirty ng-valid" value="">
+							</div>
+						</div>
+						<div class="col-md-12 col-sm-12">
+							<div class="col-md-4 col-sm-4 formcol firstcol">
+								
+							</div>
+							<div class="col-md-8 col-sm-8 formcol ">
+								<div class="checkbox" style="margin:0 -20px">
+									<label>
+										<input type="checkbox" value="">Billing address (Checkbox to fill same as office address)</label>
+								</div>
+							</div>							
+						</div>
+						<div class="col-md-12 col-sm-12">
+							<h2>BANK DETAILS (Optional)</h2>
+							<div class="col-md-12 col-sm-12">
+								<div class="col-md-4 col-sm-4 formcol firstcol">
+									<label>Bank Name</label>
+								</div>
+								<div class="col-md-8 col-sm-8 formcol">
+									<input type="text" name="bankname" class="ui-input ng-touched ng-dirty ng-valid" value="">
+								</div>
+							</div>
+							<div class="col-md-12 col-sm-12">
+								<div class="col-md-4 col-sm-4 formcol firstcol">
+									<label>Address Line 1</label>
+								</div>
+								<div class="col-md-8 col-sm-8 formcol">
+									<input type="text" name="line1" class="ui-input ng-touched ng-dirty ng-valid" placeholder="">
+								</div>
+							</div>
+							<div class="col-md-12 col-sm-12">
+								<div class="col-md-4 col-sm-4 formcol firstcol">
+									<label>Address Line 2</label>
+								</div>
+								<div class="col-md-8 col-sm-8 formcol">
+									<input type="text" name="line1" class="ui-input ng-touched ng-dirty ng-valid" placeholder="Optional">
+								</div>
+							</div>
+							<div class="col-md-12 col-sm-12">
+							<div class="col-md-4 col-sm-4 formcol firstcol">
+								<label>Country</label>
+							</div>
+							<div class="col-md-4 col-sm-4 formcol">
+								<div class="">
+                          <ibe-select listid="countrySelect" name="countries">
+                            <!---->
+                            <!---->
+                            <div class="ui-input-container has-value">
+                              <!---->
+                              <!---->
+                             <div class="ui-dropdown">
+                                <button data-toggle="dropdown" aria-haspopup="true" class="ui-input" type="button" aria-expanded="false">
+                                  <!---->
+                                  <div class="ui-dropdown_value">
+                                    <span class="hide-visually">Country/Region*</span>Country</div>
+                                  <!---->
+                                </button>
+                                <!---->
+                                <ul class="dropdown-menu ui-dropdown_list" tabindex="-1" id="countrySelect" aria-hidden="false" aria-activedescendant="countrySelect-0">
+                                    <!---->
+                                    <!----><li>
+                                        <button id="countrySelect-0" aria-selected="true" class="is-focus">
+                                            Afghanistan
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-1" aria-selected="false">
+                                            Åland Islands
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-2" aria-selected="false">
+                                            Albania
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-3" aria-selected="false">
+                                            Algeria
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-4" aria-selected="false">
+                                            American Samoa
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-5" aria-selected="false">
+                                            Andorra
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-6" aria-selected="false">
+                                            Angola
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-7" aria-selected="false">
+                                            Anguilla
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-8" aria-selected="false">
+                                            Antigua &amp; Barbuda
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-9" aria-selected="false">
+                                            Argentina
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-10" aria-selected="false">
+                                            Armenia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-11" aria-selected="false">
+                                            Aruba
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-12" aria-selected="false">
+                                            Australia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-13" aria-selected="false">
+                                            Austria
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-14" aria-selected="false">
+                                            Azerbaijan
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-15" aria-selected="false">
+                                            Bahamas
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-16" aria-selected="false">
+                                            Bahrain
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-17" aria-selected="false">
+                                            Bangladesh
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-18" aria-selected="false">
+                                            Barbados
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-19" aria-selected="false">
+                                            Belarus
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-20" aria-selected="false">
+                                            Belgium
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-21" aria-selected="false">
+                                            Belize
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-22" aria-selected="false">
+                                            Benin
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-23" aria-selected="false">
+                                            Bermuda
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-24" aria-selected="false">
+                                            Bhutan
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-25" aria-selected="false">
+                                            Bolivia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-26" aria-selected="false">
+                                            Bosnia &amp; Herzegovina
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-27" aria-selected="false">
+                                            Botswana
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-28" aria-selected="false">
+                                            Brazil
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-29" aria-selected="false">
+                                            British Indian Ocean Territory
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-30" aria-selected="false">
+                                            British Virgin Islands
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-31" aria-selected="false">
+                                            Brunei
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-32" aria-selected="false">
+                                            Bulgaria
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-33" aria-selected="false">
+                                            Burkina Faso
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-34" aria-selected="false">
+                                            Burundi
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-35" aria-selected="false">
+                                            Cambodia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-36" aria-selected="false">
+                                            Cameroon
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-37" aria-selected="false">
+                                            Canada
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-38" aria-selected="false">
+                                            Cape Verde
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-39" aria-selected="false">
+                                            Caribbean Netherlands
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-40" aria-selected="false">
+                                            Cayman Islands
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-41" aria-selected="false">
+                                            Central African Republic
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-42" aria-selected="false">
+                                            Chad
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-43" aria-selected="false">
+                                            Chile
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-44" aria-selected="false">
+                                            China
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-45" aria-selected="false">
+                                            Christmas Island
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-46" aria-selected="false">
+                                            Cocos (Keeling) Islands
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-47" aria-selected="false">
+                                            Colombia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-48" aria-selected="false">
+                                            Comoros
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-49" aria-selected="false">
+                                            Congo - Brazzaville
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-50" aria-selected="false">
+                                            Congo - Kinshasa
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-51" aria-selected="false">
+                                            Cook Islands
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-52" aria-selected="false">
+                                            Costa Rica
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-53" aria-selected="false">
+                                            Côte d’Ivoire
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-54" aria-selected="false">
+                                            Croatia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-55" aria-selected="false">
+                                            Cuba
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-56" aria-selected="false">
+                                            Curaçao
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-57" aria-selected="false">
+                                            Cyprus
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-58" aria-selected="false">
+                                            Czechia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-59" aria-selected="false">
+                                            Denmark
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-60" aria-selected="false">
+                                            Djibouti
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-61" aria-selected="false">
+                                            Dominica
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-62" aria-selected="false">
+                                            Dominican Republic
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-63" aria-selected="false">
+                                            Ecuador
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-64" aria-selected="false">
+                                            Egypt
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-65" aria-selected="false">
+                                            El Salvador
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-66" aria-selected="false">
+                                            Equatorial Guinea
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-67" aria-selected="false">
+                                            Eritrea
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-68" aria-selected="false">
+                                            Estonia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-69" aria-selected="false">
+                                            Ethiopia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-70" aria-selected="false">
+                                            Falkland Islands
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-71" aria-selected="false">
+                                            Faroe Islands
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-72" aria-selected="false">
+                                            Fiji
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-73" aria-selected="false">
+                                            Finland
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-74" aria-selected="false">
+                                            France
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-75" aria-selected="false">
+                                            French Guiana
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-76" aria-selected="false">
+                                            French Polynesia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-77" aria-selected="false">
+                                            Gabon
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-78" aria-selected="false">
+                                            Gambia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-79" aria-selected="false">
+                                            Georgia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-80" aria-selected="false">
+                                            Germany
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-81" aria-selected="false">
+                                            Ghana
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-82" aria-selected="false">
+                                            Gibraltar
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-83" aria-selected="false">
+                                            Greece
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-84" aria-selected="false">
+                                            Greenland
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-85" aria-selected="false">
+                                            Grenada
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-86" aria-selected="false">
+                                            Guadeloupe
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-87" aria-selected="false">
+                                            Guam
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-88" aria-selected="false">
+                                            Guatemala
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-89" aria-selected="false">
+                                            Guernsey
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-90" aria-selected="false">
+                                            Guinea
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-91" aria-selected="false">
+                                            Guinea-Bissau
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-92" aria-selected="false">
+                                            Guyana
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-93" aria-selected="false">
+                                            Haiti
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-94" aria-selected="false">
+                                            Honduras
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-95" aria-selected="false">
+                                            Hong Kong SAR
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-96" aria-selected="false">
+                                            Hungary
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-97" aria-selected="false">
+                                            Iceland
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-98" aria-selected="false">
+                                            India
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-99" aria-selected="false">
+                                            Indonesia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-100" aria-selected="false">
+                                            Iran
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-101" aria-selected="false">
+                                            Iraq
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-102" aria-selected="false">
+                                            Ireland
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-103" aria-selected="false">
+                                            Isle of Man
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-104" aria-selected="false">
+                                            Israel
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-105" aria-selected="false">
+                                            Italy
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-106" aria-selected="false">
+                                            Jamaica
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-107" aria-selected="false">
+                                            Japan
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-108" aria-selected="false">
+                                            Jersey
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-109" aria-selected="false">
+                                            Jordan
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-110" aria-selected="false">
+                                            Kazakhstan
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-111" aria-selected="false">
+                                            Kenya
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-112" aria-selected="false">
+                                            Kiribati
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-113" aria-selected="false">
+                                            Kuwait
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-114" aria-selected="false">
+                                            Kyrgyzstan
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-115" aria-selected="false">
+                                            Laos
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-116" aria-selected="false">
+                                            Latvia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-117" aria-selected="false">
+                                            Lebanon
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-118" aria-selected="false">
+                                            Lesotho
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-119" aria-selected="false">
+                                            Liberia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-120" aria-selected="false">
+                                            Libya
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-121" aria-selected="false">
+                                            Liechtenstein
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-122" aria-selected="false">
+                                            Lithuania
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-123" aria-selected="false">
+                                            Luxembourg
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-124" aria-selected="false">
+                                            Macau SAR China
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-125" aria-selected="false">
+                                            Macedonia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-126" aria-selected="false">
+                                            Madagascar
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-127" aria-selected="false">
+                                            Malawi
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-128" aria-selected="false">
+                                            Malaysia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-129" aria-selected="false">
+                                            Maldives
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-130" aria-selected="false">
+                                            Mali
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-131" aria-selected="false">
+                                            Malta
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-132" aria-selected="false">
+                                            Marshall Islands
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-133" aria-selected="false">
+                                            Martinique
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-134" aria-selected="false">
+                                            Mauritania
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-135" aria-selected="false">
+                                            Mauritius
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-136" aria-selected="false">
+                                            Mayotte
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-137" aria-selected="false">
+                                            Mexico
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-138" aria-selected="false">
+                                            Micronesia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-139" aria-selected="false">
+                                            Moldova
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-140" aria-selected="false">
+                                            Monaco
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-141" aria-selected="false">
+                                            Mongolia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-142" aria-selected="false">
+                                            Montenegro
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-143" aria-selected="false">
+                                            Montserrat
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-144" aria-selected="false">
+                                            Morocco
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-145" aria-selected="false">
+                                            Myanmar (Burma)
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-146" aria-selected="false">
+                                            Namibia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-147" aria-selected="false">
+                                            Nauru
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-148" aria-selected="false">
+                                            Nepal
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-149" aria-selected="false">
+                                            Netherlands
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-150" aria-selected="false">
+                                            New Caledonia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-151" aria-selected="false">
+                                            New Zealand
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-152" aria-selected="false">
+                                            Nicaragua
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-153" aria-selected="false">
+                                            Niger
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-154" aria-selected="false">
+                                            Nigeria
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-155" aria-selected="false">
+                                            Niue
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-156" aria-selected="false">
+                                            Norfolk Island
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-157" aria-selected="false">
+                                            North Korea
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-158" aria-selected="false">
+                                            Northern Mariana Islands
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-159" aria-selected="false">
+                                            Norway
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-160" aria-selected="false">
+                                            Oman
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-161" aria-selected="false">
+                                            Pakistan
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-162" aria-selected="false">
+                                            Palau
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-163" aria-selected="false">
+                                            Palestinian Territories
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-164" aria-selected="false">
+                                            Panama
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-165" aria-selected="false">
+                                            Papua New Guinea
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-166" aria-selected="false">
+                                            Paraguay
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-167" aria-selected="false">
+                                            Peru
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-168" aria-selected="false">
+                                            Philippines
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-169" aria-selected="false">
+                                            Pitcairn Islands
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-170" aria-selected="false">
+                                            Poland
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-171" aria-selected="false">
+                                            Portugal
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-172" aria-selected="false">
+                                            Puerto Rico
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-173" aria-selected="false">
+                                            Qatar
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-174" aria-selected="false">
+                                            Qatar
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-175" aria-selected="false">
+                                            Réunion
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-176" aria-selected="false">
+                                            Romania
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-177" aria-selected="false">
+                                            Russia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-178" aria-selected="false">
+                                            Rwanda
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-179" aria-selected="false">
+                                            Samoa
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-180" aria-selected="false">
+                                            San Marino
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-181" aria-selected="false">
+                                            São Tomé &amp; Príncipe
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-182" aria-selected="false">
+                                            Saudi Arabia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-183" aria-selected="false">
+                                            Senegal
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-184" aria-selected="false">
+                                            Serbia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-185" aria-selected="false">
+                                            Seychelles
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-186" aria-selected="false">
+                                            Sierra Leone
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-187" aria-selected="false">
+                                            Singapore
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-188" aria-selected="false">
+                                            Sint Maarten
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-189" aria-selected="false">
+                                            Slovakia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-190" aria-selected="false">
+                                            Slovenia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-191" aria-selected="false">
+                                            Solomon Islands
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-192" aria-selected="false">
+                                            Somalia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-193" aria-selected="false">
+                                            South Africa
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-194" aria-selected="false">
+                                            South Korea
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-195" aria-selected="false">
+                                            South Sudan
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-196" aria-selected="false">
+                                            Spain
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-197" aria-selected="false">
+                                            Sri Lanka
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-198" aria-selected="false">
+                                            St. Barthélemy
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-199" aria-selected="false">
+                                            St. Helena
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-200" aria-selected="false">
+                                            St. Kitts &amp; Nevis
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-201" aria-selected="false">
+                                            St. Lucia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-202" aria-selected="false">
+                                            St. Martin
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-203" aria-selected="false">
+                                            St. Pierre &amp; Miquelon
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-204" aria-selected="false">
+                                            St. Vincent &amp; Grenadines
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-205" aria-selected="false">
+                                            Sudan
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-206" aria-selected="false">
+                                            Suriname
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-207" aria-selected="false">
+                                            Svalbard &amp; Jan Mayen
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-208" aria-selected="false">
+                                            Swaziland
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-209" aria-selected="false">
+                                            Sweden
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-210" aria-selected="false">
+                                            Switzerland
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-211" aria-selected="false">
+                                            Syria
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-212" aria-selected="false">
+                                            Taiwan, China
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-213" aria-selected="false">
+                                            Tajikistan
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-214" aria-selected="false">
+                                            Tanzania
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-215" aria-selected="false">
+                                            Thailand
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-216" aria-selected="false">
+                                            Timor-Leste
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-217" aria-selected="false">
+                                            Togo
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-218" aria-selected="false">
+                                            Tonga
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-219" aria-selected="false">
+                                            Trinidad &amp; Tobago
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-220" aria-selected="false">
+                                            Tunisia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-221" aria-selected="false">
+                                            Turkey
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-222" aria-selected="false">
+                                            Turkmenistan
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-223" aria-selected="false">
+                                            Turks &amp; Caicos Islands
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-224" aria-selected="false">
+                                            Tuvalu
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-225" aria-selected="false">
+                                            U.S. Outlying Islands
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-226" aria-selected="false">
+                                            U.S. Virgin Islands
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-227" aria-selected="false">
+                                            Uganda
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-228" aria-selected="false">
+                                            Ukraine
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-229" aria-selected="false">
+                                            United Arab Emirates
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-230" aria-selected="false">
+                                            United Kingdom
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-231" aria-selected="false">
+                                            United States
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-232" aria-selected="false">
+                                            Uruguay
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-233" aria-selected="false">
+                                            Uzbekistan
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-234" aria-selected="false">
+                                            Vanuatu
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-235" aria-selected="false">
+                                            Venezuela
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-236" aria-selected="false">
+                                            Vietnam
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-237" aria-selected="false">
+                                            Wallis &amp; Futuna
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-238" aria-selected="false">
+                                            Western Sahara
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-239" aria-selected="false">
+                                            Yemen
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-240" aria-selected="false">
+                                            Zambia
+                                        </button>
+                                    </li><li>
+                                        <button id="countrySelect-241" aria-selected="false">
+                                            Zimbabwe
+                                        </button>
+                                    </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <!---->
+                          </ibe-select>
+                        </div>
+							</div>
+							<div class="col-md-4 col-sm-4 formcol">
+							</div>
+						</div>
+							<div class="col-md-12 col-sm-12">
+								<div class="col-md-4 col-sm-4 formcol firstcol">
+									<label>City</label>
+								</div>
+								<div class="col-md-4 col-sm-4 formcol">
+									<input type="text" name="city" class="ui-input ng-touched ng-dirty ng-valid" placeholder="">
+								</div>
+								<div class="col-md-4 col-sm-4 formcol doublecol">
+									<label>Postcode&nbsp;</label>
+									<input type="text" name="postcode" class="ui-input ng-touched ng-dirty ng-valid" value="">
+								</div>
+							</div>
+							<div class="col-md-12 col-sm-12">
+								<div class="col-md-4 col-sm-4 formcol firstcol">
+									<label>Account Name</label>
+								</div>
+								<div class="col-md-4 col-sm-4 formcol">
+									<input type="text" name="accname" class="ui-input ng-touched ng-dirty ng-valid" placeholder="">
+								</div>
+								<div class="col-md-4 col-sm-4 formcol"></div>
+							</div>
+							<div class="col-md-12 col-sm-12">
+								<div class="col-md-4 col-sm-4 formcol firstcol">
+									<label>Bank Account No.</label>
+								</div>
+								<div class="col-md-4 col-sm-4 formcol">
+									<input type="text" name="accno" class="ui-input ng-touched ng-dirty ng-valid" placeholder="">
+								</div>
+								<div class="col-md-4 col-sm-4 formcol"></div>
+							</div>
+							<div class="col-md-12 col-sm-12">
+								<div class="col-md-4 col-sm-4 formcol firstcol">
+									<label>Preferred Currency</label>
+								</div>
+								<div class="col-md-4 col-sm-4 formcol">
+									<ibe-select listid="selectsta" name="selectsta">
+										<div class="ui-input-container has-value">
+											<div class="ui-dropdown">
+												<button data-toggle="dropdown" aria-haspopup="true" class="ui-input" type="button" aria-expanded="false">
+													<div class="ui-dropdown_value">USD</div>
+												</button>
+												<ul class="dropdown-menu ui-dropdown_list" tabindex="-1" id="grouptype" aria-hidden="false" aria-activedescendant="grouptype-0">
+													<li>
+														<button aria-selected="true" class="is-focus">USD</button>
+													</li>
+													<li>
+														<button aria-selected="false">HKD</button>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</ibe-select>
+								</div>
+								<div class="col-md-4 col-sm-4 formcol"></div>
+							</div>
+							<div class="nospace"></div>
+							<h2>REMARKS (optional)</h2>
+							<div class="col-md-12 col-sm-12">
+								<textarea rows="4" placeholder="Free text" class="ui-input ng-touched ng-dirty ng-valid" style="height: 100px;"></textarea>
+
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-6">
+						<h2>ADMIN USER - Main Contact</h2>
+						<div class="col-md-12 col-sm-12">
+							<div class="col-md-4 col-sm-4 formcol firstcol">
+								<label>Preferred Language</label>
+							</div>
+							<div class="col-md-4 col-sm-4 formcol">
+								<ibe-language-selector listlabel="Language">
+									<div class="ui-dropdown">
+										<button data-toggle="dropdown" aria-haspopup="true" class="ui-input" type="button" aria-expanded="false">
+											<div class="ui-dropdown_value">English</div>
+										</button>
+										<ul class="dropdown-menu ui-dropdown_list ng-star-inserted" id="languageTopListId" tabindex="-1" aria-hidden="false">
+											<!---->
+											<li class="ng-star-inserted">
+												<button>日本(日本語)</button>
+											</li>
+											<li class="ng-star-inserted">
+												<button>한국(한국어)</button>
+											</li>
+											<li class="ng-star-inserted">
+												<button>中国大陆 (简体)</button>
+											</li>
+											<li class="ng-star-inserted">
+												<button>中國台灣 (繁體)</button>
+											</li>
+											<li class="ng-star-inserted">
+												<button>香港特別行政區 (繁體)</button>
+											</li>
+										</ul>
+									</div>
+								</ibe-language-selector>
+							</div>
+						</div>
+						<div class="col-md-12 col-sm-12">
+							<div class="col-md-4 col-sm-4 formcol firstcol">
+								<div class="col-md-6 col-sm-6 formcol firstcol"></div>
+								<div class="col-md-6 col-sm-6 formcol firstcol">
+									<ibe-select listid="selectgen" name="selectgen">
+										<div class="ui-input-container has-value">
+											<div class="ui-dropdown">
+												<button data-toggle="dropdown" aria-haspopup="true" class="ui-input" type="button" aria-expanded="false">
+													<div class="ui-dropdown_value">Mr.</div>
+												</button>
+												<ul class="dropdown-menu ui-dropdown_list" tabindex="-1" id="grouptype" aria-hidden="false" aria-activedescendant="grouptype-0">
+													<li>
+														<button aria-selected="true" class="is-focus">Mr.</button>
+													</li>
+													<li>
+														<button aria-selected="false">Ms.</button>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</ibe-select>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-4 formcol">
+								<input type="text" name="firstname" id="firstname" class="ui-input ng-touched ng-dirty ng-valid" value="" placeholder="First Name">
+							</div>
+							<div class="col-md-4 col-sm-4 formcol">
+								<input type="text" name="lastname" id="lastname" class="ui-input ng-touched ng-dirty ng-valid" value="" placeholder="Last Name">
+							</div>
+						</div>
+						<div class="col-md-12 col-sm-12">
+							<div class="col-md-4 col-sm-4 formcol firstcol">
+								<label>Office Contact</label>
+							</div>
+							<div class="col-md-4 col-sm-4 formcol">
+								<input type="text" name="office" id="office" class="ui-input ng-touched ng-dirty ng-valid" value="">
+							</div>
+							<div class="col-md-4 col-sm-4 formcol doublecol">
+								<label>Mobile</label>
+								<input type="text" name="mobile" id="mobile" class="ui-input ng-touched ng-dirty ng-valid" value="">
+							</div>
+						</div>
+						<div class="col-md-12 col-sm-12">
+							<div class="col-md-4 col-sm-4 formcol firstcol">
+								<label>Bussiness Title</label>
+							</div>
+							<div class="col-md-4 col-sm-4 formcol">
+								<input type="text" name="bussiness" id="bussiness" class="ui-input ng-touched ng-dirty ng-valid" value="">
+							</div>
+							<div class="col-md-4 col-sm-4 formcol doublecol">
+								<label>User ID</label>
+								<input type="text" name="userid" id="userid" class="ui-input ng-touched ng-dirty ng-valid" value="" maxlength="2">
+							</div>
+						</div>
+						<div class="col-md-12 col-sm-12 minirow">
+							<div class="col-md-4 col-sm-4 formcol firstcol"></div>
+							<div class="col-md-4 col-sm-4 formcol"></div>
+							<div class="col-md-4 col-sm-4 formcol">
+								<label>2 characters alpha/numeric</label>
+							</div>
+						</div>
+						<div class="col-md-12 col-sm-12">
+							<div class="col-md-4 col-sm-4 formcol firstcol">
+								<label>Email address</label>
+							</div>
+							<div class="col-md-4 col-sm-4 formcol">
+								<input type="text" name="email" id="email" class="ui-input ng-touched ng-dirty ng-valid" value="">
+							</div>
+							<div class="col-md-4 col-sm-4 formcol"></div>
+						</div>
+						
+						<div class="nospace"></div>
+						
+						<h2>ALTERNATIVE CONTACT</h2>
+						<div class="col-md-12 col-sm-12">
+							<div class="col-md-4 col-sm-4 formcol firstcol">
+								<label>Preferred Language</label>
+							</div>
+							<div class="col-md-4 col-sm-4 formcol">
+								<ibe-language-selector listlabel="Language">
+									<div class="ui-dropdown">
+										<button data-toggle="dropdown" aria-haspopup="true" class="ui-input" type="button" aria-expanded="false">
+											<div class="ui-dropdown_value">English</div>
+										</button>
+										<ul class="dropdown-menu ui-dropdown_list ng-star-inserted" id="languageTopListId" tabindex="-1" aria-hidden="false">
+											<!---->
+											<li class="ng-star-inserted">
+												<button>日本(日本語)</button>
+											</li>
+											<li class="ng-star-inserted">
+												<button>한국(한국어)</button>
+											</li>
+											<li class="ng-star-inserted">
+												<button>中国大陆 (简体)</button>
+											</li>
+											<li class="ng-star-inserted">
+												<button>中國台灣 (繁體)</button>
+											</li>
+											<li class="ng-star-inserted">
+												<button>香港特別行政區 (繁體)</button>
+											</li>
+										</ul>
+									</div>
+								</ibe-language-selector>
+							</div>
+						</div>
+						<div class="col-md-12 col-sm-12">
+							<div class="col-md-4 col-sm-4 formcol firstcol">
+								<div class="col-md-6 col-sm-6 formcol firstcol"></div>
+								<div class="col-md-6 col-sm-6 formcol firstcol">
+									<ibe-select listid="selectgen" name="selectgen">
+										<div class="ui-input-container has-value">
+											<div class="ui-dropdown">
+												<button data-toggle="dropdown" aria-haspopup="true" class="ui-input" type="button" aria-expanded="false">
+													<div class="ui-dropdown_value">Mr.</div>
+												</button>
+												<ul class="dropdown-menu ui-dropdown_list" tabindex="-1" id="grouptype" aria-hidden="false" aria-activedescendant="grouptype-0">
+													<li>
+														<button aria-selected="true" class="is-focus">Mr.</button>
+													</li>
+													<li>
+														<button aria-selected="false">Ms.</button>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</ibe-select>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-4 formcol">
+								<input type="text" name="firstname" id="firstname" class="ui-input ng-touched ng-dirty ng-valid" value="" placeholder="First Name">
+							</div>
+							<div class="col-md-4 col-sm-4 formcol">
+								<input type="text" name="lastname" id="lastname" class="ui-input ng-touched ng-dirty ng-valid" value="" placeholder="Last Name">
+							</div>
+						</div>
+						<div class="col-md-12 col-sm-12">
+							<div class="col-md-4 col-sm-4 formcol firstcol">
+								<label>Office Contact</label>
+							</div>
+							<div class="col-md-4 col-sm-4 formcol">
+								<input type="text" name="office" id="office" class="ui-input ng-touched ng-dirty ng-valid" value="">
+							</div>
+							<div class="col-md-4 col-sm-4 formcol doublecol">
+								<label>Mobile</label>
+								<input type="text" name="mobile" id="mobile" class="ui-input ng-touched ng-dirty ng-valid" value="">
+							</div>
+						</div>
+						<div class="col-md-12 col-sm-12">
+							<div class="col-md-4 col-sm-4 formcol firstcol">
+								<label>Bussiness Title</label>
+							</div>
+							<div class="col-md-4 col-sm-4 formcol">
+								<input type="text" name="bussiness" id="bussiness" class="ui-input ng-touched ng-dirty ng-valid" value="">
+							</div>
+							<div class="col-md-4 col-sm-4 formcol doublecol">
+								<label>User ID</label>
+								<input type="text" name="userid" id="userid" class="ui-input ng-touched ng-dirty ng-valid" value="" maxlength="2">
+							</div>
+						</div>
+						<div class="col-md-12 col-sm-12 minirow">
+							<div class="col-md-4 col-sm-4 formcol firstcol"></div>
+							<div class="col-md-4 col-sm-4 formcol"></div>
+							<div class="col-md-4 col-sm-4 formcol">
+								<label>2 characters alpha/numeric</label>
+							</div>
+						</div>
+						<div class="col-md-12 col-sm-12">
+							<div class="col-md-4 col-sm-4 formcol firstcol">
+								<label>Email address</label>
+							</div>
+							<div class="col-md-4 col-sm-4 formcol">
+								<input type="text" name="email" id="email" class="ui-input ng-touched ng-dirty ng-valid" value="">
+							</div>
+							<div class="col-md-4 col-sm-4 formcol"></div>
+						</div>
+						
+						<div class="nospace"></div>
+						<h2>PASSWORD</h2>
+						<div class="col-md-12 col-sm-12">
+								<div class="col-md-4 col-sm-4 formcol firstcol">
+									<label>New Password</label>
+								</div>
+								<div class="col-md-4 col-sm-4 formcol">
+									<input type="password" name="password" id="password" class="ui-input ng-touched ng-dirty ng-valid" value="">
+								</div>
+								<div class="col-md-4 col-sm-4 formcol"></div>
+							</div>
+						<div class="col-md-12 col-sm-12">
+								<div class="col-md-4 col-sm-4 formcol firstcol">
+									<label>Confirm Password</label>
+								</div>
+								<div class="col-md-4 col-sm-4 formcol">
+									<input type="password" name="cfpassword" id="cfpassword" class="ui-input ng-touched ng-dirty ng-valid" value="">
+								</div>
+								<div class="col-md-4 col-sm-4 formcol"></div>
+						</div>
+						<div class="nospace"></div>	
+						<h2>Supporting document to be attached in application</h2>
+						<p style="font-style:italic"><i>File type allowed: .pdf / .jpg / .tif</i></p>
+						<div class="col-md-12 col-sm-12">
+							<div class="col-md-4 col-sm-4 formcol ">
+								<label>1. Company registration</label>
+							</div>
+							<div class="col-md-6 col-sm-6 formcol">
+								<input type="file" name="title" id="title" class="ui-input ng-touched ng-dirty ng-valid">
+							</div>
+							<div class="col-md-2 col-sm-2 formcol"><label><a href="" style="text-decoration:underline">Upload</a></label></div>
+						</div>
+						<div class="col-md-12 col-sm-12">
+							<div class="col-md-4 col-sm-4 formcol ">
+								<label>2. Others (optional)</label>
+							</div>
+							<div class="col-md-6 col-sm-6 formcol">
+								<input type="file" name="title" id="title" class="ui-input ng-touched ng-dirty ng-valid">
+							</div>
+							<div class="col-md-2 col-sm-2 formcol"><label><a href="" style="text-decoration:underline">Upload</a></label></div>
+						</div>
+						<div class="col-md-12 col-sm-12">
+							<div class="col-md-4 col-sm-4 formcol ">
+								<label>3. Others (optional)</label>
+							</div>
+							<div class="col-md-6 col-sm-6 formcol">
+								<input type="file" name="title" id="title" class="ui-input ng-touched ng-dirty ng-valid">
+							</div>
+							<div class="col-md-2 col-sm-2 formcol"><label><a href="" style="text-decoration:underline">Upload</a></label></div>
+						</div>
+					</div>
+					
+					<div class="col-md-12">
+						<div class="checkbox" id="herebychb">
+							<label><input type="checkbox"> I hereby declare that I have read and accepted the Terms and Conditions relating to the use of the HK Express site. I Also declare the information I have provided is accurate and not misleading, to the best of my knowledge and belief.</label>
+						</div>
+								
+						<button id="btncancel" class="btn float-right mt-2 mb-3 cancelBtn" style="color:white; background-color:#6e2d91; border-radius: 0.5em;float:right;padding:5px 15px;margin-left:5px;">Cancel</button>						
+						<button id="btnsave" class="btn float-right mt-2 mb-3 saveBtn" style="color:white; background-color:#6e2d91; border-radius: 0.5em;float:right;padding:5px 15px;margin-left:5px;">Save</button>
+						<button id="btnprint" class="btn float-right mt-2 mb-3 printBtn" style="color:white; background-color:#6e2d91; border-radius: 0.5em;float:right;padding:5px 15px;">Print</button>
+					</div>
+					<div class="nospace"></div>
+				</div>
+			</div>		
+		</main>
+		<footer class="footer">
+			<div class="content">
+				<div class="footer_logo">
+					<a href="###########" class="logo">
+						<img src="./images/logo-neg.svg">
+					</a>
+				</div>
+				<div class="footer_right">
+					<span class="poweredby"> Powered by
+						<span class="poweredby_logo">
+							<span class="hide-visually">newshore</span>
+							<a href="##########" target="_blank" class="logo" rel="noopener"> newshore_ </a>
+						</span>
+					</span>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+
+	<link rel="stylesheet" href="./css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="./css/bootstrap-datetimepicker.min.css">
+	<script src="./css/moment.min.js"></script>
+
+	<script src="./css/bootstrap-datetimepicker.min.js"></script>
+	<script>
+		$(function () {
+			var bindDatePicker = function () {
+				$(".date").datetimepicker({
+					format: 'DD-MM-YYYY',
+					icons: {
+						time: "fa fa-clock-o",
+						date: "fa fa-calendar",
+						up: "fa fa-arrow-up",
+						down: "fa fa-arrow-down"
+					}
+				}).find('input:first').on("blur", function () {
+					// check if the date is correct. We can accept dd-mm-yyyy and yyyy-mm-dd.
+					// update the format if it's dd-mm-yyyy
+					var date = parseDate($(this).val());
+					// if (!isValidDate(date)) {
+					//create date based on momentjs (we have that)
+					// 	date = moment().format('DD-MM-YYYY');
+					// }
+					$(this).val(date);
+				});
+			}
+
+			var isValidDate = function (value, format) {
+				format = format || false;
+				// lets parse the date to the best of our knowledge
+				if (format) {
+					value = parseDate(value);
+				}
+
+				var timestamp = Date.parse(value);
+
+				return isNaN(timestamp) == false;
+			}
+
+			var parseDate = function (value) {
+				var m = value.match(/^(\d{1,2})(\/|-)?(\d{1,2})(\/|-)?(\d{4})$/);
+				if (m)
+					value = ("00" + m[1]).slice(-2) + '-' + ("00" + m[3]).slice(-2) + '-' + m[5];
+				return value;
+			}
+
+			bindDatePicker();
+		});
+
+		$(document).ready(function () {
+			$(".colorone").attr('style', 'color: #6e2d91 !important; background: white !important');
+			$('.dropdown-submenu a.test').on("click", function (e) {
+				$(this).next('ul').toggle();
+				e.stopPropagation();
+				e.preventDefault();
+			});
+		})
+
+		$('.dropmenu1 li a').click(function () {
+			$("#selected1").text($(this).text());
+			$(".colorone").attr('style', 'color: #6e2d91 !important; background: white !important')
+			$(".colortwo").attr('style', 'color: white !important; background: #6e2d91 !important')
+		})
+
+		$('.dropmenu2 li a').click(function () {
+			$("#selected2").text($(this).text())
+			$(".colortwo").attr('style', 'color: #6e2d91 !important; background: white !important')
+			$(".colorone").attr('style', 'color: white !important; background: #6e2d91 !important')
+		})
+		$('#btnback').click(function (evt) {
+			evt.preventDefault();
+			window.location.href = './uoaAgt-listing.html';
+		});
+	</script>
+</body>
+
+</html>

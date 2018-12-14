@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="./css/daterangepicker.css">
+	<link rel="stylesheet" href="./css/styles.min.css" type="text/css">
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="./css/bootstrap-treefy.js"></script>
+	<script src="./css/bootstrap.min.js"></script>
+	<script>
+		$(function () {
+			$("#table").treeFy({
+				treeColumn: 2
+			})
+		})
+	</script>
+	<style>
+		.header_link {
+			font-size: 1.5rem;
+		}
+
+		.header_link::before {
+			font-size: 1.5rem;
+		}
+
+		i.fa.fa-pencil {
+			color: white;
+			background: orange;
+			border-radius: 50px;
+			height: 25px;
+			width: 25px;
+			top: 25px !important;
+		}
+
+		.fa-pencil:before {
+			top: 5px !important;
+			content: "\f040";
+			position: relative;
+		}
+
+		label.pink11 {
+			color: white;
+			background: #6e2d91;
+			padding: 5px 10px;
+		}
+
+		.green {
+			color: white;
+			background: #00b14d;
+			padding: 5px 10px;
+		}
+
+		a.link_section {
+			font-size: 13px;
+			text-decoration: underline;
+			color: #6e2d91 !important;
+			position: relative;
+		}
+
+		.nav-pills>li>a {
+			border-radius: 0 !important;
+		}
+
+		ul.float-right {
+			float: right;
+			text-align: right;
+			padding-right: 15px;
+			padding-left: 15px;
+		}
+
+		ul.float-right li {
+			background-color: gray;
+			color: #fff;
+		}
+
+		ul.float-right li a {
+			color: #fff;
+		}
+
+		ul.float-right li a.active,
+		ul.float-right li a:hover {
+			background-color: #eee;
+			color: #000;
+		}
+
+		ul.float-left {
+			margin-top: 15px;
+			margin-bottom: -0px;
+			z-index: 999;
+			float: left;
+			text-align: left;
+			padding-right: 15px;
+			padding-left: 15px;
+		}
+
+		ul.float-left li {
+			border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
+			background-color: #bbb;
+			color: #fff;
+		}
+
+		ul.float-left li a {
+			color: #fff;
+		}
+
+		ul.float-left li a.active,
+		ul.float-left li a:hover {
+			border-top-left-radius: 5px !important;
+			border-top-right-radius: 5px !important;
+			background-color: #eee;
+			color: #000;
+		}
+
+		.border_section {
+			border: 1px solid black;
+			padding: 1px;
+		}
+
+		.border_section label {
+			margin-bottom: 0px;
+		}
+
+		.border_section label select.form-control.form-control-lg {
+			border: 1px solid #6e2d91;
+			height: 40px;
+		}
+
+		button.pink {
+			position: relative;
+			padding: 12px 52px;
+			margin-top: 35px;
+			left: -31px;
+		}
+
+		th,
+		td {
+			text-align: center !important;
+		}
+
+		.pink {
+			color: white;
+			background: #6e2d91;
+			border: 1px solid white !important;
+		}
+
+		td.green {
+			background: #00b14d;
+			color: white;
+			border: 1px solid white !important;
+		}
+
+		td.rd {
+			border: 1px solid black;
+			color: red;
+			text-decoration: underline;
+		}
+
+		td.rd1 {
+			color: red;
+			text-decoration: underline;
+		}
+
+		th.pink1 {
+			color: #6e2d91;
+			font-weight: 600;
+			text-decoration: underline;
+		}
+
+		.pink p {
+			padding: 12px;
+		}
+
+
+		.form-control {
+			border: 1px solid #6e2d91;
+		}
+
+		.form-control {
+			border: 1px solid #6e2d91;
+			height: 40px;
+		}
+
+		input::placeholder {
+			text-align: center;
+			color: #6e2d91;
+		}
+
+		input.form-control::placeholder {
+			color: #6e2d91;
+		}
+
+		span.input-group-addon.pink {
+			background: #6e2d91;
+			color: white;
+			border-radius: 0px !important;
+		}
+
+		.reds {
+			color: red;
+		}
+
+		.table>thead>tr>th {
+			border-bottom: 2px solid #333 !important;
+		}
+
+		.table>tbody>tr>td {
+			border-top: 1px solid #333 !important;
+		}
+
+		tr .rd {
+			font-size: 18px;
+		}
+
+		form {
+			border: solid 1px black;
+			padding: 5px;
+			background-color: rgb(212, 211, 211);
+		}
+
+		.checkbox label input {
+			width: 15px;
+			height: 15px;
+		}
+
+		thead {
+			background-color: gray;
+		}
+
+		thead tr th {
+			padding: 5px 0 !important;
+			color: #ffffff !important;
+		}
+
+		.btn-primary {
+			background-image: linear-gradient(to bottom, #6e2d91 0, #6e2d91 100%) !important;
+		}
+
+		.btn-primary:hover,
+		.btn-primary:focus {
+			color: #fff !important;
+			background-color: #6e2d91 !important;
+			border-color: #6e2d91 !important;
+		}
+
+		.btn-group {
+			padding: 0 10px 10px 0;
+		}
+
+		input {
+			
+		}
+
+		select {
+			height: 30px !important;
+		}
+
+		.reviewsection {
+			margin-top: 5px;
+			padding-top: 20px;
+			border-top: 2px solid #bd2c92;
+		}
+
+		.paymentdetail {
+			float: left;
+			min-width: 270px;
+			margin-bottom: 10px;
+			margin-right: 20px;
+		}
+
+		.reviewsection label {
+			margin-bottom: 0 !important;
+			font-weight: 500;
+		}
+
+		.paymentdetail .text1line {
+			height: 22px;
+		}
+
+		.boxgroup .text2line {
+			height: 42px;
+			text-align: center;
+		}
+
+		.paymentdetail table {
+			height: 64px;
+			margin: 0 !important;
+		}
+
+		.paymentdetail .tdgray {
+			background-color: #eee;
+		}
+
+		.paymentdetail tr {
+			border-top: 1px solid #333;
+			border-right: 1px solid #333;
+		}
+
+		.paymentdetail td {
+			border-bottom: 1px solid #333;
+			border-left: 1px solid #333;
+			padding: 0 !important;
+		}
+
+		.boxgroups {
+			float: left;
+			margin-bottom: 10px;
+		}
+		.boxgroup {
+			float: left;
+			min-width: 50px;
+			margin-bottom: 5px;
+			margin-right: 20px;
+		}
+
+		.numbox {
+			text-align: center;
+			padding-top: 10px;
+			height: 44px;
+			border: 1px solid #6e2d91;
+		}
+
+		.textdesc {
+			clear: both;
+			font-size:1.2rem;
+			font-style:italic;
+		}
+
+		.listsection {
+			z-index: 1;
+			margin-top: -1px;
+			border: 1px solid gray;
+			padding: 15px;
+		}
+
+		.pnrlabel {
+			float: left;
+			padding: 15px;
+		}
+
+		.listsection .table>thead>tr>th:first-child {
+			
+		}
+
+		.listsection .table>tbody>tr>td:first-child {
+			
+		}
+
+		tr.trbb {
+			background-color: #bbb;
+		}
+
+		tr.trbb td {
+			color: #fff !important;
+		}
+
+		tr.trcc {
+			background-color: #ccc;
+		}
+
+		tr.trdd {
+			background-color: #ddd;
+		}
+
+		tr.tree {
+			background-color: #eee;
+		}
+
+		.nav-tabs>li+li {
+			margin-left: 2px;
+		}
+		button.ui-input {
+			height: 34px !important;
+		}
+		.formcol label {
+			padding: 8px 5px 0 0;
+			margin: 0;
+			font-weight: normal;
+		}
+		.formcol {
+			padding: 0 5px 0 0;
+			margin: 0;
+		}
+		.nopadding{
+			padding:0 0 0 0;
+		}
+		.paddingbottom{
+			padding-bottom:5px;
+		}
+		.paddingtop{
+			padding-top:5px;
+		}
+		input[type=radio]+label {
+			padding:0;
+		}
+		.ui-checkbox input[type=radio]:checked+label:after {
+			left: 4px;
+			top: 4px;
+			background: #6e2d91;
+			width: 12px;
+			height: 12px;
+		}
+		.changeflightbox{
+			border: 1px solid #ddd;
+			padding: 15px;
+			margin-bottom:15px;
+			background-color:#eee;
+		}
+		span.code-ah {
+			color: white;
+			background: #6e2d91;
+			margin-right: 10px;
+			padding: 5px;
+		}
+
+		span.code-sr {
+			color: white;
+			background: #00b14d;
+			margin-right: 10px;
+			padding: 5px;
+		}
+
+		span.code-as {
+			color: white;
+			background: #ed1d24;
+			margin-right: 10px;
+			padding: 5px;
+		}
+		td input[type="text"] {
+			height: 20px !important;
+		}
+		
+		td input[type="checkbox"] {
+			margin:0;height:13px!important;
+		}
+		.payment_partials_trigger .icon {top:0}
+		.payment_methods .tabs-pill a {
+			font-size: 1.8rem;
+			font-weight: 700;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="page-wrap">
+		<header class="header">
+			<div class="header_container">
+				<div class="header_logo">
+					<a class="logo" href="#">
+						<img src="./images/logoHK.svg">
+					</a>
+				</div>
+				<div class="header_right">
+					<div class="header_links">
+						<ul>
+							<li class="header_links_item link-home">
+								<!---->
+								<!---->
+								<div>
+									<button class="header_link" role="link">
+										<i class="fa fa-home"></i> home </button>
+								</div>
+							</li>
+							<!---->
+							<li class="header_links_item link-user">
+								<!---->
+								<!---->
+								<div>
+									<button class="header_link" role="link"> Welcome back Sally </button>
+								</div>
+							</li>
+							<li class="header_links_item link-language">
+								<ibe-language-selector listlabel="Language">
+									<div class="ui-dropdown">
+										<button data-toggle="dropdown" attr.aria-controls="languageTopListId" attr.aria-haspopup="true" class="header_link">
+										</button>
+										<!---->
+										<ul class="dropdown-menu ui-dropdown_list ng-star-inserted" id="languageTopListId" tabindex="-1" aria-hidden="false">
+											<!---->
+											<li class="ng-star-inserted">
+												<button>日本(日本語)</button>
+											</li>
+											<li class="ng-star-inserted">
+												<button>한국(한국어)</button>
+											</li>
+											<li class="ng-star-inserted">
+												<button>中国大陆 (简体)</button>
+											</li>
+											<li class="ng-star-inserted">
+												<button>中國台灣 (繁體)</button>
+											</li>
+											<li class="ng-star-inserted">
+												<button>香港特別行政區 (繁體)</button>
+											</li>
+										</ul>
+									</div>
+								</ibe-language-selector>
+							</li>
+							<!---->
+							<li class="header_links_item link-Logout">
+								<!---->
+								<!---->
+								<div>
+									<button class="header_link" role="link">
+										<i class="fa fa-lock"></i> Logout </button>
+								</div>
+							</li>
+						</ul>
+						<div class="company-info">
+							<div class="des">
+								<strong>B2G Group Booking Portal</strong>
+							</div>
+							<strong>Company:</strong> ABC Travel Services Ltd.
+							<strong>Account Balance:</strong> HKD 150.000
+							<button id="btnrefesh" class="header_link">
+								<i class="fa fa-redo-alt" style="font-size:12px"></i>
+							</button>
+							<span class="balup">Bal. update: 30Sep’18 15:35</span>
+						</div>
+					</div>
+				</div>
+				<div class="header_bottom">
+					<div class="header_links">
+						<div class="dropdown btn-group">
+							<button class="btn btn-primary dropdown-toggle colorone" type="button" data-toggle="dropdown">
+								<span id="selected1">B2G</span>
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu dropmenu1">
+								<li>
+									<a tabindex="-1" href="#">B2G</a>
+								</li>
+								<li>
+									<a tabindex="-1" href="#">Book Ad-Hoc Group</a>
+								</li>
+							</ul>
+						</div>
+						<div class="dropdown btn-group">
+							<button class="btn btn-primary dropdown-toggle colortwo" type="button" data-toggle="dropdown">
+								<span id="selected2">Admin</span>
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu dropmenu2">
+								<li>
+									<a tabindex="-1" href="#">Admin</a>
+								</li>
+								<li>
+									<a tabindex="-1" href="#">Profile</a>
+								</li>
+								<li>
+									<a tabindex="-1" href="#">Users Management</a>
+								</li>
+								<li class="dropdown-submenu">
+									<a class="test" tabindex="-1" href="#">Reports
+										<span class="caret"></span>
+									</a>
+									<ul class="dropdown-menu">
+										<li>
+											<a tabindex="-1" href="#">UO Alerts</a>
+										</li>
+										<li>
+											<a tabindex="-1" href="#">Payments</a>
+										</li>
+										<li>
+											<a tabindex="-1" href="#">Monthly Statement</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						
+					</div>
+					
+				</div>
+			</div>
+		</header>
+		<main id="maincontent">
+			<div class="container-wrap">
+				<div class="row">
+					<div class="col-md-3 col-sm-3">
+						<div style="font-size: 12px">
+							<label class="pink11">AH</label>
+							<label>Booking Ref:</label>
+							<label class="reds">G1234567</label>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-3">
+						<div style="font-size: 12px;padding-top:5px;">
+							<label>Group Title:</label>
+							<label class="reds">Super VIP - Kong Manufacturer</label>
+						</div>
+					</div>
+					<div class="col-md-1 col-sm-1">
+						<div style="font-size: 12px;padding-top:5px;">
+							<a href="./MBkg-GroupTitle.html" class="link_section">
+								Edit
+							</a>
+						</div>
+					</div>
+					
+					</div>
+				<div class="reviewsection">					
+					<div class="paymentdetail">
+						<div class="text1line">
+							<label class="reds">Payment Details</label>
+						</div>
+						<table class="table">
+							<tbody>
+								<tr>
+									<td class="tdgray">Total Due Amount</td>
+									<td class="">10,337.00 USD</td>
+								</tr>
+								<tr>
+									<td class="tdgray">Total Paid Amount</td>
+									<td class="">500.00 USD</td>
+								</tr>
+								<tr>
+									<td class="tdgray">Balance Due</td>
+									<td class="">9,837.00 USD</td>
+								</tr>
+
+							</tbody>
+						</table>
+					</div>
+					<div class="boxgroups">
+					<div class="boxgroup">
+						<div class="text2line">
+							<label class="reds">Actual
+								<br/>Group Size</label>
+						</div>
+						<div class="numbox">
+							0/18
+						</div>
+					</div>
+					<div class="boxgroup">
+						<div class="text2line">
+							<label class="reds">No. of
+								<br/>PNR</label>
+						</div>
+						<div class="numbox">
+							2
+						</div>
+					</div>
+					<div class="boxgroup">
+						<div class="text2line">
+							<label class="reds">Seats
+								<br/>Selection</label>
+						</div>
+						<div class="numbox">
+							0
+						</div>
+					</div>
+					<div class="boxgroup">
+						<div class="text2line">
+							<label class="reds">Baggage</label>
+						</div>
+						<div class="numbox">
+							8
+						</div>
+					</div>
+					<div class="boxgroup">
+						<div class="text2line">
+							<label class="reds">Meals</label>
+						</div>
+						<div class="numbox">
+							0
+						</div>
+					</div>
+					<div class="boxgroup">
+						<div class="text2line">
+							<label class="reds">Sports
+								<br/>Equip</label>
+						</div>
+						<div class="numbox">
+							0
+						</div>
+					</div>
+					<div class="boxgroup">
+						<div class="text2line">
+							<label class="reds">U-First</label>
+						</div>
+						<div class="numbox">
+							0
+						</div>
+					</div>
+					<div class="textdesc">The above summary is based on the actual headcount/items that are active now – excluding the cancelled/expired PNR/pax/add-ons.</div>
+					</div>
+				</div>
+				<ul class="float-left nav nav-tabs mb-3" id="pills-tab" role="tablist">
+					<li class="nav-item">
+						<a class="nav-link " id="pills-filghts-tab" data-toggle="" href="./MBkg-FltChg.html" role="tab" aria-controls="pills-filghts"
+						 aria-selected="true">Change Flights</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" id="pills-profile-tab" data-toggle="" href="./MBkg-AddPax.html" role="tab" aria-controls="" aria-selected="false">Add Pax</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" id="pills-contact-tab" data-toggle="" href="./MBkg-CxlPax1.html" role="" aria-controls="" aria-selected="false">Cancel Pax</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" id="pills-contact-tab" data-toggle="" href="./MBkg-CxlGroup1.html" role="" aria-controls="" aria-selected="false">Cancel Group</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" id="pills-fare-tab" data-toggle="" href="./MBkg-FareBreak.html" role="tab" aria-controls="pills-fare" aria-selected="false">Fare Breakdown</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active" id="pills-payment-tab" data-toggle="" href="./MBkg-Payment.html" role="tab" aria-controls="pills-payment"
+						 aria-selected="false">Payment</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" id="pills-pax-tab" data-toggle="" href="./MBkg-PaxNames.html" role="tab" aria-controls="pills-pax" aria-selected="false">Pax Names</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" id="pills-add-tab" data-toggle="" href="./MBkg-aoBag.html" role="tab" aria-controls="pills-add" aria-selected="false">Add-On</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" id="pills-contact-tab" data-toggle="" href="./MBkg-Ctc.html" role="tab" aria-controls="pills-contact"
+						 aria-selected="false">Contacts</a>
+					</li>
+				</ul>
+				<div class="col-md-12 listsection tab-content">
+					<div class="row mt-2 table-section tab-pane fade" id="pills-flights" role="tabpanel" aria-labelledby="pills-filghts-tab">
+					</div>
+					<div class="table-responsive tab-pane fade " id="pills-fare" role="tabpanel" aria-labelledby="pills-fare-tab">
+					</div>
+					<div class="tab-pane fade active in" id="pills-payment" role="tabpanel" aria-labelledby="pills-payment-tab">
+						<div class="col-md-12">
+						<h4 class="payment_methods_title">Proceed for payment to secure your group seats</h4>
+						<div class="table-responsive">
+							<table class="table table-bordered">
+								<thead>
+									<tr class="text-center">
+										<th scope="col" style="background-color:#5a5a5a">Type</th>
+										<th scope="col" style="background-color:#5a5a5a">PNR</th>
+										<th scope="col" style="background-color:#5a5a5a">Payment Expiry</th>
+										<th scope="col" style="background-color:#5a5a5a">Time Remain</th>
+										<th scope="col" style="background-color:#5a5a5a">Amount Due</th>
+										<th scope="col" style="background-color:#5a5a5a">Pay Full</th>
+										<th scope="col" style="background-color:#5a5a5a">Pay Partial</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Balance</td>
+										<td>WOOOEJ</td>
+										<td>30Aug18 11:11</td>
+										<td class="reds">20D 12H:23M</td>
+										
+										<td>200.00 USD </td>
+										<td><input type="checkbox" class="form-check-input" value=""></td>
+										<td><input type="text" size="3" value="" placeholder="100.00">USD</td>
+									</tr>
+									<tr>
+										<td>Balance</td>
+										<td>WOOOEJ</td>
+										<td>30Aug18 11:11</td>
+										<td class="reds">20D 12H:23M</td>
+										
+										<td>2000.00 USD </td>
+										<td><input type="checkbox" class="form-check-input" value=""></td>
+										<td><input type="text" size="3" value="">USD</td>
+									</tr>
+									<tr>
+										<td>Balance</td>
+										<td>WOOOEJ</td>
+										<td>30Aug18 11:11</td>
+										<td class="reds">20D 12H:23M</td>
+										
+										<td>700.00 USD </td>
+										<td><input type="checkbox" class="form-check-input" value=""></td>
+										<td><input type="text" size="3" value="">USD</td>
+									</tr>
+									<tr>
+										<td colspan="6" style="text-align:right!important">Total amount to pay</td>
+										<td><strong> 100.00 USD</strong></td>
+									</tr>
+									<tr>
+										<td colspan="6" style="text-align:right!important">Balance amount due</td>
+										<td class="reds"><strong> 8000.00 USD</strong></td>
+									</tr>
+								</tbody>
+							</table>
+							
+						</div>
+					</div>
+					<div class="grid container-wrap">
+            <div class="col-12_lg-12">
+
+<!---->
+<!---->
+
+
+
+
+
+<!---->
+<!---->
+
+
+
+
+
+              <payment-container data-initial-value="{}" data-module-path="" ng-version="5.2.1">
+                <div class="payment">
+                  <div class="payment_methods">
+                      <payment-discount><!----><!---->
+
+                       <div class="payment_partials">
+                            <div class="payment_partials_body">
+                                <ul class="payment_partials_tabs" role="tablist">
+                                    <!----><!---->
+                                        <!----><li>
+                                            <button class="payment_partials_trigger collapsed" role="tab" aria-expanded="false">
+                                                <span aria-hidden="true" class="icon icon-voucher"></span>
+                                                <span class="label">Redeem voucher</span>
+                                            </button>
+                                        </li>   
+                                    <!---->
+                                        <!----> 
+                                                    
+                                </ul>
+                    
+                                <!----><!---->
+                                    <!----><div class="payment_partials_item" role="tabpanel">
+                                        <button aria-hidden="true" class="payment_partials_trigger collapsed" role="tab" aria-expanded="false" aria-controls="discountCollapse">
+                                            <span class="icon icon-voucher"></span>
+                                            <span class="label">Redeem voucher</span>
+                                        </button>
+                                        <!---->
+                                        <!----> 
+                                    </div>   
+                                <!---->
+                                    <!----><div class="payment_partials_item" role="tabpanel">
+                                        <button aria-hidden="true" class="payment_partials_trigger" role="tab" aria-expanded="true" aria-controls="discountCollapse">
+                                            <span class="icon icon-reward-u"></span>
+                                            <span class="label">Redeem my reward-U Points</span>
+                                        </button>
+                                        <!---->
+                                        <!----><!---->
+                                         
+                                    </div>   
+                                
+                            </div>
+                    
+                            <!---->
+                        </div>
+                    </payment-discount>
+                    <!---->
+                    <payment-tabs>
+                      <!---->
+                      <!---->
+                      <!---->
+                      <div class="payment_methods">
+                        <ul class="tabs-pill">
+                          <!---->
+                          <!---->
+                          <!---->
+						  <li>
+                            <a role="button" tabindex="0" class="collapsed" aria-expanded="true">
+                              AG BSP 
+                            </a>
+                          </li>
+                          <li>
+                            <a role="button" tabindex="0" aria-expanded="true">
+                              <img class="method-logo" width="auto" src="images/payment-methods/creditcard.svg">
+                              <img class="method-logo-selected" width="auto" src="images/payment-methods/creditcard-selected.svg">
+                            </a>
+                          </li>
+                          <!---->
+                          <!---->
+                          <li>
+                            <a role="button" tabindex="0" class="collapsed" aria-expanded="false">
+                              <img class="method-logo" width="auto" src="images/payment-methods/alipay.svg">
+                              <img class="method-logo-selected" width="auto" src="images/payment-methods/alipay-selected.svg">
+                            </a>
+                          </li>
+                          <!---->
+                          <!---->
+                          <li>
+                            <a role="button" tabindex="0" class="collapsed" aria-expanded="false">
+                              <img class="method-logo" width="auto" src="images/payment-methods/unionpay.svg">
+                              <img class="method-logo-selected" width="auto" src="images/payment-methods/unionpay-selected.svg">
+                            </a>
+                          </li>
+                          <!---->
+                          <!---->
+                          <li>
+                            <a role="button" tabindex="0" class="collapsed" aria-expanded="false">
+                              <img class="method-logo" width="auto" src="images/payment-methods/wechat.svg">
+                              <img class="method-logo-selected" width="auto" src="images/payment-methods/wechat-selected.svg">
+                            </a>
+                          </li>
+                        </ul>
+                        <div class="tabs-pill_content">
+                          <!---->
+                          <!---->
+                          <a class="tabs-pill_trigger" role="button" aria-expanded="true">
+                            <img class="method-logo" width="auto" src="../../App_Plugins/IBE/assets/imgs/payment-methods/creditcard.svg">
+                            <img class="method-logo-selected" width="auto" src="../../App_Plugins/IBE/assets/imgs/payment-methods/creditcard-selected.svg">
+                          </a>
+                          <!---->
+                          <!---->
+                          <credit-card-tab>
+                            <!---->
+                            <div class="payment_methods_content">
+                              <h4 class="payment_methods_title"> Credit / Debit card </h4>
+                              <div class="payment_methods_cc-type">
+                                <div class="ui-checkbox-inline">
+                                  <div class="ui-checkbox-group">
+                                    <!---->
+                                    <div class="ui-checkbox">
+                                      <input name="credit_card_type" type="radio" id="credit_card_type_AX">
+                                      <label for="credit_card_type_AX">
+                                        <img alt="checkbox.imageAlt" src="images/payment-methods/credit-cards/american-express.svg">
+                                      </label>
+                                    </div>
+                                    <div class="ui-checkbox">
+                                      <input name="credit_card_type" type="radio" id="credit_card_type_JC">
+                                      <label for="credit_card_type_JC">
+                                        <img alt="checkbox.imageAlt" src="images/payment-methods/credit-cards/JCB.svg">
+                                      </label>
+                                    </div>
+                                    <div class="ui-checkbox">
+                                      <input name="credit_card_type" type="radio" id="credit_card_type_MC">
+                                      <label for="credit_card_type_MC">
+                                        <img alt="checkbox.imageAlt" src="images/payment-methods/credit-cards/mastercard.svg">
+                                      </label>
+                                    </div>
+                                    <div class="ui-checkbox">
+                                      <input name="credit_card_type" type="radio" id="credit_card_type_VI">
+                                      <label for="credit_card_type_VI">
+                                        <img alt="checkbox.imageAlt" src="images/payment-methods/credit-cards/visa.svg">
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!---->
+                              <fieldset class="payment_methods_form">
+                                <div class="ui-form_group">
+                                  <ibe-input>
+                                    <!---->
+                                    <div class="ui-input-container" ng-init="focusedInput == false;">
+                                      <label class="ui-label" for="cardNumber"> Credit / Debit card
+                                        <!---->
+                                      </label>
+                                      <div class="ui-input_wrap">
+                                        <!---->
+                                        <!---->
+                                        <input class="ui-input ng-untouched ng-pristine ng-invalid" numberonly="" name="cardNumber" id="cardNumber" type="text" placeholder="" maxlength="19" autocomplete="off">
+                                      </div>
+                                    </div>
+                                  </ibe-input>
+                                </div>
+                                <div class="ui-form_group">
+                                  <ibe-input>
+                                    <!---->
+                                    <div class="ui-input-container" ng-init="focusedInput == false;">
+                                      <label class="ui-label" for="cardHolderName"> Card Holder Name
+                                        <!---->
+                                      </label>
+                                      <div class="ui-input_wrap">
+                                        <!---->
+                                        <!---->
+                                        <input class="ui-input ng-untouched ng-pristine ng-invalid" numberonly="" name="cardHolderName" id="cardHolderName" type="text" placeholder="" maxlength="30" autocomplete="on">
+                                      </div>
+                                    </div>
+                                  </ibe-input>
+                                </div>
+                                <div class="ui-form_group">
+                                  <cc-expiry-date>
+                                    <div class="ui-input-container">
+                                      <label class="ui-label"> Expiry Date </label>
+                                      <div class="ui-input-multiple">
+                                        <!---->
+                                        <div class="ui-dropdown">
+                                          <button data-toggle="dropdown" aria-controls="_" aria-haspopup="true" class="ui-input text-placeholder" type="button">
+                                            <!---->
+                                            <!---->
+                                            <div class="ui-dropdown_value"> MM </div>
+                                          </button>
+                                          <!---->
+                                          <ul class="dropdown-menu ui-dropdown_list" role="listbox" tabindex="-1" aria-hidden="false">
+                                              <!----><li role="option">
+                                                  <a tabindex="0" aria-selected="true" class="is-focus">1</a>
+                                              </li><li role="option">
+                                                  <a tabindex="0" aria-selected="false">2</a>
+                                              </li><li role="option">
+                                                  <a tabindex="0" aria-selected="false">3</a>
+                                              </li><li role="option">
+                                                  <a tabindex="0" aria-selected="false">4</a>
+                                              </li><li role="option">
+                                                  <a tabindex="0" aria-selected="false">5</a>
+                                              </li><li role="option">
+                                                  <a tabindex="0" aria-selected="false">6</a>
+                                              </li><li role="option">
+                                                  <a tabindex="0" aria-selected="false">7</a>
+                                              </li><li role="option">
+                                                  <a tabindex="0" aria-selected="false">8</a>
+                                              </li><li role="option">
+                                                  <a tabindex="0" aria-selected="false">9</a>
+                                              </li><li role="option">
+                                                  <a tabindex="0" aria-selected="false">10</a>
+                                              </li><li role="option">
+                                                  <a tabindex="0" aria-selected="false">11</a>
+                                              </li><li role="option">
+                                                  <a tabindex="0" aria-selected="false">12</a>
+                                              </li>
+                                          </ul>
+                                        </div>
+                                        <div class="ui-dropdown">
+                                          <button data-toggle="dropdown" aria-controls="_" aria-haspopup="true" class="ui-input text-placeholder" type="button">
+                                            <!---->
+                                            <!---->
+                                            <div class="ui-dropdown_value"> YYYY </div>
+                                          </button>
+                                          <!---->
+                                          <ul class="dropdown-menu ui-dropdown_list" role="listbox" tabindex="-1" aria-hidden="false">
+                                              <!----><li role="option">
+                                                  <a tabindex="0" aria-selected="true" class="is-focus">2018</a>
+                                              </li><li role="option">
+                                                  <a tabindex="0" aria-selected="false">2019</a>
+                                              </li><li role="option">
+                                                  <a tabindex="0" aria-selected="false">2020</a>
+                                              </li><li role="option">
+                                                  <a tabindex="0" aria-selected="false">2021</a>
+                                              </li><li role="option">
+                                                  <a tabindex="0" aria-selected="false">2022</a>
+                                              </li><li role="option">
+                                                  <a tabindex="0" aria-selected="false">2023</a>
+                                              </li><li role="option">
+                                                  <a tabindex="0" aria-selected="false">2024</a>
+                                              </li><li role="option">
+                                                  <a tabindex="0" aria-selected="false">2025</a>
+                                              </li><li role="option">
+                                                  <a tabindex="0" aria-selected="false">2026</a>
+                                              </li><li role="option">
+                                                  <a tabindex="0" aria-selected="false">2027</a>
+                                              </li><li role="option">
+                                                  <a tabindex="0" aria-selected="false">2028</a>
+                                              </li><li role="option">
+                                                  <a tabindex="0" aria-selected="false">2029</a>
+                                              </li><li role="option">
+                                                  <a tabindex="0" aria-selected="false">2030</a>
+                                              </li><li role="option">
+                                                  <a tabindex="0" aria-selected="false">2031</a>
+                                              </li><li role="option">
+                                                  <a tabindex="0" aria-selected="false">2032</a>
+                                              </li><li role="option">
+                                                  <a tabindex="0" aria-selected="false">2033</a>
+                                              </li><li role="option">
+                                                  <a tabindex="0" aria-selected="false">2034</a>
+                                              </li><li role="option">
+                                                  <a tabindex="0" aria-selected="false">2035</a>
+                                              </li><li role="option">
+                                                  <a tabindex="0" aria-selected="false">2036</a>
+                                              </li><li role="option">
+                                                  <a tabindex="0" aria-selected="false">2037</a>
+                                              </li><li role="option">
+                                                  <a tabindex="0" aria-selected="false">2038</a>
+                                              </li><li role="option">
+                                                  <a tabindex="0" aria-selected="false">2039</a>
+                                              </li>
+                                          </ul>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </cc-expiry-date>
+                                </div>
+                                <div class="ui-form_group">
+                                  <div class="ui-input-container">
+                                    <ibe-input>
+                                      <!---->
+                                      <div class="ui-input-container" ng-init="focusedInput == false;">
+                                        <label class="ui-label" for="cw2Cv2"> CW2/CV2 Numbers
+                                          <!---->
+                                        </label>
+                                        <div class="ui-input_wrap">
+                                          <!---->
+                                          <!---->
+                                          <input class="ui-input ng-untouched ng-pristine ng-invalid" numberonly="" name="cw2Cv2" id="cw2Cv2" type="text" placeholder="" maxlength="4" autocomplete="off">
+                                        </div>
+                                      </div>
+                                    </ibe-input>
+                                  </div>
+                                </div>
+                              </fieldset>
+                              <!---->
+                              <input formcontrolname="expirationMonth" type="hidden" value="" class="ng-untouched ng-pristine ng-invalid">
+                              <input formcontrolname="expirationYear" type="hidden" value="" class="ng-untouched ng-pristine ng-invalid">
+                              <input formcontrolname="methodId" type="hidden" value="MC" class="ng-untouched ng-pristine ng-valid">
+                              <input formcontrolname="dccStatus" type="hidden" value="0" class="ng-untouched ng-pristine ng-valid">
+                              <div class="payment_polices">
+                                <div class="ui-form_group">
+                                  <div class="ui-checkbox">
+                                    <input id="policePayCC" name="policePayCC" type="checkbox" class="ng-untouched ng-pristine ng-valid">
+                                    <!----><label for="policePayCC"> Please confirm that you understand and accept our <a> policies</a> to continue. </label>
+                                    <!---->
+                                  </div>
+                                </div>
+                                <!---->
+                              </div>
+                            </div>
+                          </credit-card-tab>
+                          <!---->
+                          <!---->
+                          <!---->
+                          <!---->
+                          <!---->
+                          <!---->
+                          <a class="tabs-pill_trigger collapsed" role="button" aria-expanded="false">
+                            <img class="method-logo" width="auto" src="images/payment-methods/alipay.svg">
+                            <img class="method-logo-selected" width="auto" src="images/payment-methods/alipay-selected.svg">
+                          </a>
+                          <!---->
+                          <!---->
+                          <!---->
+                          <!---->
+                          <!---->
+                          <!---->
+                          <!---->
+                          <a class="tabs-pill_trigger collapsed" role="button" aria-expanded="false">
+                            <img class="method-logo" width="auto" src="images/payment-methods/unionpay.svg">
+                            <img class="method-logo-selected" width="auto" src="images/payment-methods/unionpay-selected.svg">
+                          </a>
+                          <!---->
+                          <!---->
+                          <!---->
+                          <!---->
+                          <!---->
+                          <!---->
+                          <!---->
+                          <a class="tabs-pill_trigger collapsed" role="button" aria-expanded="false">
+                            <img class="method-logo" width="auto" src="images/payment-methods/wechat.svg">
+                            <img class="method-logo-selected" width="auto" src="images/payment-methods/wechat-selected.svg">
+                          </a>
+                          <!---->
+                          <!---->
+                          <!---->
+                          <!---->
+                          <!---->
+                          <!---->
+                        </div>
+                        <!---->
+                        <payment-summary>
+                          <!---->
+                          <div class="payment-summary">
+                            <h3 class="payment-summary_title"> Summary </h3>
+                            <table>
+                              <tbody>
+                                <tr>
+                                  <td>Total Price</td>
+                                  <td class="price">USD 10,337</td>
+                                </tr>
+                                <tr>
+                                  <td>Discount</td>
+                                  <td class="price" align="right">
+                                    <!----> 0</td>
+                                </tr>
+                                <!---->
+                              </tbody>
+                              <tfoot>
+                                <tr>
+								<td></td>	
+                                  <td>Total Amount Due</td>
+                                </tr>
+                                <tr>
+									<td></td>	
+                                  <td class="price">
+                                    <span class="currency">USD</span>
+                                    <span class="price">10,337</span>
+                                  </td>
+                                </tr>
+                              </tfoot>
+                            </table>
+                          </div>
+                        </payment-summary>
+                      </div>
+                    </payment-tabs>
+                  </div>
+                </div>
+                
+              </payment-container>
+          
+              <button-container data-initial-value="[{&quot;page&quot;:&quot;&quot;,&quot;translations&quot;:{&quot;label&quot;:&quot;Cancel&quot;},&quot;culture&quot;:&quot;en-US&quot;,&quot;key&quot;:&quot;&quot;,&quot;type&quot;:&quot;&quot;},{&quot;page&quot;:&quot;/[culture]/itinerary/&quot;,&quot;translations&quot;:{&quot;label&quot;:&quot;Next&quot;},&quot;culture&quot;:&quot;en-US&quot;,&quot;key&quot;:&quot;COMMON-NEXT&quot;,&quot;type&quot;:&quot;next&quot;}]" data-module-path="./common/button-container/button-container.module#ButtonContainerModule" ng-version="5.2.1">
+                <!---->
+                <div class="page_buttons">
+                  <!---->
+                  <!---->
+                  <button id="btn1" class="btn float-right mt-2 mb-3 cancelBtn" style="width:148px; height:35px; color:white; background-color:#6e2d91; border-radius: 0.5em;margin-right:20px;">Proceed Payment</button>
+				  <button id="btn2" class="btn float-right mt-2 mb-3 cancelBtn" style="width:148px; height:35px; color:white; background-color:#6e2d91; border-radius: 0.5em;margin-right:20px;">Cancel</button>
+				  
+                </div>
+              </button-container> 
+            </div>
+          </div>
+
+					
+					
+					</div>
+					<div class="table-responsive tab-pane fade" id="pills-pax" role="tabpanel" aria-labelledby="pills-pax-tab">
+						Sit amet mauris commodo quis imperdiet. Vivamus at augue eget arcu dictum. Id porta nibh venenatis cras sed felis eget. Et
+						tortor consequat id porta nibh venenatis cras sed. Sagittis orci a scelerisque purus semper eget duis at tellus. Dictum
+						fusce ut placerat orci nulla pellentesque dignissim enim sit. Semper quis lectus nulla at volutpat diam ut venenatis
+						tellus. Ac ut consequat semper viverra nam libero justo laoreet sit. Nunc sed blandit libero volutpat sed. Aliquet
+						risus feugiat in ante metus dictum at. Nam aliquam sem et tortor consequat id. Fusce id velit ut tortor pretium. Velit
+						laoreet id donec ultrices tincidunt. Tristique senectus et netus et malesuada fames ac turpis.
+
+
+					</div>
+					<div class="table-responsive tab-pane fade" id="pills-add" role="tabpanel" aria-labelledby="pills-add-tab">
+						Risus commodo viverra maecenas accumsan lacus vel facilisis. Lobortis elementum nibh tellus molestie. Accumsan lacus vel
+						facilisis volutpat est. Nibh sit amet commodo nulla facilisi nullam. Morbi tempus iaculis urna id volutpat lacus laoreet
+						non. Mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Felis imperdiet proin fermentum leo vel orci
+						porta. Quisque egestas diam in arcu cursus euismod. Scelerisque eleifend donec pretium vulputate sapien nec sagittis.
+						Vulputate mi sit amet mauris commodo quis imperdiet massa tincidunt. Id venenatis a condimentum vitae. Mauris nunc
+						congue nisi vitae suscipit tellus mauris a diam. Et malesuada fames ac turpis. Leo urna molestie at elementum eu facilisis
+						sed odio morbi.
+
+
+					</div>
+					<div class="table-responsive tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+						In aliquam sem fringilla ut morbi tincidunt augue interdum. Quam pellentesque nec nam aliquam sem et tortor consequat id.
+						Sapien pellentesque habitant morbi tristique senectus et. Orci ac auctor augue mauris augue. A diam maecenas sed enim.
+						Rutrum quisque non tellus orci ac auctor. Ornare aenean euismod elementum nisi quis. In ornare quam viverra orci sagittis
+						eu volutpat odio. Dui sapien eget mi proin sed libero. Consectetur a erat nam at lectus urna duis convallis. Placerat
+						orci nulla pellentesque dignissim enim. In tellus integer feugiat scelerisque varius morbi enim nunc faucibus.
+
+
+					</div>
+
+				</div>
+		</main>
+		<footer class="footer">
+			<div class="content">
+				<div class="footer_logo">
+					<a href="###########" class="logo">
+						<img src="./images/logo-neg.svg">
+					</a>
+				</div>
+				<div class="footer_right">
+					<span class="poweredby"> Powered by
+						<span class="poweredby_logo">
+							<span class="hide-visually">newshore</span>
+							<a href="##########" target="_blank" class="logo" rel="noopener"> newshore_ </a>
+						</span>
+					</span>
+				</div>
+			</div>
+		</footer>
+		</div>
+
+
+		<link rel="stylesheet" href="./css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="./css/bootstrap-datetimepicker.min.css">
+		<script src="./css/moment.min.js"></script>
+
+		<script src="./css/bootstrap-datetimepicker.min.js"></script>
+		<script>
+			$(function () {
+				var bindDatePicker = function () {
+					$(".date").datetimepicker({
+						format: 'DD-MM-YYYY',
+						icons: {
+							time: "fa fa-clock-o",
+							date: "fa fa-calendar",
+							up: "fa fa-arrow-up",
+							down: "fa fa-arrow-down"
+						}
+					}).find('input:first').on("blur", function () {
+						// check if the date is correct. We can accept dd-mm-yyyy and yyyy-mm-dd.
+						// update the format if it's dd-mm-yyyy
+						var date = parseDate($(this).val());
+						// if (!isValidDate(date)) {
+						//create date based on momentjs (we have that)
+						// 	date = moment().format('DD-MM-YYYY');
+						// }
+						$(this).val(date);
+					});
+				}
+
+				var isValidDate = function (value, format) {
+					format = format || false;
+					// lets parse the date to the best of our knowledge
+					if (format) {
+						value = parseDate(value);
+					}
+
+					var timestamp = Date.parse(value);
+
+					return isNaN(timestamp) == false;
+				}
+
+				var parseDate = function (value) {
+					var m = value.match(/^(\d{1,2})(\/|-)?(\d{1,2})(\/|-)?(\d{4})$/);
+					if (m)
+						value = ("00" + m[1]).slice(-2) + '-' + ("00" + m[3]).slice(-2) + '-' + m[5];
+					return value;
+				}
+
+				bindDatePicker();
+			});
+
+			$(document).ready(function () {
+				$(".colorone").attr('style', 'color: #6e2d91 !important; background: white !important');
+				$('.dropdown-submenu a.test').on("click", function (e) {
+					$(this).next('ul').toggle();
+					e.stopPropagation();
+					e.preventDefault();
+				});
+			})
+
+			$('.dropmenu1 li a').click(function () {
+				$("#selected1").text($(this).text());
+				$(".colorone").attr('style', 'color: #6e2d91 !important; background: white !important')
+				$(".colortwo").attr('style', 'color: white !important; background: #6e2d91 !important')
+			})
+
+			$('.dropmenu2 li a').click(function () {
+				$("#selected2").text($(this).text())
+				$(".colortwo").attr('style', 'color: #6e2d91 !important; background: white !important')
+				$(".colorone").attr('style', 'color: white !important; background: #6e2d91 !important')
+			})
+			$('#btn1').click(function (evt) {
+				evt.preventDefault();
+				window.location.href = './MBkg-Payment.html';
+			});
+			$('#btn2').click(function (evt) {
+				evt.preventDefault();
+				window.location.href = './MBkg-Payment.html';
+			});
+		</script>
+</body>
+
+</html>

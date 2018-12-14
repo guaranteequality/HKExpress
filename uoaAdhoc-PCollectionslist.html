@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="./css/daterangepicker.css">
+	<link rel="stylesheet" href="./css/styles.min.css" type="text/css">
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="./css/bootstrap-treefy.js"></script>
+	<script src="./css/bootstrap.min.js"></script>
+	<script>
+		$(function () {
+			$("#table").treeFy({
+				treeColumn: 2
+			})
+		})
+	</script>
+	<style>
+		.header_link {
+			font-size: 1.5rem;
+		}
+
+		.header_link::before {
+			font-size: 1.5rem;
+		}
+
+		i.fa.fa-pencil {
+			color: white;
+			background: orange;
+			border-radius: 50px;
+			height: 25px;
+			width: 25px;
+			top: 25px !important;
+		}
+
+		.fa-pencil:before {
+			top: 5px !important;
+			content: "\f040";
+			position: relative;
+		}
+
+		label.pink11 {
+			color: white;
+			background: #6e2d91;
+			padding: 5px 10px;
+		}
+
+		.green {
+			color: white;
+			background: #00b14d;
+			padding: 5px 10px;
+		}
+
+		a.link_section {
+			font-size: 13px;
+			text-decoration: underline;
+			color: #6e2d91 !important;
+			position: relative;
+		}
+
+		.nav-pills>li>a {
+			border-radius: 0 !important;
+		}
+
+		ul.float-right {
+			float: right;
+			text-align: right;
+			padding-right: 15px;
+			padding-left: 15px;
+		}
+
+		ul.float-right li {
+			background-color: gray;
+			color: #fff;
+		}
+
+		ul.float-right li a {
+			color: #fff;
+		}
+
+		ul.float-right li a.active,
+		ul.float-right li a:hover {
+			background-color: #eee;
+			color: #000;
+		}
+
+		ul.float-left {
+			margin-top: 15px;
+			margin-bottom: -0px;
+			z-index: 999;
+			float: left;
+			text-align: left;
+			padding-right: 15px;
+			padding-left: 15px;
+		}
+
+		ul.float-left li {
+			border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
+			background-color: #bbb;
+			color: #fff;
+		}
+
+		ul.float-left li a {
+			color: #fff;
+		}
+
+		ul.float-left li a.active,
+		ul.float-left li a:hover {
+			border-top-left-radius: 5px !important;
+			border-top-right-radius: 5px !important;
+			background-color: #eee;
+			color: #000;
+		}
+
+		.border_section {
+			border: 1px solid black;
+			padding: 1px;
+		}
+
+		.border_section label {
+			margin-bottom: 0px;
+		}
+
+		.border_section label select.form-control.form-control-lg {
+			border: 1px solid #6e2d91;
+			height: 40px;
+		}
+
+		button.pink {
+			position: relative;
+			padding: 12px 52px;
+			margin-top: 35px;
+			left: -31px;
+		}
+
+		th,
+		td {
+			text-align: center !important;
+		}
+
+		.pink {
+			color: white;
+			background: #6e2d91;
+			border: 1px solid white !important;
+		}
+
+		td.green {
+			background: #00b14d;
+			color: white;
+			border: 1px solid white !important;
+		}
+
+		td.rd {
+			border: 1px solid black;
+			color: red;
+			text-decoration: underline;
+		}
+
+		td.rd1 {
+			color: red;
+			text-decoration: underline;
+		}
+
+		th.pink1 {
+			color: #6e2d91;
+			font-weight: 600;
+			text-decoration: underline;
+		}
+
+		.pink p {
+			padding: 12px;
+		}
+
+		.col-sm-6.col-md-6 {
+			padding-top: 35px;
+		}
+
+		.form-control {
+			border: 1px solid #6e2d91;
+		}
+
+		.form-control {
+			border: 1px solid #6e2d91;
+			height: 40px;
+		}
+
+		input::placeholder {
+			text-align: center;
+			color: #6e2d91;
+		}
+
+		input.form-control::placeholder {
+			color: #6e2d91;
+		}
+
+		span.input-group-addon.pink {
+			background: #6e2d91;
+			color: white;
+			border-radius: 0px !important;
+		}
+
+		.reds {
+			color: red;
+		}
+
+		.table>thead>tr>th {
+			border-bottom: none !important;
+			vertical-align: middle !important;
+			padding: 0 !important;
+			line-height: 1rem;
+		}
+
+		.table>tbody>tr>td {
+			
+			padding: 0;
+			vertical-align: middle;
+		}
+
+		tr .rd {
+			font-size: 18px;
+		}
+
+		form {
+			border: solid 1px black;
+			padding: 5px;
+			background-color: rgb(212, 211, 211);
+		}
+
+		.checkbox label input {
+			width: 15px;
+			height: 15px;
+		}
+
+		thead {
+			background-color: gray;
+		}
+
+		thead tr th {
+			padding: 5px 0 !important;
+			color: #ffffff !important;
+		}
+		.table tr:first-child td:first-child{padding:0;}
+		.btn-primary {
+			background-image: linear-gradient(to bottom, #6e2d91 0, #6e2d91 100%) !important;
+		}
+
+		.btn-primary:hover,
+		.btn-primary:focus {
+			color: #fff !important;
+			background-color: #6e2d91 !important;
+			border-color: #6e2d91 !important;
+		}
+
+		.btn-group {
+			padding: 0 10px 10px 0;
+		}
+
+		input {
+			height: 30px !important;
+		}
+
+		select {
+			height: 30px !important;
+		}
+
+		.reviewsection {
+			margin-top: 5px;
+			padding-top: 20px;
+			border-top: 2px solid #bd2c92;
+		}
+
+		.paymentdetail {
+			float: left;
+			min-width: 270px;
+			margin-bottom: 10px;
+			margin-right: 20px;
+		}
+
+		.reviewsection label {
+			margin-bottom: 0 !important;
+			font-weight: 500;
+		}
+
+		.paymentdetail .text1line {
+			height: 22px;
+		}
+
+		.boxgroup .text2line {
+			height: 42px;
+			text-align: center;
+		}
+
+		.paymentdetail table {
+			height: 64px;
+			margin: 0 !important;
+		}
+
+		.paymentdetail .tdgray {
+			background-color: #eee;
+		}
+
+		.paymentdetail tr {
+			border-top: 1px solid #333;
+			border-right: 1px solid #333;
+		}
+
+		.paymentdetail td {
+			border-bottom: 1px solid #333;
+			border-left: 1px solid #333;
+			padding: 0 !important;
+		}
+
+		.boxgroup {
+			float: left;
+			min-width: 50px;
+			margin-bottom: 10px;
+			margin-right: 20px;
+		}
+
+		.numbox {
+			text-align: center;
+			padding-top: 10px;
+			height: 44px;
+			border: 1px solid #6e2d91;
+		}
+
+		.textdesc {
+			clear: both;
+		}
+
+		.listsection {
+			z-index: 1;
+			margin-top: -1px;
+			border: 1px solid gray;
+			padding: 15px;
+		}
+
+		.pnrlabel {
+			float: left;
+			padding: 15px;
+		}
+
+		.listsection .table>thead>tr>th:first-child {
+			
+			
+		}
+
+		.listsection .table>tbody>tr>td:first-child {
+			background-color: #fff !important;
+			
+		}
+
+		tr.trbb {
+			background-color: #bbb;
+		}
+
+		tr.trbb td {
+			color: #fff !important;
+		}
+
+		tr.trcc {
+			background-color: #ccc;
+		}
+
+		tr.trdd {
+			background-color: #ddd;
+		}
+
+		tr.tree {
+			background-color: #eee;
+		}
+
+		.nav-tabs>li+li {
+			margin-left: 2px;
+		}
+
+		.header_link {}
+
+		#login {
+			width: 320px;
+			margin: auto;
+			font-family: BiomeStd-Regular, sans-serif;
+			color: #6e2d91;
+			font-weight: 600;
+			font-size: 1.4rem;
+			line-height: 2.2;
+		}
+
+		#login form {
+			padding: 0 10px;
+			border: none;
+		}
+
+		#login h1 {
+			font-size: 1.8rem;
+			color: #fff;
+			padding: 10px 10px;
+			margin: 0 0 0 0;
+			background-color: #7d429c;
+		}
+
+		#login p {
+			margin: 0;
+			padding: 10px 0 0 0;
+		}
+
+		#login label {
+			display: block;
+			color: #bd2c92;
+			margin: 0;
+		}
+
+		#login input[type=text],
+		#login input[type=password] {
+			width: 100%;
+			padding: 3px;
+			;
+		}
+
+		.apply-reset {
+			text-align: right;
+		}
+
+		.apply-reset a {
+			margin-left: 20px;
+			color: #7d429c;
+			font-weight: normal;
+			font-style: italic;
+			border-bottom: 1px solid #7d429c;
+			font-size: 1.2rem;
+		}
+
+		.apply-reset a:hover {
+			text-decoration: none;
+		}
+
+		#login p.submit {
+			padding: 0 0 20px 0;
+			margin-top: -15px;
+		}
+
+		#login .btn {
+			height: 40px !important;
+			color: white;
+			background-color: #6e2d91;
+		}
+
+		div.nospace {
+			clear: both;
+		}
+
+		div.nospace label {
+			float: left;
+			margin-right: 1px;
+		}
+
+		label.admin-mnu-b2g {
+			color: white;
+			background: #6e2d91;
+			padding: 2px 15px;
+			font-size: 1.2rem;
+		}
+
+		label.admin-mnu-admin {
+			color: #6e2d91;
+			background: rgb(212, 211, 211);
+			padding: 2px 15px;
+			font-size: 1.2rem;
+		}
+
+		ul.users-menu {
+			clear: both;
+			width: 100%;
+		}
+
+		ul.users-menu li {
+			float: left;
+			padding: 0 10px 0 0;
+			color: #6e2d91;
+		}
+
+		ul.users-menu li a {
+			color: #6e2d91;
+			font-size: 1.2rem;
+			font-weight: 700;
+			text-decoration: underline;
+		}
+
+		ul.users-menu li span {
+			margin-left: 10px;
+		}
+
+		ul.users-menu li a.active {
+			color: #000;
+			text-decoration: none;
+		}
+
+		.searchuserform {
+			margin: 0 0 30px 0;
+			padding: 0 0 10px 0;
+			border: 1px solid gray;
+		}
+
+		.searchuserform form {
+			background: none;
+			border: none 
+		}
+
+		.searchuserform .formcol {
+			padding: 0 5px 0 0;
+			margin: 0;
+		}
+
+		.searchuserform .formcol label {
+			padding: 8px 0;
+			margin: 0;
+			font-weight: normal;
+		}
+
+		.searchuserform .formcol input[type=text] {
+			width: 100%;
+			background-clip: border-box;
+		}
+
+		.searchuserform .formcol input[type=text]::-webkit-input-placeholder {
+			text-align: left;
+			color: #ccc;
+		}
+
+		.searchuserform .formcol select {
+			width: 100%;
+		}
+
+		.searchuserform .firstcol {
+			text-align: right;
+		}
+
+		.searchuserform .checkbox {
+			position: relative;
+			display: block;
+			float: left;
+			margin: 0;
+			padding: 8px 0;
+		}
+
+		.searchuserform .checkbox label {
+			margin: 0;
+			padding: 0 15px 0 20px;
+		}
+
+		.searchuserform .checkbox input[type=checkbox] {
+			padding: 0;
+			width: 20px;
+			height: 14px !important;
+			margin: 4px 0 0 -20px
+		}
+
+		.searchuserform .btnsearch {
+			width: 80px;
+			height: 32px;
+			color: white;
+			background-color: #6e2d91;
+			border-radius: 0.3em;
+			float: right;
+		}
+
+		.code-list {
+			padding: 0 0 7px 0;
+		}
+
+		.code-list span {
+			padding: 1px 3px;
+			margin-right: 5px
+		}
+
+		.downcol {
+			float: left;
+			padding: 0px 0 0 0;
+			text-align: right;
+		}
+
+		.downcol a {
+			text-decoration: underline;
+			margin-right: 25px;
+		}
+
+		span.code-ah {
+			color: white;
+			background: #6e2d91;
+			margin-right: 0;
+			padding: 5px;
+		}
+
+		span.code-sr {
+			color: white;
+			background: #00b14d;
+			margin-right: 0;
+			padding: 5px;
+		}
+
+		span.code-as {
+			color: white;
+			background: #ed1d24;
+			margin-right: 0;
+			padding: 5px;
+		}
+
+		.table-section {
+			clear: both;
+		}
+
+		.table-section .table-responsive tr td a:link {
+			text-decoration: underline;
+		}
+
+		.ui-input {
+			height: 34px !important;
+		}
+		.nopadding{padding:0}
+		h1.h2title {
+			font-size: 1.6rem;
+			color: #6e2d91;
+			font-weight: 600;
+			margin: 10px 0 10px 0;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="page-wrap">
+		<header class="header">
+			<div class="header_container">
+				<div class="header_logo">
+					<a class="logo" href="#">
+						<img src="./images/logoHK.svg">
+					</a>
+				</div>
+				<div class="header_right">
+					<div class="header_links">
+						<ul>
+							<li class="header_links_item link-home">
+								<!---->
+								<!---->
+								<div>
+									<button class="header_link" role="link">
+										<i class="fa fa-home"></i> home </button>
+								</div>
+							</li>
+							<!---->
+							<li class="header_links_item link-user">
+								<!---->
+								<!---->
+								<div>
+									<button class="header_link" role="link"> Welcome back Sally </button>
+								</div>
+							</li>
+							<li class="header_links_item link-language">
+								<ibe-language-selector listlabel="Language">
+									<div class="ui-dropdown">
+										<button data-toggle="dropdown" attr.aria-controls="languageTopListId" attr.aria-haspopup="true" class="header_link">
+										</button>
+										<!---->
+										<ul class="dropdown-menu ui-dropdown_list ng-star-inserted" id="languageTopListId" tabindex="-1" aria-hidden="false">
+											<!---->
+											<li class="ng-star-inserted">
+												<button>日本(日本語)</button>
+											</li>
+											<li class="ng-star-inserted">
+												<button>한국(한국어)</button>
+											</li>
+											<li class="ng-star-inserted">
+												<button>中国大陆 (简体)</button>
+											</li>
+											<li class="ng-star-inserted">
+												<button>中國台灣 (繁體)</button>
+											</li>
+											<li class="ng-star-inserted">
+												<button>香港特別行政區 (繁體)</button>
+											</li>
+										</ul>
+									</div>
+								</ibe-language-selector>
+							</li>
+							<!---->
+							<li class="header_links_item link-Logout">
+								<!---->
+								<!---->
+								<div>
+									<button class="header_link" role="link">
+										<i class="fa fa-lock"></i> Logout </button>
+								</div>
+							</li>
+						</ul>
+						<div class="company-info">
+							<div class="des">
+								<strong>B2G Group Booking Portal</strong>
+							</div>
+							<strong>Company:</strong> ABC Travel Services Ltd.
+							<strong>Account Balance:</strong> HKD 150.000
+							<button id="btnrefesh" class="header_link">
+								<i class="fa fa-redo-alt" style="font-size:12px"></i>
+							</button>
+							<span class="balup">Bal. update: 30Sep’18 15:35</span>
+						</div>
+					</div>
+				</div>
+				<div class="header_bottom">
+					<div class="dropdown btn-group">
+							<button class="btn btn-primary dropdown-toggle colorone" type="button" data-toggle="dropdown">
+								<span id="selected1">B2G</span>
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu dropmenu1">
+								<li>
+									<a tabindex="-1" href="#">B2G</a>
+								</li>
+								<li>
+									<a tabindex="-1" href="#">Book Ad-Hoc</a>
+								</li>
+							</ul>
+						</div>
+						<div class="dropdown btn-group">
+							<button class="btn btn-primary dropdown-toggle colortwo" type="button" data-toggle="dropdown">
+								<span id="selected2">Admin</span>
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu dropmenu2">
+								<li><a tabindex="-1" href="./uoaAgt-listing.html">Agents</a></li>
+								<li><a tabindex="-1" href="./uoaUsers-listing.html" >Users</a></li>
+								<li><a tabindex="-1" href="./uoaAdhoc-PCollectionslist.html">Ad-hoc</a></li>
+								<li><a tabindex="-1" href="./uoaAlerts-list.html">UO Alerts</a></li>
+								<li><a tabindex="-1" href="./uoaOthers-Email.html">Others</a></li>
+								<li class="dropdown-submenu">
+									<a class="test" tabindex="-1" href="./uoaReports-PaymentForfeit.html">Reports<span class="caret"></span></a>
+									<ul class="dropdown-menu">
+										<li><a tabindex="-1" href="./uoaReports-Payment.html">Payment</a></li>
+										<li><a tabindex="-1" href="./uoaReports-MonthlyS.html">Monthly Statement</a></li>
+										<li><a tabindex="-1" href="./uoaReports-PaymentForfeit.html">Payment Forfeit</a></li>
+										<li><a tabindex="-1" href="./uoaReports-AG.html">AG</a></li>
+										<li><a tabindex="-1" href="./uoaReports-Expiry.html">Expiry</a></li>
+										<li><a tabindex="-1" href="./uoaReports-COC.html">COC</a></li>										
+									</ul>
+								</li>
+								<li><a tabindex="-1" href="./uoaSupport-CallCenter.html">Support</a></li>								
+							</ul>
+						</div>
+					</div>
+			</div>
+		</header>
+		<main id="maincontent">
+			<div class="container-wrap">
+				<ul class="float-left nav nav-tabs mb-3" id="pills-tab" role="tablist">
+					<li class="nav-item">
+						<a class="nav-link active" id="" data-toggle="" href="./uoaAdhoc-PCollectionslist.html" role="tab" aria-controls="" aria-selected="true">Payment Collections</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link " id="" data-toggle="" href="./uoaAdhoc-GrpSize.html" role="tab" aria-controls="" aria-selected="true">Group Size</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link " id="" data-toggle="" href="./uoaAdhoc-FOP.html" role="tab" aria-controls="" aria-selected="true">Form of Payment</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link " id="" data-toggle="" href="./uoaAdhoc-PaxNames" role="tab" aria-controls="" aria-selected="true">Pax Names</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link " id="" data-toggle="" href="./uoaAdhoc-ManageBkg.html" role="tab" aria-controls="" aria-selected="true">Manage Booking</a>
+					</li>
+				</ul>
+				<div class="col-md-12 listsection tab-content">
+				<h1 class="h2title">Search by</h1>
+				<div class="searchuserform col-md-8 col-sm-8">
+					<form name="searchuserform" id="searchuserform" action="" method="post">
+						<div class="col-md-12 col-sm-12">
+							<div class="col-md-3 col-sm-3 formcol firstcol">
+								<label>Booking Period From</label>
+							</div>
+							<div class="col-md-3 col-sm-3 formcol">
+								<div class="input-group date" id="datetimepicker3">
+										<input type="text" placeholder="YYYY MMMM" class="form-control">
+										<span class="input-group-addon pink">
+											<span class="glyphicon glyphicon-calendar"></span>
+										</span>
+									</div>
+							</div>
+							<div class="col-md-1 col-sm-1 formcol firstcol">
+								<label>To</label>
+							</div>
+							<div class="col-md-3 col-sm-3 formcol">
+								<div class="input-group date" id="datetimepicker3">
+										<input type="text" placeholder="YYYY MMMM" class="form-control">
+										<span class="input-group-addon pink">
+											<span class="glyphicon glyphicon-calendar"></span>
+										</span>
+									</div>
+							</div>
+						</div>
+						<div class="col-md-12 col-sm-12">
+							<div class="col-md-2 col-sm-2 formcol firstcol">
+								<label>Collection title</label>
+							</div>
+							<div class="col-md-6 col-sm-6 formcol">
+								<input type="text" name="coltit" id="" class="ui-input ng-touched ng-dirty ng-valid" value="" placeholder="Keywords">
+							</div>
+						</div>
+						<div class="col-md-12 col-sm-12">
+							<div class="col-md-2 col-sm-2 formcol firstcol">
+								<label>Remarks</label>
+							</div>
+							<div class="col-md-6 col-sm-6 formcol">
+								<input type="text" name="remarks" id="" class="ui-input ng-touched ng-dirty ng-valid" value="" placeholder="Keywords">
+							</div>
+						</div>
+						<div class="col-md-12 col-sm-12">
+							<div class="col-md-2 col-sm-2 formcol firstcol">
+								<label>Status</label>
+							</div>
+							<div class="col-md-3 col-sm-3 formcol">
+								<ibe-select listid="selectstatus" name="selectstatus">
+									<div class="ui-input-container has-value">
+										<div class="ui-dropdown">
+											<button data-toggle="dropdown" aria-haspopup="true" class="ui-input" type="button" aria-expanded="false">
+												<div class="ui-dropdown_value">All</div>
+											</button>
+											<ul class="dropdown-menu ui-dropdown_list" tabindex="-1" id="grouptype" aria-hidden="false" aria-activedescendant="grouptype-0">
+												<li>
+													<button id="Select-0" aria-selected="true" class="is-focus">All</button>
+												</li>
+												<li>
+													<button id="Select-1" aria-selected="false">Active</button>
+												</li>
+												<li>
+													<button id="Select-2" aria-selected="false">Inactive</button>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<!---->
+								</ibe-select>
+							</div>
+							<div class="col-md-6 col-sm-6 formcol">
+								
+							</div>
+						</div>
+						<div class="col-md-11 col-sm-11 firstcol">
+							<button id="btnsearch" class="btn float-right mt-2 mb-3 searchBtn" style="color:white; background-color:#6e2d91; border-radius: 0.5em;float:right;padding:5px 20px;">Search</button>
+						</div>
+					</form>
+					<div class="nospace"></div>
+				</div>
+				<div class="code-list nospace col-md-6">
+					
+				</div>
+				<div class="col-md-6 downcol">
+					<a href="#">Download list</a>
+				</div>
+				<div class="row mt-2 table-section">
+					<div class="col-md-12">
+						<div class="table-responsive">
+							<table class="table table-bordered">
+								<thead>
+									<tr class="text-center">
+										<th scope="col" style="background-color:#555">No.</th>										
+										<th scope="col" style="background-color:#555">Collection Title</th>										
+										<th scope="col" style="background-color:#555">Booking Period</th>
+										<th scope="col" style="background-color:#555">Remarks</th>
+										<th scope="col" style="background-color:#555">Last Modified</th>
+										<th scope="col" style="background-color:#555">Status</th>
+										<th scope="col" style="background-color:white">
+											<div class="form-check-inline">
+												<input type="checkbox" class="form-check-input" value="">
+											</div>
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td style="text-align:left!important;padding-left:10px">Default</td>
+										<td>1Jan18 - 31Dec18</td>
+										<td></td>
+										<td>12Sep18 13:10</td>
+										<td>Active</td>
+										<td>
+											<div class="form-check-inline">
+												<input type="checkbox" class="form-check-input" value="">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td style="text-align:left!important;padding-left:10px">JP Agencies</td>
+										<td>1Jan18 - 31Dec18</td>
+										<td></td>
+										<td>12Sep18 13:10</td>
+										<td>Active</td>
+										<td>
+											<div class="form-check-inline">
+												<input type="checkbox" class="form-check-input" value="">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td style="text-align:left!important;padding-left:10px">TW Agencies</td>
+										<td>1Jan18 - 31Dec18</td>
+										<td></td>
+										<td>12Sep18 13:10</td>
+										<td>Inactive</td>
+										<td>
+											<div class="form-check-inline">
+												<input type="checkbox" class="form-check-input" value="">
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-12">					
+					<button id="btncreate" class="btn float-right mt-2 mb-3 " style="color:white; background-color:#6e2d91; border-radius: 0.5em;float:right;padding:5px 15px;margin-left:5px;">Create</button>					
+					<button id="btnchange" class="btn float-right mt-2 mb-3 " style="color:white; background-color:#6e2d91; border-radius: 0.5em;float:right;padding:5px 15px;margin-left:5px;">Change</button>
+					<button id="btninactivate" class="btn float-right mt-2 mb-3 " style="color:white; background-color:#6e2d91; border-radius: 0.5em;float:right;padding:5px 15px;margin-left:5px;">Inactive</button>
+					<button id="btnduplicate" class="btn float-right mt-2 mb-3 " style="color:white; background-color:#6e2d91; border-radius: 0.5em;float:right;padding:5px 15px;margin-left:5px;">Duplicate</button>
+				</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="content">
+				<div class="footer_logo">
+					<a href="###########" class="logo">
+						<img src="./images/logo-neg.svg">
+					</a>
+				</div>
+				<div class="footer_right">
+					<span class="poweredby"> Powered by
+						<span class="poweredby_logo">
+							<span class="hide-visually">newshore</span>
+							<a href="##########" target="_blank" class="logo" rel="noopener"> newshore_ </a>
+						</span>
+					</span>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+
+	<link rel="stylesheet" href="./css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="./css/bootstrap-datetimepicker.min.css">
+	<script src="./css/moment.min.js"></script>
+
+	<script src="./css/bootstrap-datetimepicker.min.js"></script>
+	<script>
+		$(function () {
+			var bindDatePicker = function () {
+				$(".date").datetimepicker({
+					format: 'DD-MM-YYYY',
+					icons: {
+						time: "fa fa-clock-o",
+						date: "fa fa-calendar",
+						up: "fa fa-arrow-up",
+						down: "fa fa-arrow-down"
+					}
+				}).find('input:first').on("blur", function () {
+					// check if the date is correct. We can accept dd-mm-yyyy and yyyy-mm-dd.
+					// update the format if it's dd-mm-yyyy
+					var date = parseDate($(this).val());
+					// if (!isValidDate(date)) {
+					//create date based on momentjs (we have that)
+					// 	date = moment().format('DD-MM-YYYY');
+					// }
+					$(this).val(date);
+				});
+			}
+
+			var isValidDate = function (value, format) {
+				format = format || false;
+				// lets parse the date to the best of our knowledge
+				if (format) {
+					value = parseDate(value);
+				}
+
+				var timestamp = Date.parse(value);
+
+				return isNaN(timestamp) == false;
+			}
+
+			var parseDate = function (value) {
+				var m = value.match(/^(\d{1,2})(\/|-)?(\d{1,2})(\/|-)?(\d{4})$/);
+				if (m)
+					value = ("00" + m[1]).slice(-2) + '-' + ("00" + m[3]).slice(-2) + '-' + m[5];
+				return value;
+			}
+
+			bindDatePicker();
+		});
+
+		$(document).ready(function () {
+			$(".colorone").attr('style', 'color: #6e2d91 !important; background: white !important');
+			$('.dropdown-submenu a.test').on("click", function (e) {
+				$(this).next('ul').toggle();
+				e.stopPropagation();
+				e.preventDefault();
+			});
+		})
+
+		$('.dropmenu1 li a').click(function () {
+			$("#selected1").text($(this).text());
+			$(".colorone").attr('style', 'color: #6e2d91 !important; background: white !important')
+			$(".colortwo").attr('style', 'color: white !important; background: #6e2d91 !important')
+		})
+
+		$('.dropmenu2 li a').click(function () {
+			$("#selected2").text($(this).text())
+			$(".colortwo").attr('style', 'color: #6e2d91 !important; background: white !important')
+			$(".colorone").attr('style', 'color: white !important; background: #6e2d91 !important')
+		})
+		$('#btncreate').click(function (evt) {
+			evt.preventDefault();
+			window.location.href = './uoaAdhoc-PCollectionsCreate.html';
+		});
+	</script>
+</body>
+
+</html>

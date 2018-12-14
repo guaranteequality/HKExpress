@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="theme.css" type="text/css"> -->
+  <link rel="stylesheet" href="css/daterangepicker.css">
+  <link rel="stylesheet" href="css/styles.min.css" type="text/css">
+</head>
+
+<body>
+  <div class="page-wrap">
+    <header class="header">
+      <div class="header_container">
+        <h1 class="header_logo">
+          <a class="logo" href="##########"><img src="images/logoHK.svg"></a>
+        </h1>
+        <div class="header_right">
+          <div class="header_links">
+            <ul>
+              <li class="header_links_item link-home">
+                <!---->
+                <!---->
+                <div>
+                  <button class="header_link" role="link"> home </button>
+                </div>
+              </li>
+              <!---->
+              <li class="header_links_item link-user">
+                <!---->
+                <!---->
+                <div>
+                  <button class="header_link" role="link"> Welcome back Sally </button>
+                </div>
+              </li>
+              <li class="header_links_item link-language">
+                <ibe-language-selector listlabel="Language">
+                  <div class="ui-dropdown">
+                    <button data-toggle="dropdown" attr.aria-controls="languageTopListId" attr.aria-haspopup="true" class="header_link">
+                    </button>
+                    <!---->
+                    <ul class="dropdown-menu ui-dropdown_list ng-star-inserted" id="languageTopListId" tabindex="-1" aria-hidden="false">
+                      <!---->
+                      <li class="ng-star-inserted">
+                        <button>日本(日本語)</button>
+                      </li>
+                      <li class="ng-star-inserted">
+                        <button>한국(한국어)</button>
+                      </li>
+                      <li class="ng-star-inserted">
+                        <button>中国大陆 (简体)</button>
+                      </li>
+                      <li class="ng-star-inserted">
+                        <button>中國台灣 (繁體)</button>
+                      </li>
+                      <li class="ng-star-inserted">
+                        <button>香港特別行政區 (繁體)</button>
+                      </li>
+                    </ul>
+                  </div>
+                </ibe-language-selector>
+              </li>
+              <!---->
+              <li class="header_links_item link-Logout">
+                <!---->
+                <!---->
+                <div>
+                  <button class="header_link" role="link"> Logout </button>
+                </div>
+              </li>
+            </ul>
+            <div class="company-info">
+              <div class="des">B2G Group Booking Portal</div> <strong>Company:</strong> ABC Travtl Services LTD, (W12345678) <strong>Sccount Balance:</strong> HKD 150.000
+            </div>
+          </div>
+        </div>
+        <div class="header_bottom">
+          <div class="header_links">
+            <ul class="f-menu">
+              <!---->
+              <li class="header_links_item active">
+                <a class="header_link"> B2G </a>
+              </li>
+              <li class="header_links_item">
+                <a class="header_link"> Admin </a>
+              </li>
+              <!---->
+            </ul>
+            <ul>
+              <!---->
+              <li class="header_links_item">
+                <a class="header_link"> Home </a>
+              </li>
+              <li class="header_links_item">
+                <a class="header_link active"> Book Ad-Hoc Group </a>
+              </li>
+              <!-- <li class="header_links_item">
+                <a class="header_link"> Booking Review </a>
+              </li> -->
+              <!---->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main id="maincontent">
+      <div class="container-wrap">
+        <h2 class="context-h2"><strong>Start Your flight search here!</strong></h2>
+        <div class="grid">
+          <div class="col-12_lg-12">
+            <!---->
+            <!---->
+            <div class="container ng-star-inserted">
+              <!---->
+              <ibe-tab-panel id="tab-panel">
+                <!---->
+                <!---->
+                <ul class="tab-panel-buttons ng-star-inserted">
+                  <!---->
+                  <li class="selected ng-star-inserted">
+                  </li>
+                </ul>
+                <ibe-tab>
+                  <!---->
+                  <!---->
+                  <flight-search class="ng-star-inserted">
+                    <div class="searchflight multicity">
+                      <form autocomplete="off" novalidate="" class="ng-pristine ng-valid ng-touched">
+                        <div class="inner">
+                          <div class="route">
+                            <ibe-input-station class="ng-tns-c0-0">
+                              <div class="ng-tns-c0-0">
+                                <div class="ui-input-container has-value" data-toggle="dropdown">
+                                  <div class="ui-input-multiline">
+                                    <div class="ui-input-multiline_group outbound">
+                                      <div class="ui-input-multiline_group_inner" id="originDiv">
+                                        <button class="ui-input" aria-haspopup="true" id="originBtn" aria-expanded="false">
+                                          <span class="hide-visually">From</span>
+                                          <span class="value-selected" id="originStationSelected">
+                                            <span class="value-large" id="originStationBig" title="Hong Kong (HKG)">Hong Kong (HKG)</span>
+                                            <span class="value-small" id="originStationSmall">Hong Kong SAR</span>
+                                          </span>
+                                        </button>
+                                      </div>
+                                      <div class="ui-input-multiline_group_inner" hidden="">
+                                        <label class="hide-visually" for="outboundDepartureStation">Choose an Origin</label>
+                                        <input class="ui-input" aria-haspopup="true" type="text" aria-expanded="false" name="outboundDepartureStation" id="outboundDepartureStation" placeholder="From">
+                                      </div>
+                                    </div>
+                                    <div class="ui-input-multiline_group inbound">
+                                      <div class="ui-input-multiline_group_inner">
+                                        <button class="ui-input" aria-haspopup="true" tabindex="0" aria-expanded="false">
+                                          <span class="hide-visually">To</span>
+                                          <span class="value-selected">
+                                            <span class="value-large" title="Tokyo (All Airports) (TYO)">Tokyo (All Airports) (TYO)</span>
+                                            <span class="value-small">Japan </span>
+                                          </span>
+                                        </button>
+                                      </div>
+                                      <div class="ui-input-multiline_group_inner" hidden="">
+                                        <label class="hide-visually" for="outboundArrivalStation">Choose a Destination</label>
+                                        <input class="ui-input" aria-haspopup="true" type="text" aria-expanded="false" name="outboundArrivalStation" id="outboundArrivalStation" placeholder="To" tabindex="0">
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!---->
+                                <div class="dropdown-menu search_tt ng-tns-c0-0 ng-trigger ng-trigger-curtainEffec ng-star-inserted" ibe-content-stations="" id="originStationsListId">
+                                  <div class="search_tt_inner">
+                                    <div class="search_tt_title">Choose an Origin</div>
+                                    <div class="search_tt_menu_scroll">
+                                      <div class="search_tt_menu">
+                                        <!---->
+                                        <ul class="ng-star-inserted" style="">
+                                          <li class="title">Hong Kong SAR</li>
+                                          <!---->
+                                          <li class="ng-star-inserted">
+                                            <a href=""> Hong Kong (HKG) </a>
+                                          </li>
+                                        </ul>
+                                        <ul class="ng-star-inserted" style="">
+                                          <li class="title">Cambodia</li>
+                                          <!---->
+                                          <li class="ng-star-inserted">
+                                            <a href=""> Siem Reap (REP) </a>
+                                          </li>
+                                        </ul>
+                                        <ul class="ng-star-inserted" style="">
+                                          <li class="title">Mainland China</li>
+                                          <!---->
+                                          <li class="ng-star-inserted">
+                                            <a href=""> Ningbo (NGB) </a>
+                                          </li>
+                                          <li class="ng-star-inserted">
+                                            <a href=""> Zhangjiajie (DYG) </a>
+                                          </li>
+                                        </ul>
+                                        <ul class="ng-star-inserted" style="">
+                                          <li class="title">Japan</li>
+                                          <!---->
+                                          <li class="ng-star-inserted">
+                                            <a href=""> Fukuoka (FUK) </a>
+                                          </li>
+                                          <li class="ng-star-inserted">
+                                            <a href=""> Hiroshima (HIJ) </a>
+                                          </li>
+                                          <li class="ng-star-inserted">
+                                            <a href=""> Ishigaki (ISG) </a>
+                                          </li>
+                                          <li class="ng-star-inserted">
+                                            <a href=""> Kagoshima (KOJ) </a>
+                                          </li>
+                                          <li class="ng-star-inserted">
+                                            <a href=""> Kumamoto (KMJ) </a>
+                                          </li>
+                                          <li class="ng-star-inserted">
+                                            <a href=""> Nagoya (NGO) </a>
+                                          </li>
+                                          <li class="ng-star-inserted">
+                                            <a href=""> Osaka (Kansai) (KIX) </a>
+                                          </li>
+                                          <li class="ng-star-inserted">
+                                            <a href=""> Takamatsu (TAK) </a>
+                                          </li>
+                                          <li class="ng-star-inserted">
+                                            <a href=""> Tokyo (All Airports) (TYO) </a>
+                                          </li>
+                                          <li class="ng-star-inserted">
+                                            <a href=""> Tokyo (Haneda) (HND) </a>
+                                          </li>
+                                          <li class="ng-star-inserted">
+                                            <a href=""> Tokyo (Narita) (NRT) </a>
+                                          </li>
+                                        </ul>
+                                        <ul class="ng-star-inserted" style="">
+                                          <li class="title">South Korea</li>
+                                          <!---->
+                                          <li class="ng-star-inserted">
+                                            <a href=""> Busan (PUS) </a>
+                                          </li>
+                                          <li class="ng-star-inserted">
+                                            <a href=""> Jeju (CJU) </a>
+                                          </li>
+                                          <li class="ng-star-inserted">
+                                            <a href=""> Seoul (Incheon) (ICN) </a>
+                                          </li>
+                                        </ul>
+                                        <ul class="ng-star-inserted" style="">
+                                          <li class="title">Taiwan, China</li>
+                                          <!---->
+                                          <li class="ng-star-inserted">
+                                            <a href=""> Hualien (HUN) </a>
+                                          </li>
+                                          <li class="ng-star-inserted">
+                                            <a href=""> Taichung (RMQ) </a>
+                                          </li>
+                                        </ul>
+                                        <ul class="ng-star-inserted" style="">
+                                          <li class="title">Thailand</li>
+                                          <!---->
+                                          <li class="ng-star-inserted">
+                                            <a href=""> Chiang Mai (CNX) </a>
+                                          </li>
+                                          <li class="ng-star-inserted">
+                                            <a href=""> Chiang Rai (CEI) </a>
+                                          </li>
+                                          <li class="ng-star-inserted">
+                                            <a href=""> Phuket (HKT) </a>
+                                          </li>
+                                        </ul>
+                                        <ul class="ng-star-inserted" style="">
+                                          <li class="title">Northern Mariana Islands</li>
+                                          <!---->
+                                          <li class="ng-star-inserted">
+                                            <a href=""> Saipan (SPN) </a>
+                                          </li>
+                                        </ul>
+                                        <ul class="ng-star-inserted" style="">
+                                          <li class="title">Vietnam</li>
+                                          <!---->
+                                          <li class="ng-star-inserted">
+                                            <a href=""> Da Nang (DAD) </a>
+                                          </li>
+                                          <li class="ng-star-inserted">
+                                            <a href=""> Nha Trang (CXR) </a>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!---->
+                              </div>
+                            </ibe-input-station>
+                          </div>
+                          <div class="dates">
+                            <div ibe-calendar="" class="ng-tns-c1-1">
+                              <div class="ui-input-container">
+                                <div class="ui-input-multiline" id="outboundStartDate">
+                                  <div class="ui-input-multiline_group outbound">
+                                    <div class="ui-input-multiline_group_inner">
+                                      <!---->
+                                      <label class="hide-visually ng-tns-c1-1 ng-star-inserted" for="departureDateInput"> Departure Date: format dd/mm/yyyy </label>
+                                      <input class="ui-input ng-tns-c1-1 ng-untouched ng-pristine ng-valid ng-star-inserted" id="departureDateInput" name="startDate" type="text" maxlength="10" placeholder="Outbound">
+                                      <!---->
+                                      <!---->
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!---->
+                            </div>
+                          </div>
+                          <!---->
+                          <!---->
+                          <div class="triptype ng-star-inserted">
+                            <ibe-select listid="triptype" listlabel="Trip type" name="tripType">
+                              <!---->
+                              <!---->
+                              <div class="ui-input-container has-value ng-star-inserted">
+                                <!---->
+                                <!---->
+                                <div class="ui-dropdown dropdown ng-star-inserted">
+                                  <button class="ui-input " type="button" id="dropdownMenuButton" data-toggle="dropdown">
+                                    <!---->
+                                    <div class="ui-dropdown_value ng-star-inserted">
+                                      <span class="hide-visually">Trip type</span> Multi-City </div>
+                                    <!---->
+                                  </button>
+                                  <ul class="dropdown-menu ui-dropdown_list ng-star-inserted" aria-labelledby="dropdownMenuButton" tabindex="-1" id="triptype" aria-hidden="" aria-activedescendant="triptype-2">
+                                    <!---->
+                                    <!---->
+                                    <li class="ng-star-inserted">
+                                      <button id="triptype-0" aria-selected="false"> One way </button>
+                                    </li>
+                                    <li class="ng-star-inserted">
+                                      <button id="triptype-1" aria-selected="false"> Round Trip </button>
+                                    </li>
+                                    <li class="ng-star-inserted">
+                                      <button id="triptype-2" aria-selected="true" class="is-focus"> Multi-City </button>
+                                    </li>
+                                  </ul>
+                                  <!---->
+                                </div>
+                              </div>
+                              <!---->
+                            </ibe-select>
+                          </div>
+                          <ibe-passenger class="ng-star-inserted">
+                            <div class="typology">
+                              <div class="ui-input-container has-value">
+                                <div class="ui-dropdown">
+                                  <button data-toggle="dropdown" aria-haspopup="true" class="ui-input" name="typology" type="button" aria-label="Passengers type 3 Adults, 1 Child, 1 Infant">
+                                    <div class="ui-dropdown_value"> 3 Adults, 1 Child, 1 Infant </div>
+                                  </button>
+                                  <!---->
+                                  <div class="dropdown-menu typology_option ng-star-inserted" tabindex="-1">
+                                    <fieldset class="typology_option_list ng-untouched ng-pristine ng-valid">
+                                      <legend class="hide-visually">Passengers type selection</legend>
+                                      <div class="typology_option_item">
+                                        <label class="typology_option_label" for="paxAdultInput" id="paxAdultInput_label"> Adult <span class="label-small">(&gt;12 years)</span>
+                                        </label>
+                                        <div class="typology_option_select">
+                                          <ibe-minus-plus id="paxAdultInput" labelledby="paxAdultInput_label">
+                                            <div class="ui-num-ud">
+                                              <button class="ui-num-ud_button minus" tabindex="0" aria-labelledby="paxAdultInput_label numLabelDecrease">
+                                                <span class="hide-visually" id="numLabelDecrease">decrease</span>
+                                              </button>
+                                              <div class="ui-num-ud_input">
+                                                <input readonly="readonly" tabindex="-1" type="text" id="paxAdultInput" value="3">
+                                              </div>
+                                              <button class="ui-num-ud_button plus" tabindex="0" aria-labelledby="paxAdultInput_label numLabelIncrease">
+                                                <span class="hide-visually" id="numLabelIncrease">increase</span>
+                                              </button>
+                                            </div>
+                                          </ibe-minus-plus>
+                                        </div>
+                                      </div>
+                                      <div class="typology_option_item">
+                                        <label class="typology_option_label" for="paxChildrenInput" id="paxChildrenInput_label"> Children <span class="label-small">(2-11 years)</span>
+                                        </label>
+                                        <div class="typology_option_select">
+                                          <ibe-minus-plus id="paxChildrenInput" labelledby="paxChildrenInput_label">
+                                            <div class="ui-num-ud">
+                                              <button class="ui-num-ud_button minus disabled" tabindex="-1" aria-labelledby="paxChildrenInput_label numLabelDecrease">
+                                                <span class="hide-visually" id="numLabelDecrease">decrease</span>
+                                              </button>
+                                              <div class="ui-num-ud_input">
+                                                <input readonly="readonly" tabindex="-1" type="text" id="paxChildrenInput" value="1">
+                                              </div>
+                                              <button class="ui-num-ud_button plus" tabindex="0" aria-labelledby="paxChildrenInput_label numLabelIncrease">
+                                                <span class="hide-visually" id="numLabelIncrease">increase</span>
+                                              </button>
+                                            </div>
+                                          </ibe-minus-plus>
+                                        </div>
+                                      </div>
+                                      <div class="typology_option_item">
+                                        <label class="typology_option_label" for="paxInfantInput" id="paxInfantInput_label"> Infant <span class="label-small">(&lt;2 years)</span>
+                                          <button class="ui-tooltip_info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Please note, by selecting the below you must seat your infant in your lap. Should you choose to purchase a seat for your infant, please contact our call center at (852) 3902 0288.">
+                                            <span class="hide-visually">Infant information</span>
+                                          </button>
+                                        </label>
+                                        <div class="typology_option_select">
+                                          <ibe-minus-plus id="paxInfantInput" labelledby="paxInfantInput_label">
+                                            <div class="ui-num-ud">
+                                              <button class="ui-num-ud_button minus" tabindex="0" aria-labelledby="paxInfantInput_label numLabelDecrease">
+                                                <span class="hide-visually" id="numLabelDecrease">decrease</span>
+                                              </button>
+                                              <div class="ui-num-ud_input">
+                                                <input readonly="readonly" tabindex="-1" type="text" id="paxInfantInput" value="1">
+                                              </div>
+                                              <button class="ui-num-ud_button plus disabled" tabindex="-1" aria-labelledby="paxInfantInput_label numLabelIncrease">
+                                                <span class="hide-visually" id="numLabelIncrease">increase</span>
+                                              </button>
+                                            </div>
+                                          </ibe-minus-plus>
+                                        </div>
+                                      </div>
+                                    </fieldset>
+                                    <div class="typology_option_button">
+                                      <button class="button">Done</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </ibe-passenger>
+                          <!---->
+                          <!---->
+                          <div class="currency ng-star-inserted">
+                            <ibe-select listid="currencySearch" listlabel="Currency" name="currency">
+                              <!---->
+                              <!---->
+                              <div class="ui-input-container ng-star-inserted has-value">
+                                <!---->
+                                <!---->
+                                <div class="ui-dropdown ng-star-inserted">
+                                  <button aria-haspopup="true" class="ui-input" type="button" data-toggle="dropdown">
+                                    <!---->
+                                    <div class="ui-dropdown_value ng-star-inserted">
+                                      <span class="hide-visually">Currency</span> Australian Dollar (AUD) </div>
+                                    <!---->
+                                  </button>
+                                  <!---->
+                                  <ul class="dropdown-menu ui-dropdown_list ng-star-inserted" tabindex="-1" id="currencySearch" aria-hidden="false" aria-activedescendant="currencySearch-27">
+                                    <!---->
+                                    <li class="ng-star-inserted">
+                                      <a>Select Currency</a>
+                                    </li>
+                                    <!---->
+                                    <li class="ng-star-inserted">
+                                      <button id="currencySearch-0" aria-selected="false"> UAE Dirham (AED) </button>
+                                    </li>
+                                    <li class="ng-star-inserted">
+                                      <button id="currencySearch-1" aria-selected="false"> Argentinean Peso (ARS) </button>
+                                    </li>
+                                    <li class="ng-star-inserted">
+                                      <button id="currencySearch-2" aria-selected="false"> Australian Dollar (AUD) </button>
+                                    </li>
+                                    <li class="ng-star-inserted">
+                                      <button id="currencySearch-3" aria-selected="false"> Brazilian Real (BRL) </button>
+                                    </li>
+                                    <li class="ng-star-inserted">
+                                      <button id="currencySearch-4" aria-selected="false"> Canadian Dollar (CAD) </button>
+                                    </li>
+                                    <li class="ng-star-inserted">
+                                      <button id="currencySearch-5" aria-selected="false"> Swiss Franc (CHF) </button>
+                                    </li>
+                                    <li class="ng-star-inserted">
+                                      <button id="currencySearch-6" aria-selected="false"> Chilean Peso (CLP) </button>
+                                    </li>
+                                    <li class="ng-star-inserted">
+                                      <button id="currencySearch-7" aria-selected="false"> Chinese Yuan (CNY) </button>
+                                    </li>
+                                    <li class="ng-star-inserted">
+                                      <button id="currencySearch-8" aria-selected="false"> Colombian Peso (COP) </button>
+                                    </li>
+                                    <li class="ng-star-inserted">
+                                      <button id="currencySearch-9" aria-selected="false"> Czech Koruna (CZK) </button>
+                                    </li>
+                                    <li class="ng-star-inserted">
+                                      <button id="currencySearch-10" aria-selected="false"> Danish Krone (DKK) </button>
+                                    </li>
+                                    <li class="ng-star-inserted">
+                                      <button id="currencySearch-11" aria-selected="false"> Euro (EUR) </button>
+                                    </li>
+                                    <li class="ng-star-inserted">
+                                      <button id="currencySearch-12" aria-selected="false"> British Pound (GBP) </button>
+                                    </li>
+                                    <li class="ng-star-inserted">
+                                      <button id="currencySearch-13" aria-selected="false"> Hong Kong Dollar (HKD) </button>
+                                    </li>
+                                    <li class="ng-star-inserted">
+                                      <button id="currencySearch-14" aria-selected="false"> Indonesian Rupiah (IDR) </button>
+                                    </li>
+                                    <li class="ng-star-inserted">
+                                      <button id="currencySearch-15" aria-selected="false"> Indian Rupee (INR) </button>
+                                    </li>
+                                    <li class="ng-star-inserted">
+                                      <button id="currencySearch-16" aria-selected="false"> Jordanian Dinar (JOD) </button>
+                                    </li>
+                                    <li class="ng-star-inserted">
+                                      <button id="currencySearch-17" aria-selected="false"> Japanese Yen (JPY) </button>
+                                    </li>
+                                    <li class="ng-star-inserted">
+                                      <button id="currencySearch-18" aria-selected="false"> South Korean Won (KRW) </button>
+                                    </li>
+                                    <li class="ng-star-inserted">
+                                      <button id="currencySearch-19" aria-selected="false"> Macanese Pataca (MOP) </button>
+                                    </li>
+                                    <li class="ng-star-inserted">
+                                      <button id="currencySearch-20" aria-selected="false"> Mexican Peso (MXN) </button>
+                                    </li>
+                                    <li class="ng-star-inserted">
+                                      <button id="currencySearch-21" aria-selected="false"> Malaysian Ringgit (MYR) </button>
+                                    </li>
+                                    <li class="ng-star-inserted">
+                                      <button id="currencySearch-22" aria-selected="false"> Norwegian Krone (NOK) </button>
+                                    </li>
+                                    <li class="ng-star-inserted">
+                                      <button id="currencySearch-23" aria-selected="false"> New Zealand Dollar (NZD) </button>
+                                    </li>
+                                    <li class="ng-star-inserted">
+                                      <button id="currencySearch-24" aria-selected="false"> Philippine Peso (PHP) </button>
+                                    </li>
+                                    <li class="ng-star-inserted">
+                                      <button id="currencySearch-25" aria-selected="false"> Polish Zloty (PLN) </button>
+                                    </li>
+                                    <li class="ng-star-inserted">
+                                      <button id="currencySearch-26" aria-selected="false"> Romanian Leu (RON) </button>
+                                    </li>
+                                    <li class="ng-star-inserted">
+                                      <button id="currencySearch-27" aria-selected="true" class="is-focus"> Russian Ruble (RUB) </button>
+                                    </li>
+                                    <li class="ng-star-inserted">
+                                      <button id="currencySearch-28" aria-selected="false"> Saudi Riyal (SAR) </button>
+                                    </li>
+                                    <li class="ng-star-inserted">
+                                      <button id="currencySearch-29" aria-selected="false"> Swedish Krona (SEK) </button>
+                                    </li>
+                                    <li class="ng-star-inserted">
+                                      <button id="currencySearch-30" aria-selected="false"> Singapore Dollar (SGD) </button>
+                                    </li>
+                                    <li class="ng-star-inserted">
+                                      <button id="currencySearch-31" aria-selected="false"> Thai Baht (THB) </button>
+                                    </li>
+                                    <li class="ng-star-inserted">
+                                      <button id="currencySearch-32" aria-selected="false"> New Taiwan Dollar (TWD) </button>
+                                    </li>
+                                    <li class="ng-star-inserted">
+                                      <button id="currencySearch-33" aria-selected="false"> US Dollar (USD) </button>
+                                    </li>
+                                    <li class="ng-star-inserted">
+                                      <button id="currencySearch-34" aria-selected="false"> South African Rand (ZAR) </button>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                              <!---->
+                            </ibe-select>
+                          </div>
+                       <!--   <div class="promocode ng-star-inserted">
+                            <ibe-promo-code>
+                              <ibe-input type="text" class="ng-star-inserted">
+                                <div class="ui-input-container" ng-init="focusedInput == false;">
+                                  <label class="hide-visually" for="promoCode">
+                                  </label>
+                                  <div class="ui-input_wrap">
+                                    <input class="ui-input ng-pristine ng-valid ng-touched" numberonly="" name="promoCode" id="promoCode" type="text" placeholder="Type your promocode" maxlength="8" autocomplete="on">
+                                  </div>
+                                </div>
+                              </ibe-input>
+                            </ibe-promo-code>
+                          </div> -->
+                          <div class="searchflight_button">
+                            <button class="button btn-action" type="submit"> Find flights </button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </flight-search>
+                </ibe-tab>
+              </ibe-tab-panel>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="content">
+        <div class="footer_logo">
+          <a href="###########" class="logo">
+            <img src="images/logo-neg.svg">
+          </a>
+        </div>
+        <div class="footer_right">
+          <span class="poweredby"> Powered by <span class="poweredby_logo">
+              <span class="hide-visually">newshore</span>
+              <a href="##########" target="_blank" class="logo" rel="noopener"> newshore_ </a>
+            </span>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script>
+    $(function() {
+      $('input[name="startDate"]').daterangepicker({
+        timePicker: true,
+        startDate: moment().startOf('hour'),
+        endDate: moment().startOf('hour').add(32, 'hour'),
+        locale: {
+          format: 'M/DD hh:mm A'
+        }
+      });
+    });
+    $(function() {
+      $('[data-toggle="tooltip"]').tooltip()
+    });
+  </script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+</body>
+</html>

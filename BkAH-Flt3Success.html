@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="./css/daterangepicker.css">
+	<link rel="stylesheet" href="./css/styles.min.css" type="text/css">
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="./css/bootstrap-treefy.js"></script>
+	<script src="./css/bootstrap.min.js"></script>
+	<script>
+		$(function () {
+			$("#table").treeFy({
+				treeColumn: 2
+			})
+		})
+	</script>
+	<style>
+		.header_link {
+			font-size: 1.5rem;
+		}
+
+		.header_link::before {
+			font-size: 1.5rem;
+		}
+
+		i.fa.fa-pencil {
+			color: white;
+			background: orange;
+			border-radius: 50px;
+			height: 25px;
+			width: 25px;
+			top: 25px !important;
+		}
+
+		.fa-pencil:before {
+			top: 5px !important;
+			content: "\f040";
+			position: relative;
+		}
+
+		label.pink11 {
+			color: white;
+			background: #6e2d91;
+			padding: 5px 10px;
+		}
+
+		.green {
+			color: white;
+			background: #00b14d;
+			padding: 5px 10px;
+		}
+
+		a.link_section {
+			font-size: 13px;
+			text-decoration: underline;
+			color: #6e2d91 !important;
+			position: relative;
+		}
+
+		.nav-pills>li>a {
+			border-radius: 0 !important;
+		}
+
+		ul.float-right {
+			float: right;
+			text-align: right;
+			padding-right: 15px;
+			padding-left: 15px;
+		}
+
+		ul.float-right li {
+			background-color: gray;
+			color: #fff;
+		}
+
+			ul.float-right li a {
+			color: #fff;
+		}
+
+		ul.float-right li a.active,
+		ul.float-right li a:hover {
+			background-color: #eee;
+			color: #000;
+		}
+
+		ul.float-left {
+			margin-top: 15px;
+			margin-bottom: -0px;
+			z-index: 999;
+			float: left;
+			text-align: left;
+			padding-right: 15px;
+			padding-left: 15px;
+		}
+
+		ul.float-left li {
+			border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
+			background-color: #bbb;
+			color: #fff;
+		}
+
+		ul.float-left li a {
+			color: #fff;
+		}
+
+		ul.float-left li a.active,
+		ul.float-left li a:hover {
+			border-top-left-radius: 5px !important;
+			border-top-right-radius: 5px !important;
+			background-color: #eee;
+			color: #000;
+		}
+
+		.border_section {
+			border: 1px solid black;
+			padding: 1px;
+		}
+
+		.border_section label {
+			margin-bottom: 0px;
+		}
+
+		.border_section label select.form-control.form-control-lg {
+			border: 1px solid #6e2d91;
+			height: 40px;
+		}
+
+		button.pink {
+			position: relative;
+			padding: 12px 52px;
+			margin-top: 35px;
+			left: -31px;
+		}
+
+		th,
+		td {
+		}
+
+		.pink {
+			color: white;
+			background: #6e2d91;
+			border: 1px solid white !important;
+		}
+
+		td.green {
+			background: #00b14d;
+			color: white;
+			border: 1px solid white !important;
+		}
+
+		td.rd {
+			border: 1px solid black;
+			color: red;
+			text-decoration: underline;
+		}
+
+		td.rd1 {
+			color: red;
+			text-decoration: underline;
+		}
+
+		th.pink1 {
+			color: #6e2d91;
+			font-weight: 600;
+			text-decoration: underline;
+		}
+
+		.pink p {
+			padding: 12px;
+		}
+
+
+		.form-control {
+			border: 1px solid #6e2d91;
+		}
+
+		.form-control {
+			border: 1px solid #6e2d91;
+			height: 40px;
+		}
+
+		input::placeholder {
+			text-align: center;
+			color: #6e2d91;
+		}
+
+		input.form-control::placeholder {
+			color: #6e2d91;
+		}
+
+		span.input-group-addon.pink {
+			background: #6e2d91;
+			color: white;
+			border-radius: 0px !important;
+		}
+
+		.reds {
+			color: red;
+		}
+
+		.table>thead>tr>th {
+			border-bottom: 2px solid #333 !important;
+		}
+
+		.table>tbody>tr>td {
+			border-top: none !important;
+			padding:5px 0;
+			vertical-align  :middle;
+		}
+
+		tr .rd {
+			font-size: 18px;
+		}
+
+		form {
+		}
+
+		.checkbox label input {
+			width: 15px;
+			height: 15px;
+		}
+
+		thead {
+			background-color: gray;
+		}
+
+		thead tr th {
+			padding: 5px 0 !important;
+			color: #ffffff !important;
+		}
+
+		.btn-primary {
+			background-image: linear-gradient(to bottom, #6e2d91 0, #6e2d91 100%) !important;
+		}
+
+		.btn-primary:hover,
+		.btn-primary:focus {
+			color: #fff !important;
+			background-color: #6e2d91 !important;
+			border-color: #6e2d91 !important;
+		}
+
+		.btn-group {
+			padding: 0 10px 10px 0;
+		}
+
+		input {
+			
+		}
+
+		select {
+			height: 30px !important;
+		}
+
+		.reviewsection {
+			margin-top: 5px;
+			padding-top: 20px;
+			border-top: 2px solid #bd2c92;
+		}
+
+		.paymentdetail {
+			float: left;
+			min-width: 270px;
+			margin-bottom: 10px;
+			margin-right: 20px;
+		}
+
+		.reviewsection label {
+			margin-bottom: 0 !important;
+			font-weight: 500;
+		}
+
+		.paymentdetail .text1line {
+			height: 22px;
+		}
+
+		.boxgroup .text2line {
+			height: 42px;
+			text-align: center;
+		}
+
+		.paymentdetail table {
+			height: 64px;
+			margin: 0 !important;
+		}
+
+		.paymentdetail .tdgray {
+			background-color: #eee;
+		}
+
+		.paymentdetail tr {
+			border-top: 1px solid #333;
+			border-right: 1px solid #333;
+		}
+
+		.paymentdetail td {
+			border-bottom: 1px solid #333;
+			border-left: 1px solid #333;
+			padding: 0 !important;
+		}
+
+		.boxgroups {
+			float: left;
+			margin-bottom: 10px;
+		}
+		.boxgroup {
+			float: left;
+			min-width: 50px;
+			margin-bottom: 5px;
+			margin-right: 20px;
+		}
+
+		.numbox {
+			text-align: center;
+			padding-top: 10px;
+			height: 44px;
+			border: 1px solid #6e2d91;
+		}
+
+		.textdesc {
+			clear: both;
+			font-size:1.2rem;
+			font-style:italic;
+		}
+
+		.listsection {
+			z-index: 1;
+			margin-top: -1px;
+			border: 1px solid gray;
+			padding: 15px;
+		}
+
+		.pnrlabel {
+			float: left;
+			padding: 15px;
+		}
+
+		.listsection .table>thead>tr>th:first-child {
+			border: 0 !important;
+		}
+
+		.listsection .table>tbody>tr>td:first-child {
+			border: 0 !important;
+		}
+
+		tr.trbb {
+			background-color: #bbb;
+		}
+
+		tr.trbb td {
+			color: #fff !important;
+		}
+
+		tr.trcc {
+			background-color: #ccc;
+		}
+
+		tr.trdd {
+			background-color: #ddd;
+		}
+
+		tr.tree {
+			background-color: #eee;
+		}
+
+		.nav-tabs>li+li {
+			margin-left: 2px;
+		}
+		button.ui-input, input.ui-input {
+			
+		}
+		.formcol label {
+			padding: 8px 5px 0 0;
+			margin: 0;
+			font-weight: normal;
+		}
+		.formcol {
+			padding: 0 5px 0 0;
+			margin: 0;
+		}
+		.nopadding{
+			padding:0 0 0 0;
+		}
+		.paddingbottom{
+			padding-bottom:5px;
+		}
+		.paddingtop{
+			padding-top:5px;
+		}
+		input[type=radio]+label {
+			padding:0;
+		}
+		.ui-checkbox input[type=radio]:checked+label:after {
+			left: 4px;
+			top: 4px;
+			background: #6e2d91;
+			width: 12px;
+			height: 12px;
+		}
+		.changeflightbox{
+			border: 1px solid #ddd;
+			padding: 15px;
+			margin-bottom:15px;
+			background-color:#eee;
+		}
+		span.code-ah {
+			color: white;
+			background: #6e2d91;
+			margin-right: 10px;
+			padding: 5px;
+		}
+
+		span.code-sr {
+			color: white;
+			background: #00b14d;
+			margin-right: 10px;
+			padding: 5px;
+		}
+
+		span.code-as {
+			color: white;
+			background: #ed1d24;
+			margin-right: 10px;
+			padding: 5px;
+		}
+.searchflight, .searchflight form {
+    background: none;
+    border: none;
+}
+	</style>
+	<style>
+	.booking-steps {
+		position: relative;
+		display: table;
+		width: 340px;
+		margin: 10px 0 0 0;
+		counter-reset: booking_steps_counter;
+	}
+	.booking-steps li .label {
+		white-space: normal; 
+	}
+	.time-remaining{
+		padding-top:40px;
+		text-align:right;
+	}
+	.time-remaining span{ color:red}
+	.summary_header .label{text-align:left;padding:0}
+	.flightselect_header_route .label+.route{    margin-top: 0;}
+	.tripselector_outbound  .label{text-align:left;padding:0}
+	.airport-name span{display:block;}
+	.ui-checkbox input[type=radio]{}
+	.flights_table .price-rate {width:auto;display:inline-block;float:right}
+	.rowFlight .ui-checkbox input[type=checkbox]+label::after, 
+	.rowFlight .ui-checkbox input[type=checkbox]+label::before, 
+	.rowFlight .ui-checkbox input[type=radio]+label::after, 
+	.rowFlight .ui-checkbox input[type=radio]+label::before {
+		content: '';
+		position: absolute;
+		right: 0;
+		left:auto;
+		top: 0;
+		margin: 17px -30px 0 0;
+	}
+	.rowFlight .ui-checkbox input[type=radio]:checked+label:after {
+		right: 0;
+		left:auto;
+		top: 0;
+		background: #6e2d91;
+		width: 12px;
+		height: 12px;
+		margin: 21px -26px 0 0;
+	}.rowFlight .ui-checkbox input[type=radio]:checked+label{ background-color: #ae8dc1; }
+	
+		.btn-primary {
+			background-image: linear-gradient(to bottom, #6e2d91 0, #6e2d91 100%) !important;
+		}
+
+		.btn-primary:hover,
+		.btn-primary:focus {
+			color: #fff !important;
+			background-color: #6e2d91 !important;
+			border-color: #6e2d91 !important;
+		}
+
+		.btn-group {
+			padding: 0 10px 10px 0;
+		}
+		.show {
+			display: inline-block !important;
+		}
+		.group_combo{margin:0 !important;}
+		.col-9  .context-table{
+		    margin: 16px 0 16px 3%;
+		}
+	
+		.upperline-tb .fare3-label {top:0}
+		.summary_details_price.collapse.show{display: block !important;}
+		.group_combo.grid.padding15{
+			padding: 15px 3%;
+		}
+		.summary_typology_item{font-size:1.6rem;color:#6e2d91;}
+		.combined_summary_bar-left .right .button.btn-inverse {padding-right:40px}
+		.btn-inverse::after {
+			
+			content: "\e908";
+			font-family: FontAwesome;
+			font-weight: 400;
+			position: absolute;
+			display: block;
+			right: 10px;
+			line-height: 1;
+			color: #6e2d91;
+			transition: transform .18s ease;
+			top: 8px;
+			font-size: 1.75rem;
+		    transform: scaleY(-1);
+
+		}
+		.collapsing {
+			position: absolute;
+			height: 0;
+			transition: height .35s ease;
+		}
+		.summary_collapse {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		z-index: 1000;
+	}
+	.titlebar .title {
+    font-family: BiomeStd-Regular,sans-serif;
+    font-size: 2.375rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+.titlebar .subtitle {
+    margin-top: 4px;
+    font-size: 1.775rem;
+    line-height: 1.2;
+    font-weight: 300;
+}
+.summary_total_list .price {
+    font-family: BiomeStd-Regular,sans-serif;
+    font-size: 2.65rem;
+    line-height: 1;
+}
+.summary_total_list .label {
+    position: relative;
+    display: block;
+    font-size: 1.7rem;
+    line-height: 1.3;
+}
+.payment_methods .tabs-pill a {
+	font-size:1.8rem;
+	font-weight:700;
+}
+.ui-checkbox label{font-weight:400;}
+.contact_data .ui-form_group.full {}
+.payment_partials_trigger .icon {top:0}
+.summary_details_trigger .label{color:#6e2d91;font-size:1.2rem;}
+.summary_details_content{padding:0 15px;}
+.sborder {
+    border: 1px solid #6e2d91;
+    padding: 2px 5px;
+}
+.sbagr {
+    border-bottom: 1px solid #6e2d91;
+    padding: 2px 2px;
+}
+.suctext{color:#bd2c92;font-size:2rem;padding:0;margin:0}
+.printdownload {text-align:right}
+.printdownload span{color:#fff;font-size:1.4rem;padding:3px 10px;background-color:#6e2d91 }
+.printdownload span.print{border-right:1px solid #fff}
+.bigbox{border:1px solid #6e2d91;padding:15px;margin-top:10px;}
+.bookref{color:#fff;font-size:1.6rem;padding:3px 10px;background-color:gray}
+.viptext{font-size:1.6rem;font-weight:bold;margin:25px 0 15px 0}
+.maincos{border:1px solid gray;padding:10px;}
+div.h3{color:#bd2c92;font-size:1.6rem;font-weight:bold;padding:0 0 15px 0;margin:0}
+.boxappo p{font-size:1.3rem;padding:0 0 5px 0;margin:0 }
+.nocol{display:block;float:left;padding-right:5px}
+.icon{display:block;float:left;padding-right:5px}
+.icon::before {
+    content: "\e91b";
+    font-family: FontAwesome;
+    font-weight: 400;
+    font-size: 1.95rem;
+    color: #bd2c92;	
+}
+#tbitinerary {border:none!important;margin-top:30px}
+#tbitinerary thead th{text-align:center!important;border:none!important;border-right:1px solid #000!important}
+#tbitinerary tbody tr:not(:last-child){border-bottom:1px solid gray}
+#tbitinerary td{padding:5px 5px 15px 5px!important;vertical-align:top!important;text-align:left!important;border:none !important}
+#tbitinerary td p{padding:0 0 2px 0;margin:0}
+
+#tbguest  {border:none!important;margin-top:30px}
+#tbguest thead th{text-align:center!important;border:none!important;border-right:1px solid #000!important;padding-left:5px!important}
+#tbguest thead th:first-child{text-align:left!important;}
+#tbguest tbody{border:none!important;}
+#tbguest tbody tr:not(:first-child) td:not(:last-child){border:1px solid gray!important;padding:5px!important}
+#tbguest td{padding:5px!important;vertical-align:top!important;text-align:left!important;border:none !important}
+#tbguest td p{padding:0 0 2px 0;margin:0}
+#tbguest .trpadtop td{padding-top:20px!important}
+
+#tbPaymentD {border:none!important;margin-top:30px}
+#tbPaymentD thead th{text-align:center!important;border:none!important;border-right:1px solid #000!important}
+#tbPaymentD tbody tr:first-child{border-bottom:1px solid gray}
+#tbPaymentD td{padding:5px 5px 15px 5px!important;vertical-align:top!important;text-align:left!important;border:none !important}
+#tbPaymentD td p{padding:0 0 2px 0;margin:0}
+input[type=text] {background-clip:unset;}
+input[type=text]::-webkit-input-placeholder {
+	text-align: left;
+	color: #ccc;
+	padding-left:5px
+}
+#pointer {
+      background: #23a1f7;
+      height: 34px;
+      position: relative;
+      width: 50px;
+	  border:none;
+	  margin-left:10px;
+    }
+#pointer:before {
+      content: "";
+      position: absolute;
+      right: -17px;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      border-left: 17px solid #23a1f7;
+      border-top: 17px solid transparent;
+      border-bottom: 17px solid transparent;
+    }
+.btnsend{background:none;border:none;color:#fff;margin:6px}	
+.divaddons{clear:both;padding-top:5px;}
+</style>
+
+	</head>
+<body>
+	<div class="page-wrap">
+		<header class="header">
+			<div class="header_container">
+				<div class="header_logo">
+					<a class="logo" href="#">
+						<img src="./images/logoHK.svg">
+					</a>
+				</div>
+				<div class="header_right">
+					<div class="header_links">
+						<ul>
+							<li class="header_links_item link-home">
+								<!---->
+								<!---->
+								<div>
+									<button class="header_link" role="link">
+										<i class="fa fa-home"></i> home </button>
+								</div>
+							</li>
+							<!---->
+							<li class="header_links_item link-user">
+								<!---->
+								<!---->
+								<div>
+									<button class="header_link" role="link"> Welcome back Sally </button>
+								</div>
+							</li>
+							<li class="header_links_item link-language">
+								<ibe-language-selector listlabel="Language">
+									<div class="ui-dropdown">
+										<button data-toggle="dropdown" attr.aria-controls="languageTopListId" attr.aria-haspopup="true" class="header_link">
+										</button>
+										<!---->
+										<ul class="dropdown-menu ui-dropdown_list ng-star-inserted" id="languageTopListId" tabindex="-1" aria-hidden="false">
+											<!---->
+											<li class="ng-star-inserted">
+												<button>日本(日本語)</button>
+											</li>
+											<li class="ng-star-inserted">
+												<button>한국(한국어)</button>
+											</li>
+											<li class="ng-star-inserted">
+												<button>中国大陆 (简体)</button>
+											</li>
+											<li class="ng-star-inserted">
+												<button>中國台灣 (繁體)</button>
+											</li>
+											<li class="ng-star-inserted">
+												<button>香港特別行政區 (繁體)</button>
+											</li>
+										</ul>
+									</div>
+								</ibe-language-selector>
+							</li>
+							<!---->
+							<li class="header_links_item link-Logout">
+								<!---->
+								<!---->
+								<div>
+									<button class="header_link" role="link">
+										<i class="fa fa-lock"></i> Logout </button>
+								</div>
+							</li>
+						</ul>
+						<div class="company-info">
+							<div class="des">
+								<strong>B2G Group Booking Portal</strong>
+							</div>
+							<strong>Company:</strong> ABC Travel Services Ltd.
+							<strong>Account Balance:</strong> HKD 150.000
+							<button id="btnrefesh" class="header_link">
+								<i class="fa fa-redo-alt" style="font-size:12px"></i>
+							</button>
+							<span class="balup">Bal. update: 30Sep’18 15:35</span>
+						</div>
+					</div>
+				</div>
+				<div class="header_bottom">
+					<div class="header_links">
+						<div class="dropdown btn-group">
+							<button class="btn btn-primary dropdown-toggle colorone" type="button" data-toggle="dropdown">
+								<span id="selected1">Book Ad-Hoc Group</span>
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu dropmenu1">
+								<li>
+									<a tabindex="-1" href="#">B2G</a>
+								</li>
+								<li>
+									<a tabindex="-1" href="#">Book Ad-Hoc Group</a>
+								</li>
+							</ul>
+						</div>
+						<div class="dropdown btn-group">
+							<button class="btn btn-primary dropdown-toggle colortwo" type="button" data-toggle="dropdown">
+								<span id="selected2">Admin</span>
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu dropmenu2">
+								<li>
+									<a tabindex="-1" href="#">Admin</a>
+								</li>
+								<li>
+									<a tabindex="-1" href="#">Profile</a>
+								</li>
+								<li>
+									<a tabindex="-1" href="#">Users Management</a>
+								</li>
+								<li class="dropdown-submenu">
+									<a class="test" tabindex="-1" href="#">Reports
+										<span class="caret"></span>
+									</a>
+									<ul class="dropdown-menu">
+										<li>
+											<a tabindex="-1" href="#">UO Alerts</a>
+										</li>
+										<li>
+											<a tabindex="-1" href="#">Payments</a>
+										</li>
+										<li>
+											<a tabindex="-1" href="#">Monthly Statement</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						
+					</div>
+					
+				</div>
+			</div>
+		</header>
+		<main id="maincontent">
+			<div class="container-wrap">
+				<div class="row mt-2 table-section tab-pane fade active in" id="pills-flights" role="tabpanel" aria-labelledby="pills-filghts-tab">
+						<div class="container-wrap">
+        <div class="grid ">
+          <div class="col-12 lg-12">
+            <div class="col-sm-9 col-md-9 nopadding">
+			<h1 class="suctext">Your booking is successful!</h1>
+				</div>
+			<div class="col-sm-3 col-md-3">
+				<div class="printdownload"><span class="print">Print</span><span>Download</span></div>
+			</div>
+          </div>
+		  <div class="col-12 lg-12 bigbox">
+			<div class="col-sm-8 col-md-8 nopadding">
+				<div class="">
+					<a class="logo" href="#">
+						<img src="./images/logoHK.svg" width="120">
+					</a>
+				</div>
+			</div>
+			<div class="col-sm-4 col-md-4 nopadding">
+				<div class="bookref">Booking Reference: G1234567</div>
+			</div>
+			<div class="col-sm-12 col-md-12 nopadding viptext">VIP Tuck Chung - Japan</div>
+			<div class="col-sm-7 col-md-7 nopadding maincos">
+				<div class="h3">Main Customer Contact Details</div>
+				<div class="col-sm-7 col-md-7 nopadding ">
+					<p>Mr. Tuc Hin WONG</p>
+					<p>No.23 Block C, ABS Tower,</p>
+					<p>Stanley Road, 123456 Kowloon</p>
+					<p>HONG KONG</p>
+				</div>
+				<div class="col-sm-5 col-md-5 nopadding ">
+					<p>Mobile 1: +852 1234 5678</p>
+					<p>Mobile 2: +852 1234 0000</p>
+					<p>Email add: thw@gmail.com</p>
+				</div>
+			</div>
+			<div class="col-sm-1 col-md-1 nopadding">
+				
+			</div>
+			<div class="col-sm-4 col-md-4 nopadding boxappo">
+				<p style="font-style:italic">Appointed Travel Agent:</p>
+				<p>ABS Travel Pte. Ltd.</p>
+				<p>Block 123 Level 30, Office D, Mayson Road,</p>
+				<p>123456 Kowloon,</p>
+				<p>HONG KONG</p>
+				<p>Contact 1: +852 2345 6677 / +852 3333 4444</p>
+				<p>Booked by: Angelina Lew / 20Oct'18(Sat) 13:30</p>
+			</div>
+			<div class="table-responsive">
+								<table class="table table-bordered " id="tbitinerary">
+									<thead>
+										<tr class="text-center">
+											<th scope="col" style="background-color:gray">Itinerary</th>
+											<th scope="col" style="background-color:gray">Depart</th>
+											<th scope="col" style="background-color:gray">Arrive</th>
+											<th scope="col" style="background-color:gray"></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td><span class="nocol">1</span><span class="icon"></span></td>
+											<td>
+												<p>Siem Reap International Airport (REP)</p>
+												<p>07-Jan-18 (Sun) 11:15</p>
+											</td>
+											<td>
+												<p>Tokyo Narita International Airport Terminal 1(NRT)</p>
+												<p>08-Jan-18 (Mon) 19:05</p>
+											</td>
+											<td>
+												<p style="font-weight:bold">UO707 | UO650</p>
+												<p>Transit in HKG 23h20m</p>
+												<p>Duration: 29h 50m</p>
+											</td>
+										</tr>
+										<tr>
+											<td><span class="nocol">2</span><span class="icon"></span></td>
+											<td>
+												<p>Tokyo Narita International Airport Terminal 1(NRT)</p>
+												<p>11-Jan-18 (Thu) 15:20</p>
+											</td>
+											<td>
+												<p>Siem Reap International Airport (REP)</p>
+												<p>12-Jan-18 (Fri) 18:15</p>
+											</td>
+											<td>
+												<p style="font-weight:bold">UO849 | UO706</p>
+												<p>Transit in HKG 23h20m</p>
+												<p>Duration: 28h 55m</p>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+			<div class="table-responsive">
+								<table class="table table-bordered " id="tbguest">
+									<thead>
+										<tr class="text-center">
+											<th scope="col" style="background-color:gray" colspan="2">Guest(s) Details</th>
+											<th scope="col" style="background-color:gray"></th>
+											<th scope="col" style="background-color:gray"></th>
+											<th scope="col" style="background-color:gray">Total Group: 9 Pax</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td colspan="2">PNR: WOOOEJ / Total Pax: 4</td>
+											<td><span class="nocol">1</span><span class="icon"></span><span class="nocol">REP-NRT</span>
+												<div class="divaddons">Add-Ons</div>
+											</td>
+											<td><span class="nocol">2</span><span class="icon"></span><span class="nocol">NRT-REP</span>
+												<div class="divaddons">Add-Ons</div>
+											</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>Adult 1</td>
+											<td>TBA</td>
+											<td>None</td>
+											<td>None</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>Adult 2</td>
+											<td>TBA</td>
+											<td>None</td>
+											<td>None</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>Child 1</td>
+											<td>TBA</td>
+											<td>None</td>
+											<td>None</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>Child 2</td>
+											<td>TBA</td>
+											<td>None</td>
+											<td>None</td>
+											<td></td>
+										</tr>
+									</tbody>
+									<tbody>
+										<tr class="trpadtop">
+											<td colspan="2">PNR: JHE3U / Total Pax: 5</td>
+											<td><span class="nocol">1</span><span class="icon"></span><span class="nocol">REP-NRT</span>
+												<div class="divaddons">Add-Ons</div>
+											</td>
+											<td><span class="nocol">2</span><span class="icon"></span><span class="nocol">NRT-REP</span>
+												<div class="divaddons">Add-Ons</div>
+											</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>Adult 1</td>
+											<td>TBA</td>
+											<td>None</td>
+											<td>None</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>Adult 2</td>
+											<td>TBA</td>
+											<td>None</td>
+											<td>None</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>Adult 3</td>
+											<td>TBA</td>
+											<td>None</td>
+											<td>None</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>Child 1</td>
+											<td>TBA</td>
+											<td>None</td>
+											<td>None</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>Infant 1</td>
+											<td>TBA</td>
+											<td>None</td>
+											<td>None</td>
+											<td></td>
+										</tr>
+									</tbody>
+								
+								</table>
+							</div>
+			<div class="table-responsive">
+								<table class="table table-bordered " id="tbPaymentD">
+									<thead>
+										<tr class="text-center">
+											<th colspan="2" scope="col" style="background-color:gray;text-align:left!important;padding-left:5px!important">Payment Details</th>
+											<th scope="col" style="background-color:gray"></th>
+											<th scope="col" style="background-color:gray"></th>
+											<th scope="col" style="background-color:gray"></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												<p>&nbsp;</p>
+												<p>PNR: WOOOEJ</p>
+												<p>PNR: JHE3U</p>
+											</td>
+											<td>
+												<p>&nbsp;</p>
+												<p>Adult</p>
+												<p>Adult</p>
+												<p>Child</p>
+												<p>Infant</p>
+											</td>
+											<td>
+												<p style="text-decoration:underline;font-style:italic">Per Pax (USD)</p>
+												<p>$ 615.40</p>
+												<p>$ 729.40</p>
+												<p>$ 588.40</p>
+												<p>$ 144.00</p>
+											</td>
+											<td>
+												<p style="text-decoration:underline;font-style:italic">No. of Pax</p>
+												<p>x &nbsp;&nbsp;&nbsp;4</p>
+												<p>x &nbsp;&nbsp;&nbsp;9</p>
+												<p>x &nbsp;&nbsp;&nbsp;2</p>
+												<p>x &nbsp;&nbsp;&nbsp;1</p>
+											</td>
+											<td>
+												<p style="text-decoration:underline;font-style:italic;text-align:center">Total (USD)</p>
+												<p style="text-align:right">$ 2461.60</p>
+												<p style="text-align:right">$ 6564.60</p>
+												<p style="text-align:right">$ 1166.80</p>
+												<p style="text-align:right">$ 144.00</p>
+											</td>
+										</tr>
+										<tr>
+											<td>
+											</td>
+											<td>
+											</td>
+											<td>
+											</td>
+											<td>
+												
+												<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;16</p>
+											</td>
+											<td>
+												
+												<p style="text-align:right">$ 10,337.00</p>
+											</td>
+										</tr>
+										<tr>
+											<td>
+											</td>
+											<td>
+											</td>
+											<td>
+											</td>
+											<td>												
+												<p style="text-align:right;padding-top:5px!important">Total Paid</p>
+												<p  style="text-align:right;">Balance</p>
+											</td>
+											<td>												
+												<p style="text-align:right;padding-top:5px!important;color:red">-$ 1,000.00</p>
+												<p  style="text-align:right;">$ 9,337.00</p>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="5">
+												<p style="text-decoration:underline;font-style:italic;">Payment Mode</p>
+												<p>AG&nbsp;&nbsp;&nbsp;&nbsp;20-Oct-18 (Sun) 13:30&nbsp;&nbsp;&nbsp;&nbsp;$1,000.00 USD</p>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="h3">What's Next?</div>
+							<p>You may view your booking <a href="">here</a> for further actions:</p>
+							<ul style="list-style:decimal;padding-left:30px">
+								<li>To upload passenger names <span class="reds">by 20Sep18</span></li>
+								<li>To purchase the necessary add-ons for your passengers <span class="reds">by 25Sep18</span></li>
+								<li>To make your payment, click <a href="">here</a></li>
+							</ul>
+							<p style="margin-top:20px">Thank you for your support. Should you have any further inquiries, please feel free to contact our Call Center team.</p>
+							
+			
+		</div>
+		  <div class="col-12 lg-12" style="margin-top:20px">
+			<div class="col-sm-8 col-md-8 nopadding" style="text-align:right;padding-right:10px">
+				Email itinerary to:
+			</div>
+			<div class="col-sm-3 col-md-3 nopadding">
+				<input type="text" placeholder="Use “;” for multiple email addresses" style="width:100%">
+				<input type="checkbox" name="withpricing">
+				<label for="withpricing" style="font-weight:normal">With pricing</label>
+			</div>
+			<div class="col-sm-1 col-md-1 nopadding">
+				<div id="pointer"><input type="button" value="Send" class="btnsend"></div>
+			</div>	
+		  </div>	
+		</div>
+      </div>
+	  </div>
+					
+
+				
+		</main>
+		<footer class="footer">
+			<div class="content">
+				<div class="footer_logo">
+					<a href="###########" class="logo">
+						<img src="./images/logo-neg.svg">
+					</a>
+				</div>
+				<div class="footer_right">
+					<span class="poweredby"> Powered by
+						<span class="poweredby_logo">
+							<span class="hide-visually">newshore</span>
+							<a href="##########" target="_blank" class="logo" rel="noopener"> newshore_ </a>
+						</span>
+					</span>
+				</div>
+			</div>
+		</footer>
+		</div>
+
+
+		<link rel="stylesheet" href="./css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="./css/bootstrap-datetimepicker.min.css">
+		<script src="./css/moment.min.js"></script>
+
+		<script src="./css/bootstrap-datetimepicker.min.js"></script>
+<script>
+		
+    $(function() {
+      $('input[name="startDate"]').daterangepicker({
+        timePicker: true,
+        startDate: moment().startOf('hour'),
+        endDate: moment().startOf('hour').add(32, 'hour'),
+        locale: {
+format: 'D MMM ddd '
+        }
+      });
+    });
+	$(function() {
+      $('[data-toggle="tooltip"]').tooltip()
+    });
+			$(document).ready(function () {
+				$(".colorone").attr('style', 'color: #6e2d91 !important; background: white !important');
+				$('.dropdown-submenu a.test').on("click", function (e) {
+					$(this).next('ul').toggle();
+					e.stopPropagation();
+					e.preventDefault();
+				});
+				var counterdown = 31;
+				var interval = setInterval(function() {
+					counterdown--;
+					// Display 'counter' wherever you want to display it.
+					$('.time-remaining span').html(counterdown);
+					if (counterdown == 0) {
+						// Display a login box
+						clearInterval(interval);
+					}
+				}, 1000);
+			})
+
+			$('.dropmenu1 li a').click(function () {
+				$("#selected1").text($(this).text());
+				$(".colorone").attr('style', 'color: #6e2d91 !important; background: white !important')
+				$(".colortwo").attr('style', 'color: white !important; background: #6e2d91 !important')
+			})
+
+			$('.dropmenu2 li a').click(function () {
+				$("#selected2").text($(this).text())
+				$(".colortwo").attr('style', 'color: #6e2d91 !important; background: white !important')
+				$(".colorone").attr('style', 'color: white !important; background: #6e2d91 !important')
+			})
+			$('#btn1').click(function (evt) {
+				evt.preventDefault();
+				window.location.href = './MBkg-FltChgSelect.html';
+			});
+			$('#btn2').click(function (evt) {
+				evt.preventDefault();
+				window.location.href = './MBkg-AddPax.html';
+			});
+			$('#btn3').click(function (evt) {
+				evt.preventDefault();
+				window.location.href = './MBkg-FltChg.html';
+			});
+		</script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+</body>
+
+</html>
